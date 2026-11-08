@@ -120,7 +120,7 @@ p{margin:0}
 .steps b{font-weight:600}
 .balance{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
 .bal-col{display:grid;gap:10px;min-width:0}
-.bal-row{display:grid;grid-template-columns:52px 1fr;align-items:center;gap:10px;font-size:.9rem;color:var(--muted)}
+.bal-row{display:grid;grid-template-columns:84px 1fr;align-items:center;gap:10px;font-size:.9rem;color:var(--muted)}
 .bal-row i{display:block;height:12px;border-radius:6px;background:var(--gold)}
 .bal-row:nth-child(2) i{background:var(--muted)}
 @media (max-width:560px){.balance{grid-template-columns:1fr}}
@@ -137,6 +137,61 @@ p{margin:0}
 .hier ol{margin:0;padding-left:22px;display:grid;gap:6px;font-size:.96rem}
 .hier li.me{color:var(--gold);font-weight:600}
 @media (max-width:560px){.hier{grid-template-columns:1fr}}
+
+/* checkout */
+.co-overlay{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.6);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));overflow-y:auto}
+.co-overlay[hidden]{display:none}
+.co-card{position:relative;width:100%;max-width:500px;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px 22px 20px;display:grid;gap:14px}
+.co-x{position:absolute;top:12px;right:14px;width:36px;height:36px;border:0;background:none;color:var(--muted);font-size:1.8rem;line-height:1;cursor:pointer}
+.co-prod{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;background:var(--surface-2);border-radius:14px;padding:12px}
+.co-prod img{width:56px;height:56px;border-radius:12px;object-fit:cover}
+.co-prod div{display:grid;min-width:0}
+.co-prod span.muted{font-size:.85rem}
+.co-price{font:800 1.05rem/1 var(--f-display);white-space:nowrap}
+.co-bonus{border:1.5px dashed var(--gold);background:var(--gold-soft);border-radius:16px;padding:14px 16px;display:grid;gap:6px}
+.co-bonus[hidden]{display:none}
+.co-bonus-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.co-tag{font:700 .72rem/1 var(--f-body);letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:var(--gold-ink);border-radius:999px;padding:5px 9px}
+.co-left{font:700 .9rem/1 var(--f-display);color:var(--gold);font-variant-numeric:tabular-nums}
+.co-bonus ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:.93rem}
+.co-total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:12px}
+.co-total b{font:800 1.8rem/1 var(--f-display);font-variant-numeric:tabular-nums}
+.co-pay{width:100%}
+.co-note{font-size:.82rem;text-align:center}
+#rest.reveal{animation:revealIn .7s ease both}
+@keyframes revealIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+button.btn{font-family:var(--f-display)}
+
+/* phone */
+p,li,.ba-cell,.item span,.q,.chat p{overflow-wrap:break-word}
+.btn{white-space:nowrap}
+@media (max-width:480px){
+  body{font-size:16px}
+  section{padding-block:44px}
+  h2{font-size:1.5rem}
+  .lead{font-size:1.05rem}
+  .quiz{padding:20px 18px;border-radius:18px}
+  .qtext{font-size:1.15rem}
+  .opt{padding:13px 15px;font-size:.96rem}
+  .ba-row{gap:8px}
+  .ba-cell{padding:10px 12px;font-size:.88rem;hyphens:auto;-webkit-hyphens:auto}
+  .item{grid-template-columns:32px 1fr;gap:12px;padding:14px}
+  .item svg{width:32px;height:32px}
+  .tag{font-size:.62rem;padding:3px 6px;margin-left:4px}
+  .group h3{flex-wrap:wrap;gap:4px 10px}
+  .bonus-group{padding:16px 14px}
+  .btn{padding:16px 22px;font-size:.95rem}
+  .offer{padding:22px 18px}
+  .price b{font-size:2.5rem}
+  .case{padding:16px}
+  .result .pct{font-size:2.8rem}
+  .result .cta{gap:14px}
+  .co-card{padding:22px 16px 16px}
+  .co-total b{font-size:1.5rem}
+  .pull{font-size:1.05rem;padding:14px 16px}
+  .facts{gap:10px 18px}
+  .fact b{font-size:1.35rem}
+}
 
 /* case */
 .case{display:grid;grid-template-columns:200px 1fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;align-items:start}
@@ -161,9 +216,10 @@ p{margin:0}
 @media (max-width:600px){.about{grid-template-columns:1fr}.about-photo{max-width:320px}}
 .strip{display:grid;grid-template-columns:3fr 2fr;gap:12px;margin-top:28px}
 .strip figure,.tl-photo{margin:0;display:grid;gap:8px;min-width:0}
-.strip img{width:100%;height:300px;object-fit:cover;border-radius:16px;display:block}
+.strip{align-items:start}
+.strip img{width:100%;height:auto;border-radius:16px;display:block}
 .strip figcaption,.tl-photo figcaption{font-size:.85rem}
-@media (max-width:560px){.strip{grid-template-columns:1fr}.strip img{height:240px}}
+@media (max-width:560px){.strip{grid-template-columns:1fr}}
 .tl-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:start}
 @media (max-width:600px){.tl-grid{grid-template-columns:1fr}.tl-photo .photo{aspect-ratio:4/3}}
 .who{display:flex;align-items:center;gap:10px}
@@ -220,9 +276,10 @@ img{max-width:100%}
     <div id="aWrap" hidden aria-live="polite"><p class="eyebrow">анализируем ответы…</p><div class="progress"><i id="aBar" style="width:0;transition:width 1.2s linear"></i></div><p class="muted" id="aText">Смотрим, что держит тебя сильнее всего</p></div>
     <div id="rWrap" class="result" hidden aria-live="polite"></div>
   </div>
-  <p class="muted" style="margin-top:14px;font-size:.9rem">Ответы видишь только ты. <a class="link" href="#offer">Сразу к набору</a></p>
+  <p class="muted" style="margin-top:14px;font-size:.9rem">Ответы видишь только ты. <button class="link" type="button" id="skipQuiz">Пропустить тест</button></p>
 </section>
 
+<div id="rest" hidden>
 <section aria-labelledby="pain-h">
   <h2 id="pain-h">узнаёшь себя?</h2>
   <p class="muted" style="margin-bottom:20px">Так пишут в комментариях под моими роликами и говорят на консультациях.</p>
@@ -276,7 +333,7 @@ img{max-width:100%}
     <p>Держи баланс значимости: вкладывайся в того, кто вкладывается в тебя, и не опережай его. И в первую очередь фокус на себе: любовь к себе не лозунг, а ежедневные действия по отношению к себе.</p>
 
     <p class="muted">Это основа. В наборе есть пошаговые инструменты: что делать в вечер, когда тянет написать, как вернуть себе силы за несколько дней и как полюбить себя так, чтобы не выбирать тех, кого надо заслуживать.</p>
-    <div><a class="btn" href="#offer">забрать набор за 1 490 ₽</a></div>
+    <div><button class="btn" type="button" data-checkout>забрать набор за 1&nbsp;490&nbsp;₽</button></div>
   </div>
 </section>
 
@@ -324,8 +381,8 @@ img{max-width:100%}
       </div>
     </div>
     <div class="group bonus-group" id="bonusGroup">
-      <h3>бонусы за быстрое решение <span class="when bonus-timer">ещё <span data-timer>24:00:00</span></span></h3>
-      <p class="muted bonus-why">Это то, о чём меня чаще всего спрашивают на консультациях. Набор помогает отпустить. Бонусы помогают сделать так, чтобы следующие отношения были другими: понять, кого выбирать, как тебя видит противоположный пол и где твоё место в собственной жизни. Они входят в набор, если оплатить его в течение 24 часов.</p>
+      <h3>бонусы за быстрое решение <span class="when bonus-timer">ещё <span data-timer>30:00</span></span></h3>
+      <p class="muted bonus-why">Это то, о чём меня чаще всего спрашивают на консультациях. Набор помогает отпустить. Бонусы помогают сделать так, чтобы следующие отношения были другими: понять, кого выбирать, как тебя видит противоположный пол и где твоё место в собственной жизни. Они входят в набор, если оплатить его в течение 30 минут после теста.</p>
       <div class="items">
         <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><rect x="16.5" y="10" width="7" height="13" rx="3.5" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M13 20a7 7 0 0 0 14 0M20 27v3" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><div><b>Подкаст для женщин «4 типа мужчин» <span class="tag">аудио</span></b><span>Эмоционально зрелый и незрелый, сильный и слабый: как отличить их с первых встреч и кого выбирать, чтобы не повторять один и тот же сценарий.</span></div></div>
         <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><rect x="16.5" y="10" width="7" height="13" rx="3.5" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M13 20a7 7 0 0 0 14 0M20 27v3" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><div><b>Подкаст для мужчин «Кем она тебя видит» <span class="tag">аудио</span></b><span>Четыре категории, по которым женщина распределяет мужчин: ухажёр-спонсор, друг, любовник и мужчина. В какой ты сейчас и в каком порядке проходить эти роли, чтобы стать для неё мужчиной.</span></div></div>
@@ -413,9 +470,9 @@ img{max-width:100%}
     <div class="price"><b>1 490 ₽</b><span class="muted">одним платежом</span></div>
     <p class="muted">Одна сессия у психолога стоит от 5 000 ₽. Здесь 2 аудио, 4 гайда, чек-листы и 7 дней заданий.</p>
     <div class="bonus-box" id="bonusBox">
-      <p><b>+ 5 бонусов, если оплатить в течение 24 часов</b></p>
+      <p><b>+ 5 бонусов, если оплатить в течение 30 минут после теста</b></p>
       <p class="muted">2 подкаста («4 типа мужчин» и «Кем она тебя видит»), «Взгляд мужчины», «Как полюбить себя», «Иерархия приоритетов»</p>
-      <p class="timer">осталось <span data-timer>24:00:00</span></p>
+      <p class="timer">осталось <span data-timer>30:00</span></p>
     </div>
     <ul class="terms">
       <li>Доступ сразу после оплаты, навсегда</li>
@@ -423,7 +480,7 @@ img{max-width:100%}
       <li>Полный возврат в течение 7 дней, если не подошло</li>
       <li>Оплата картой или по СБП через lava.top</li>
     </ul>
-    <a class="btn" id="payBtn" href="#offer">забрать набор за 1 490 ₽</a>
+    <button class="btn" id="payBtn" type="button" data-checkout>забрать набор за 1&nbsp;490&nbsp;₽</button>
     <p class="paynote muted" id="payNote" hidden>Оплата подключается, ссылка появится здесь в ближайшее время.</p>
   </div>
 </section>
@@ -439,6 +496,8 @@ img{max-width:100%}
   <details><summary>Если сюжет повторяется не в первый раз?</summary><p>Тогда, скорее всего, дело не в конкретном человеке. В конце набора есть запись на личную консультацию: разберём, почему так складывается, и что с этим делать.</p></details>
 </section>
 
+</div>
+
 <footer>
   <div class="stack">
     <span>Омар · @omar_nebo</span>
@@ -449,8 +508,35 @@ img{max-width:100%}
 
 </div>
 
+<div class="co-overlay" id="checkout" hidden role="dialog" aria-modal="true" aria-labelledby="co-h">
+  <div class="co-card">
+    <button class="co-x" type="button" id="coClose" aria-label="Закрыть">×</button>
+    <h2 id="co-h" style="margin:0 0 4px">оформление заказа</h2>
+    <p class="muted" style="font-size:.92rem">Оплата картой РФ или по СБП на следующем шаге</p>
+    <div class="co-prod">
+      <img src="omar.jpg" alt="" width="56" height="56">
+      <div><b>Отпустить и не повторить</b><span class="muted">2 аудио · 6 гайдов · задания на 7 дней</span></div>
+      <span class="co-price">1 490 ₽</span>
+    </div>
+    <div class="co-bonus" id="coBonus">
+      <div class="co-bonus-head"><span class="co-tag">в подарок</span><span class="co-left">ещё <span data-timer>30:00</span></span></div>
+      <p><b>+ 5 бонусов к набору, 0 ₽</b></p>
+      <ul>
+        <li>Подкаст для женщин «4 типа мужчин»</li>
+        <li>Подкаст для мужчин «Кем она тебя видит»</li>
+        <li>«Взгляд мужчины»</li>
+        <li>«Как полюбить себя и поднять самооценку»</li>
+        <li>«Иерархия приоритетов»</li>
+      </ul>
+    </div>
+    <div class="co-total"><span>итого к оплате</span><b>1 490 ₽</b></div>
+    <a class="btn co-pay" id="coPay" href="#offer">перейти к оплате · 1&nbsp;490&nbsp;₽</a>
+    <p class="co-note muted">🔒 Безопасная оплата через lava.top. Доступ к набору придёт на email сразу после оплаты. Полный возврат в течение 7 дней.</p>
+  </div>
+</div>
+
 <script>
-const PAY_URL_BONUS = "https://app.lava.top/products/6c29251b-3d88-43b9-86e4-2024965005c8"; // lava.top: набор + бонусы (первые 24 часа)
+const PAY_URL_BONUS = "https://app.lava.top/products/6c29251b-3d88-43b9-86e4-2024965005c8"; // lava.top: набор + бонусы (первые 30 минут после теста)
 const PAY_URL = "https://app.lava.top/products/f79aae74-a233-44c7-93a4-5a4c8067ecf0";       // lava.top: набор без бонусов
 const Q = [
   ["Как часто ты думаешь о бывшем партнёре?", ["Почти не думаю","Пару раз в день","Большую часть дня","Постоянно, даже засыпаю с мыслями о нём"]],
@@ -505,23 +591,46 @@ function showResult(){
    <h3>${r.title}</h3><p>${r.text}</p>
    <p style="margin-top:16px"><b>С чего начать в наборе:</b></p>
    <ul>${r.start.map(x=>`<li>${x}</li>`).join("")}</ul>
-   <div class="cta"><a class="btn" href="#offer">получить набор за 1 490 ₽</a><button class="link" type="button" id="again">пройти заново</button></div>`;
+   <div class="cta"><button class="btn" type="button" data-checkout>получить набор за 1&nbsp;490&nbsp;₽</button><a class="link" href="#pain-h">читать дальше ↓</a><button class="link" type="button" id="again">пройти заново</button></div>`;
+  revealRest(); startTimer(); try{localStorage.setItem("otp_done","1")}catch(e){}
   requestAnimationFrame(()=>{ w.querySelector(".meter i").style.width = pct+"%"; });
   $("again").onclick = ()=>{ i=0; ans.length=0; w.hidden=true; $("qWrap").hidden=false; render(); };
   $("quizBox").scrollIntoView({block:"start"});
 }
 render();
-// 24 часа на бонусы с первого визита этого человека
-let deadline = Date.now() + 864e5;
-try { const s = +localStorage.getItem("otp_deadline"); if (s) deadline = s; else localStorage.setItem("otp_deadline", deadline); } catch(e) {}
+// бонусы действуют BONUS_MIN минут с момента результата теста (или пропуска теста / открытия оплаты)
+const BONUS_MIN = 30;
+let deadline = null;
+try { const s = +localStorage.getItem("otp_deadline2"); if (s) deadline = s; } catch(e) {}
+function startTimer(){
+  if (deadline) return;
+  deadline = Date.now() + BONUS_MIN*6e4;
+  try { localStorage.setItem("otp_deadline2", deadline); } catch(e) {}
+  tick();
+}
 let expired = false;
 function setPay(){
   const url = expired ? PAY_URL : (PAY_URL_BONUS || PAY_URL);
-  const b = $("payBtn");
-  if (url){ b.href = url; b.target = "_blank"; b.rel = "noopener"; b.onclick = null; }
-  else { b.href = "#offer"; b.onclick = ()=>{ $("payNote").hidden = false; }; }
+  const b = $("coPay");
+  if (url){ b.href = url; b.onclick = null; }
+  else { b.href = "#offer"; b.onclick = ()=>{ $("payNote").hidden = false; closeCheckout(); }; }
+  $("coBonus").hidden = expired;
 }
+function revealRest(){
+  const r = $("rest"); if (!r.hidden) return;
+  r.hidden = false; r.classList.add("reveal");
+}
+let lastFocus = null;
+function openCheckout(){ startTimer(); lastFocus = document.activeElement; $("checkout").hidden = false; document.body.style.overflow = "hidden"; $("coPay").focus(); }
+function closeCheckout(){ $("checkout").hidden = true; document.body.style.overflow = ""; if (lastFocus) lastFocus.focus(); }
+document.addEventListener("click", e=>{ const t = e.target.closest("[data-checkout]"); if (t){ e.preventDefault(); openCheckout(); } });
+$("coClose").onclick = closeCheckout;
+$("checkout").addEventListener("click", e=>{ if (e.target.id === "checkout") closeCheckout(); });
+document.addEventListener("keydown", e=>{ if (e.key === "Escape" && !$("checkout").hidden) closeCheckout(); });
+$("skipQuiz").onclick = ()=>{ revealRest(); startTimer(); $("offer").scrollIntoView({behavior:"smooth"}); };
+try { if (localStorage.getItem("otp_done")) revealRest(); } catch(e) {}
 function tick(){
+  if (!deadline){ document.querySelectorAll("[data-timer]").forEach(el=>el.textContent = String(BONUS_MIN).padStart(2,"0")+":00"); return; }
   const left = deadline - Date.now();
   if (left <= 0){
     if (!expired){ expired = true; document.body.classList.add("bonus-expired");
@@ -529,7 +638,7 @@ function tick(){
     return;
   }
   const h = Math.floor(left/36e5), m = Math.floor(left%36e5/6e4), s = Math.floor(left%6e4/1e3);
-  const t = [h,m,s].map(n=>String(n).padStart(2,"0")).join(":");
+  const t = (h ? [h,m,s] : [m,s]).map(n=>String(n).padStart(2,"0")).join(":");
   document.querySelectorAll("[data-timer]").forEach(el=>el.textContent = t);
 }
 tick(); setPay(); setInterval(tick, 1000);
