@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Отпустить и не повторить — Омар</title>
+<meta name="description" content="Набор после расставания от Омара: тест, аудио, гайды и задания, чтобы стало легче уже сегодня вечером и следующие отношения были другими.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://omarnebo.ru/">
+<meta property="og:title" content="Отпустить и не повторить">
+<meta property="og:description" content="Набор после расставания от Омара: тест, аудио, гайды и задания, чтобы стало легче уже сегодня вечером и следующие отношения были другими.">
+<meta property="og:image" content="https://omarnebo.ru/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f0e0c'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23e8c64f' stroke-width='7'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0f0e0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Onest:wght@400;500;600&family=Caveat:wght@700&display=swap">
+<style>
+/* Layout: one narrow reading column, night-to-morning; brand from Omar's reels: black + gold, lowercase Montserrat, Caveat accents */
+:root{
+  --bg:#0f0e0c; --surface:#1a1814; --surface-2:#221f1a; --fg:#f3eee4; --muted:#a59e90; --line:#302b23;
+  --gold:#e8c64f; --gold-ink:#1a1500; --gold-soft:rgba(232,198,79,.12);
+  --f-display:"Montserrat",system-ui,sans-serif; --f-body:"Onest",system-ui,sans-serif; --f-hand:"Caveat","Comic Sans MS",cursive;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.6 var(--f-body);margin:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{padding-block:56px;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;text-transform:lowercase;letter-spacing:-.01em;line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.3rem,8vw,3.6rem)}
+h2{font-size:clamp(1.6rem,5vw,2.2rem);margin-bottom:20px}
+h3{font-size:1.15rem;line-height:1.25}
+p{margin:0}
+.hand{font-family:var(--f-hand);color:var(--gold);text-transform:none;font-weight:700;letter-spacing:0}
+.eyebrow{font:600 .78rem/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lead{font-size:1.15rem;color:var(--fg);max-width:34em}
+.muted{color:var(--muted)}
+.stack{display:flex;flex-direction:column;gap:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 1rem/1 var(--f-display);text-transform:lowercase;
+  background:var(--gold);color:var(--gold-ink);border:0;border-radius:999px;padding:18px 28px;cursor:pointer;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,.opt:focus-visible,.link:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.btn.ghost{background:transparent;color:var(--fg);border:1.5px solid var(--line)}
+.link{color:var(--gold);background:none;border:0;font:inherit;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
+
+/* hero */
+.hero{padding-block:48px 56px}
+.hero .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px}
+.handle{font:700 .9rem/1 var(--f-display);text-transform:lowercase;color:var(--muted)}
+.hero h1 .hand{display:block;font-size:.62em;margin-top:6px}
+.hero .lead{margin-top:22px}
+.hero .cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero .note{font-size:.9rem}
+
+/* quotes from comments */
+.quotes{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:.98rem;min-width:0}
+.quote::before{content:"“";font:800 1.6rem/0 var(--f-display);color:var(--gold);display:block;height:14px}
+.quote.wide{grid-column:1/-1}
+@media (max-width:560px){.quotes{grid-template-columns:1fr}}
+
+/* quiz */
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px}
+.progress{height:4px;background:var(--surface-2);border-radius:4px;overflow:hidden;margin:14px 0 22px}
+.progress i{display:block;height:100%;width:12.5%;background:var(--gold);transition:width .3s}
+.qhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.qtext{font:700 1.3rem/1.3 var(--f-display);margin-bottom:18px;text-wrap:balance}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;font:500 1rem/1.4 var(--f-body);color:var(--fg);background:var(--surface-2);border:1.5px solid transparent;border-radius:14px;padding:15px 18px;cursor:pointer;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--gold)}
+.opt.sel{border-color:var(--gold);background:var(--gold-soft)}
+.qnav{display:flex;justify-content:space-between;margin-top:18px;min-height:24px}
+.result .score{display:flex;align-items:baseline;gap:12px;margin:8px 0 6px}
+.result .pct{font:800 3.4rem/1 var(--f-display);color:var(--gold);font-variant-numeric:tabular-nums}
+.meter{height:10px;border-radius:10px;background:linear-gradient(90deg,var(--surface-2),var(--surface-2));position:relative;overflow:hidden;margin:6px 0 4px}
+.meter i{position:absolute;inset:0 auto 0 0;background:var(--gold);border-radius:10px;transition:width .6s}
+.scale{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted)}
+.result h3{font-size:1.5rem;margin:18px 0 10px}
+.result ul{margin:14px 0 0;padding-left:20px;display:grid;gap:6px}
+.result .cta{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* before/after */
+.ba{display:grid;gap:10px}
+.ba-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ba-cell{padding:14px 16px;border-radius:12px;font-size:.97rem;min-width:0}
+.ba-cell.now{background:var(--surface);color:var(--muted);border:1px solid var(--line)}
+.ba-cell.after{background:var(--gold-soft);border:1px solid var(--gold)}
+.ba-head{font:600 .75rem/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:0 4px}
+
+/* contents */
+.groups{display:grid;gap:28px}
+.group h3{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.group h3 .when{font:700 1.35rem/1 var(--f-hand);color:var(--gold);text-transform:none}
+.items{display:grid;gap:10px}
+.item{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+.item svg{width:40px;height:40px}
+.item b{display:block;font-weight:600;margin-bottom:2px}
+.item span{color:var(--muted);font-size:.95rem}
+.tag{display:inline-block;font:600 .72rem/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:4px 8px;margin-left:6px;vertical-align:2px}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:0;position:relative}
+.tl li{display:grid;gap:4px;padding:0 0 22px 30px;position:relative}
+.tl li::before{content:"";position:absolute;left:5px;top:.45em;width:12px;height:12px;border-radius:50%;background:var(--gold)}
+.tl li::after{content:"";position:absolute;left:10.5px;top:1.4em;bottom:0;width:1px;background:var(--line)}
+.tl li:last-child::after{display:none}
+.tl b{font:800 1.05rem/1.3 var(--f-display);text-transform:lowercase}
+.tl span{color:var(--muted)}
+.photo{width:100%;max-width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block}
+
+/* lesson */
+.lesson{display:grid;gap:16px;margin-top:20px;max-width:40em}
+.lesson h3{margin-top:14px;font-size:1.25rem}
+.pull{margin:6px 0;padding:18px 22px;border-left:3px solid var(--gold);background:var(--gold-soft);border-radius:0 14px 14px 0;font:700 1.2rem/1.4 var(--f-display)}
+.steps{margin:0;padding-left:22px;display:grid;gap:10px}
+.steps b{font-weight:600}
+.balance{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
+.bal-col{display:grid;gap:10px;min-width:0}
+.bal-row{display:grid;grid-template-columns:52px 1fr;align-items:center;gap:10px;font-size:.9rem;color:var(--muted)}
+.bal-row i{display:block;height:12px;border-radius:6px;background:var(--gold)}
+.bal-row:nth-child(2) i{background:var(--muted)}
+@media (max-width:560px){.balance{grid-template-columns:1fr}}
+
+/* bonus */
+.bonus-group{background:var(--gold-soft);border:1.5px dashed var(--gold);border-radius:20px;padding:20px}
+.bonus-why{margin-bottom:14px}
+.bonus-timer{font-variant-numeric:tabular-nums}
+.bonus-expired .bonus-group .items,.bonus-expired .bonus-timer,.bonus-expired .bonus-why{opacity:.45}
+.bonus-box{margin:18px 0 0;padding:16px 18px;border-radius:14px;background:var(--gold-soft);border:1px solid var(--gold);display:grid;gap:6px}
+.bonus-box .timer{font:700 1rem/1.2 var(--f-display);color:var(--gold);font-variant-numeric:tabular-nums}
+.hier{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hier-col{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;gap:10px;min-width:0}
+.hier ol{margin:0;padding-left:22px;display:grid;gap:6px;font-size:.96rem}
+.hier li.me{color:var(--gold);font-weight:600}
+@media (max-width:560px){.hier{grid-template-columns:1fr}}
+
+/* case */
+.case{display:grid;grid-template-columns:200px 1fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;align-items:start}
+.case-photo{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;display:block}
+.case-body{display:grid;gap:16px;min-width:0}
+.ba-mini{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ba-mini > div{display:grid;gap:6px;min-width:0}
+.ba-mini p{font-size:.97rem}
+.chat{margin:0;display:grid;gap:8px}
+.chat p{background:var(--surface-2);border-radius:16px 16px 16px 4px;padding:10px 14px;font-size:.97rem;max-width:34em}
+@media (max-width:600px){.case{grid-template-columns:1fr}.case-photo{max-width:220px}.ba-mini{grid-template-columns:1fr}}
+
+/* fit */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fit > div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;min-width:0}
+.fit ul{margin:10px 0 0;padding-left:18px;display:grid;gap:8px}
+@media (max-width:600px){.fit{grid-template-columns:1fr}}
+
+/* about */
+.about{display:grid;grid-template-columns:240px 1fr;gap:28px;align-items:start}
+.about-photo{aspect-ratio:2/3}
+@media (max-width:600px){.about{grid-template-columns:1fr}.about-photo{max-width:320px}}
+.strip{display:grid;grid-template-columns:3fr 2fr;gap:12px;margin-top:28px}
+.strip figure,.tl-photo{margin:0;display:grid;gap:8px;min-width:0}
+.strip img{width:100%;height:300px;object-fit:cover;border-radius:16px;display:block}
+.strip figcaption,.tl-photo figcaption{font-size:.85rem}
+@media (max-width:560px){.strip{grid-template-columns:1fr}.strip img{height:240px}}
+.tl-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:start}
+@media (max-width:600px){.tl-grid{grid-template-columns:1fr}.tl-photo .photo{aspect-ratio:4/3}}
+.who{display:flex;align-items:center;gap:10px}
+.who img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.who > span{display:grid;line-height:1.2}
+.who b{font:700 .95rem/1.2 var(--f-display)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:16px}
+.fact b{display:block;font:800 1.6rem/1 var(--f-display);color:var(--gold);font-variant-numeric:tabular-nums}
+.fact span{font-size:.85rem;color:var(--muted)}
+
+/* offer */
+.offer{background:var(--surface);border:1.5px solid var(--gold);border-radius:24px;padding:30px;text-align:left}
+.price{display:flex;align-items:baseline;gap:12px;margin:14px 0 4px;flex-wrap:wrap}
+.price b{font:800 3rem/1 var(--f-display);font-variant-numeric:tabular-nums}
+.terms{display:grid;gap:8px;margin:18px 0 24px;padding:0;list-style:none}
+.terms li{display:flex;gap:10px;align-items:flex-start}
+.terms li::before{content:"";flex:0 0 8px;height:8px;border-radius:50%;background:var(--gold);margin-top:.6em}
+.paynote{margin-top:12px;font-size:.9rem}
+.offer .btn{width:100%}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding-block:16px}
+summary{cursor:pointer;font:700 1.05rem/1.35 var(--f-display);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-weight:800}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--muted)}
+footer{padding-block:40px 56px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+footer .stack{gap:8px}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<section class="hero" id="quiz" aria-labelledby="quiz-h">
+  <div class="top"><span class="who"><img src="img/omar-look.jpg" alt="Омар" width="44" height="44"><span><b>Омар</b><span class="handle">@omar_nebo</span></span></span><span class="eyebrow">тест · 2 минуты</span></div>
+  <h1 id="quiz-h">почему ты не можешь отпустить, <span class="hand">даже когда понимаешь, что пора?</span></h1>
+  <p class="lead">Тест покажет, насколько ты ещё привязана и с чего начать, чтобы стало легче уже сегодня вечером.</p>
+  <div class="quiz" id="quizBox" style="margin-top:28px">
+    <div id="qWrap">
+      <div class="qhead"><span class="eyebrow" id="qNum">вопрос 1 из 8</span><span class="eyebrow" id="qPct">0%</span></div>
+      <div class="progress" aria-hidden="true"><i id="qBar"></i></div>
+      <p class="qtext" id="qText"></p>
+      <div class="opts" id="qOpts" role="group" aria-labelledby="qText"></div>
+      <div class="qnav"><button class="link" id="qBack" type="button" hidden>← назад</button><span></span></div>
+    </div>
+    <div id="aWrap" hidden aria-live="polite"><p class="eyebrow">анализируем ответы…</p><div class="progress"><i id="aBar" style="width:0;transition:width 1.2s linear"></i></div><p class="muted" id="aText">Смотрим, что держит тебя сильнее всего</p></div>
+    <div id="rWrap" class="result" hidden aria-live="polite"></div>
+  </div>
+  <p class="muted" style="margin-top:14px;font-size:.9rem">Ответы видишь только ты. <a class="link" href="#offer">Сразу к набору</a></p>
+</section>
+
+<section aria-labelledby="pain-h">
+  <h2 id="pain-h">узнаёшь себя?</h2>
+  <p class="muted" style="margin-bottom:20px">Так пишут в комментариях под моими роликами и говорят на консультациях.</p>
+  <div class="quotes">
+    <div class="quote">Заблокировать то можно, ну в голове ты никак не заблокируешь.</div>
+    <div class="quote">Не захожу каждые 15 минут, не проверяю, когда он был в сети, и не жду, что он напишет…</div>
+    <div class="quote">На днях написал, что любит и скучает. Опять пропал.</div>
+    <div class="quote">Сказать многое хочется. Но в ответ не услышу ни слова.</div>
+    <div class="quote wide">Думаю о нём чаще, чем о своих планах, целях и о себе вообще.</div>
+  </div>
+  <p style="margin-top:22px" class="lead">Тебе больно не потому, что ты так сильно любишь. Тебе больно, потому что тебя не выбрали. С этим можно работать, и начать можно сегодня.</p>
+</section>
+
+<section id="lesson" aria-labelledby="les-h">
+  <p class="eyebrow">мини-урок от Омара · 5 минут</p>
+  <h2 id="les-h" style="margin-top:12px">почему ты так сильно привязываешься</h2>
+  <div class="lesson">
+    <p class="lead">Привязывает не человек. Привязывает то, сколько ты в него вложил или вложила.</p>
+    <p>Это одинаково работает и у женщин, и у мужчин. Мы ценим не самого человека, а образ, который о нём построили. И в этот образ мы вкладываем время, силы, внимание, энергию. А ещё деньги и подарки: мужчина, который много тратит на женщину, точно так же начинает ценить этот образ и держаться за него.</p>
+    <p>Постепенно получается, что ты выбираешь другого человека больше, чем себя. Вот здесь и рождается зависимость.</p>
+
+    <div class="balance" role="img" aria-label="Баланс значимости: при зависимости почти все вложения уходят в партнёра, когда баланс на месте, ты вкладываешь в себя не меньше, чем в него">
+      <div class="bal-col">
+        <span class="ba-head">когда есть зависимость</span>
+        <div class="bal-row"><span>в партнёра</span><i style="width:88%"></i></div>
+        <div class="bal-row"><span>в себя</span><i style="width:12%"></i></div>
+      </div>
+      <div class="bal-col">
+        <span class="ba-head">когда баланс на месте</span>
+        <div class="bal-row"><span>в партнёра</span><i style="width:45%"></i></div>
+        <div class="bal-row"><span>в себя</span><i style="width:55%"></i></div>
+      </div>
+    </div>
+
+    <h3>что происходит, когда баланс нарушен</h3>
+    <p>Растёт тревога. Хочется всё контролировать: где он или она, с кем, почему не ответил. А когда что-то идёт не так, тебе сразу становится очень плохо, потому что под угрозой оказалось всё, во что ты вложился.</p>
+
+    <h3>главная ловушка</h3>
+    <p>Большинство людей бегают за теми, у кого любовь и одобрение приходится заслуживать. Чем больше заслуживаешь, тем больше вкладываешь. Чем больше вкладываешь, тем сильнее держишься.</p>
+    <blockquote class="pull">Мы можем получить от другого человека ровно столько любви, сколько способны дать себе сами.</blockquote>
+    <p>Поэтому выход не в том, чтобы найти того, кто наконец полюбит тебя правильно. Выход в том, чтобы в первую очередь выбирать себя и научиться любить себя. Тогда и другие начинают относиться к тебе так же.</p>
+
+    <h3>что сделать уже сейчас</h3>
+    <ol class="steps">
+      <li><b>Сфокусируйся на себе.</b> Время, силы и деньги, которые уходили на партнёра, сегодня потрать на себя: спорт, встреча с друзьями, дело, которое откладывал.</li>
+      <li><b>Заметь, где ты заслуживаешь.</b> Где ты доказываешь, подстраиваешься, ждёшь одобрения? Просто увидь это, уже станет легче.</li>
+      <li><b>Поставь себя на первое место.</b> Одно решение в день в свою пользу, даже маленькое. Так восстанавливается баланс значимости.</li>
+    </ol>
+
+    <h3>как не попасть в это снова</h3>
+    <p>Держи баланс значимости: вкладывайся в того, кто вкладывается в тебя, и не опережай его. И в первую очередь фокус на себе: любовь к себе не лозунг, а ежедневные действия по отношению к себе.</p>
+
+    <p class="muted">Это основа. В наборе есть пошаговые инструменты: что делать в вечер, когда тянет написать, как вернуть себе силы за несколько дней и как полюбить себя так, чтобы не выбирать тех, кого надо заслуживать.</p>
+    <div><a class="btn" href="#offer">забрать набор за 1 490 ₽</a></div>
+  </div>
+</section>
+
+<section aria-labelledby="ba-h">
+  <h2 id="ba-h">что изменится</h2>
+  <div class="ba">
+    <div class="ba-row"><span class="ba-head">сейчас</span><span class="ba-head">после набора</span></div>
+    <div class="ba-row"><div class="ba-cell now">Проверяешь, когда он был в сети</div><div class="ba-cell after">Телефон больше не центр дня</div></div>
+    <div class="ba-row"><div class="ba-cell now">Тянет написать первой, особенно вечером</div><div class="ba-cell after">Знаешь, что делать в эту минуту, и справляешься</div></div>
+    <div class="ba-row"><div class="ba-cell now">Не понимаешь, отвечать ли, если он напишет</div><div class="ba-cell after">Есть готовый ответ и спокойная голова</div></div>
+    <div class="ba-row"><div class="ba-cell now">Нет сил, лежишь и прокручиваешь разговоры</div><div class="ba-cell after">Спорт, люди, свои дела: силы возвращаются</div></div>
+    <div class="ba-row"><div class="ba-cell now">Боишься, что следующие отношения будут такими же</div><div class="ba-cell after">Понимаешь, как не выбрать того же человека снова</div></div>
+    <div class="ba-row"><div class="ba-cell now">Он на первом месте, ты где-то потом</div><div class="ba-cell after">Ты у себя на первом месте и начинаешь выбирать себя</div></div>
+    <div class="ba-row"><div class="ba-cell now">Кажется, что с тобой что-то не так</div><div class="ba-cell after">Растёт самооценка, ты чувствуешь свою ценность</div></div>
+    <div class="ba-row"><div class="ba-cell now">Любовь приходится заслуживать</div><div class="ba-cell after">Ты любишь себя и больше не бегаешь за другими</div></div>
+    <div class="ba-row"><div class="ba-cell now">Всё внимание уходит на одного человека</div><div class="ba-cell after">Фокус на себе, и ты снова получаешь внимание противоположного пола</div></div>
+    <div class="ba-row"><div class="ba-cell now">Привязываешься и зависишь</div><div class="ba-cell after">Перестаёшь привязываться и зависеть от другого человека</div></div>
+  </div>
+</section>
+
+<section id="inside" aria-labelledby="in-h">
+  <h2 id="in-h">что внутри набора</h2>
+  <div class="groups">
+    <div class="group">
+      <h3>сегодня вечером <span class="when">первые 40 минут</span></h3>
+      <div class="items">
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M14 17v6M18 13v14M22 15v10M26 18v4" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg><div><b>Аудио «SOS: тянет написать» <span class="tag">аудио</span></b><span>8 минут. Включаешь вместо сообщения и проживаешь импульс, а не действуешь из него.</span></div></div>
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M13 13h14M13 20h14M13 27h9" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg><div><b>Протокол первых 72 часов <span class="tag">pdf</span></b><span>Что сделать с фото, перепиской, соцсетями, вещами и общими друзьями прямо сейчас.</span></div></div>
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><rect x="13" y="12" width="14" height="17" rx="3" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M17 20l2.5 2.5L24 18" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div><b>Блокировать или нет <span class="tag">pdf</span></b><span>Когда блок помогает, а когда держит сильнее. И что делать, если заблокировали тебя.</span></div></div>
+      </div>
+    </div>
+    <div class="group">
+      <h3>следующие 3 дня <span class="when">по 15 минут</span></h3>
+      <div class="items">
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M12 27l6-6 4 4 7-9" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div><b>Аудио «Начать жить заново» <span class="tag">аудио</span></b><span>15 минут, 8 шагов. От «убрать информационный шум» до новых знакомств, у каждого шага действие на сегодня.</span></div></div>
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M12 15h16v10H18l-4 3v-3h-2z" stroke="var(--gold)" stroke-width="2.2" stroke-linejoin="round" fill="none"/></svg><div><b>Если он или она напишет <span class="tag">pdf</span></b><span>3 готовых сценария ответа и как понять, стоит ли возвращаться, когда человек то пишет, то пропадает.</span></div></div>
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><circle cx="20" cy="20" r="6" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M20 9v3M20 28v3M9 20h3M28 20h3" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round"/></svg><div><b>Ритуал «Новая реальность» <span class="tag">pdf</span></b><span>Моя практика на 21 день: утром ты описываешь, кем становишься, вечером записываешь, что уже получилось. С примерами и трекером.</span></div></div>
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M14 12h12v16H14z M17 17h6M17 21h6M17 25h3" stroke="var(--gold)" stroke-width="2.2" stroke-linejoin="round" fill="none"/></svg><div><b>«Любовь или зависимость?» и «Письмо, которое не отправишь» <span class="tag">чек-лист</span></b><span>Понять, что это было на самом деле, и высказать всё, не отправляя ни слова.</span></div></div>
+      </div>
+    </div>
+    <div class="group">
+      <h3>дальше <span class="when">7 дней</span></h3>
+      <div class="items">
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M20 11l2.6 5.4 5.9.8-4.3 4.1 1 5.8L20 24.4l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z" stroke="var(--gold)" stroke-width="2" stroke-linejoin="round" fill="none"/></svg><div><b>Вызовы на 7 дней <span class="tag">задания</span></b><span>Мои задания на выход из зоны комфорта, в женской и мужской версии: спорт, танцы по утрам, новое достижение, знакомства.</span></div></div>
+      </div>
+    </div>
+    <div class="group bonus-group" id="bonusGroup">
+      <h3>бонусы за быстрое решение <span class="when bonus-timer">ещё <span data-timer>24:00:00</span></span></h3>
+      <p class="muted bonus-why">Это то, о чём меня чаще всего спрашивают на консультациях. Набор помогает отпустить. Бонусы помогают сделать так, чтобы следующие отношения были другими: понять, кого выбирать, как тебя видит противоположный пол и где твоё место в собственной жизни. Они входят в набор, если оплатить его в течение 24 часов.</p>
+      <div class="items">
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><rect x="16.5" y="10" width="7" height="13" rx="3.5" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M13 20a7 7 0 0 0 14 0M20 27v3" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><div><b>Подкаст для женщин «4 типа мужчин» <span class="tag">аудио</span></b><span>Эмоционально зрелый и незрелый, сильный и слабый: как отличить их с первых встреч и кого выбирать, чтобы не повторять один и тот же сценарий.</span></div></div>
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><rect x="16.5" y="10" width="7" height="13" rx="3.5" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M13 20a7 7 0 0 0 14 0M20 27v3" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><div><b>Подкаст для мужчин «Кем она тебя видит» <span class="tag">аудио</span></b><span>Четыре категории, по которым женщина распределяет мужчин: ухажёр-спонсор, друг, любовник и мужчина. В какой ты сейчас и в каком порядке проходить эти роли, чтобы стать для неё мужчиной.</span></div></div>
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><circle cx="20" cy="16" r="4.5" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M12 29c1.5-4.5 4.5-6.5 8-6.5s6.5 2 8 6.5" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><div><b>Взгляд мужчины <span class="tag">pdf</span></b><span>Что он чувствует после расставания и почему пишет «скучаю». Для мужчин: почему она ушла и как не вестись на проверки.</span></div></div>
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M20 28s-8-4.8-8-10.2A4.4 4.4 0 0 1 20 15a4.4 4.4 0 0 1 8 2.8C28 23.2 20 28 20 28z" stroke="var(--gold)" stroke-width="2.2" stroke-linejoin="round" fill="none"/></svg><div><b>Как полюбить себя и поднять самооценку <span class="tag">pdf</span></b><span>Как вернуть баланс значимости, перестать заслуживать любовь и вкладываться в себя так, чтобы рядом оказывались те, кто вкладывается в тебя.</span></div></div>
+        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M14 13h12M16 19h8M18 25h4" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg><div><b>Иерархия приоритетов <span class="tag">pdf</span></b><span>Кто должен быть на каком месте в жизни мужчины и женщины, и почему отношения рушатся, когда партнёр стоит выше тебя самого.</span></div></div>
+      </div>
+      <p class="muted bonus-gone" hidden>Время на бонусы вышло. Набор по-прежнему доступен за 1 490 ₽.</p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="tl-h">
+  <h2 id="tl-h">что будет меняться</h2>
+  <div class="tl-grid">
+  <figure class="tl-photo"><img class="photo" src="img/surf.jpg" alt="Омар выходит из океана с доской на закате" loading="lazy"></figure>
+  <ol class="tl">
+    <li><b>сегодня вечером</b><span>Аудио SOS и протокол 72 часов. Ты не пишешь ему, убираешь то, что запускает боль, и засыпаешь спокойнее.</span></li>
+    <li><b>через 3 дня</b><span>Меньше проверяешь телефон. Есть план, что ответить, если он напишет. Начинаешь выходить из дома и видеться с людьми.</span></li>
+    <li><b>через неделю</b><span>Утренний ритуал и задания возвращают энергию: спорт, свои дела, новые люди. Мысли о нём приходят реже.</span></li>
+    <li><b>через месяц</b><span>Ты понимаешь, что было любовью, а что зависимостью, и знаешь, как не выбрать того же человека снова.</span></li>
+  </ol>
+  </div>
+  <p class="muted" style="margin-top:14px;font-size:.9rem">Результат зависит от того, выполняешь ли ты задания. Набор даёт шаги, делаешь их ты.</p>
+</section>
+
+<section id="reviews" aria-labelledby="rev-h">
+  <h2 id="rev-h">что меняется, когда меняешься ты</h2>
+  <p class="muted" style="margin-bottom:22px">Этот случай не про расставание. Но он хорошо показывает, как работает мой подход: ты меняешь своё поведение, и человек рядом начинает вести себя иначе.</p>
+  <article class="case">
+    <img class="case-photo" src="img/olga-ring.jpg" alt="Помолвочное кольцо в коробке" loading="lazy">
+    <div class="case-body">
+      <p class="eyebrow">Ольга · личная работа</p>
+      <div class="ba-mini">
+        <div><span class="ba-head">было</span><p>Мужчина боялся брать за неё полную ответственность, хотя дело шло к свадьбе. На разговоры о будущем отвечал: «не беги впереди паровоза».</p></div>
+        <div><span class="ba-head">стало</span><p>Сам говорит «я вообще-то твой почти муж», берёт на себя бытовые расходы, сделал предложение. А Ольга ушла с нелюбимой работы.</p></div>
+      </div>
+      <blockquote class="chat">
+        <p>Короче, сама не знаю как, но что-то я поменяла в поведении, и он часто такие вещи говорит. Типа «я вообще-то твой почти муж».</p>
+        <p>А сейчас такой: «ну всё, полную ответственность за тебя беру».</p>
+        <p>Не знаю, как это работает, но работает 😅</p>
+      </blockquote>
+    </div>
+  </article>
+</section>
+
+<section aria-labelledby="fit-h">
+  <h2 id="fit-h">кому подойдёт</h2>
+  <div class="fit">
+    <div><h3>подойдёт, если</h3><ul>
+      <li>вы расстались недавно и тебя кроет вечерами;</li>
+      <li>прошли месяцы, а ты всё ещё проверяешь его страницу;</li>
+      <li>вы сходитесь и расходитесь, и ты устала от качелей;</li>
+      <li>ты мужчина и не можешь выкинуть её из головы.</li></ul></div>
+    <div><h3>не подойдёт, если</h3><ul>
+      <li>хочешь вернуть партнёра: набор про то, как вернуть себя;</li>
+      <li>не готова ничего делать, только слушать.</li></ul></div>
+  </div>
+</section>
+
+<section aria-labelledby="about-h">
+  <div class="about">
+    <img class="photo about-photo" src="img/omar.jpg" alt="Омар, наставник по отношениям" loading="lazy">
+    <div class="stack">
+      <h2 id="about-h" style="margin:0">кто я</h2>
+      <p>Я Омар, наставник по личностному росту и отношениям. Больше 10 лет в психологии. Веду личную работу, группы, клубы, ретриты и мастер-майнды.</p>
+      <p>Я не верю, что из расставания нужно выходить годами. Я даю действия, которые возвращают силы за дни: задания, выход из зоны комфорта, работу с убеждениями. В этом наборе те шаги, которые я даю своим клиентам.</p>
+      <div class="facts">
+        <div class="fact"><b>10+ лет</b><span>в психологии</span></div>
+        <div class="fact"><b>~10 000</b><span>часов консультаций</span></div>
+        <div class="fact"><b>~500</b><span>человек прошли через мою работу</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="strip">
+    <figure><img src="img/stage.jpg" alt="Омар выступает перед залом в технопарке «Идея»" loading="lazy"></figure>
+    <figure><img src="img/moto.jpg" alt="Омар на мотоцикле на пляже вечером" loading="lazy"></figure>
+  </div>
+</section>
+
+<section id="offer" aria-labelledby="offer-h">
+  <div class="offer">
+    <p class="eyebrow">набор целиком</p>
+    <h2 id="offer-h" style="margin:10px 0 0">отпустить и не повторить</h2>
+    <div class="price"><b>1 490 ₽</b><span class="muted">одним платежом</span></div>
+    <p class="muted">Одна сессия у психолога стоит от 5 000 ₽. Здесь 2 аудио, 4 гайда, чек-листы и 7 дней заданий.</p>
+    <div class="bonus-box" id="bonusBox">
+      <p><b>+ 5 бонусов, если оплатить в течение 24 часов</b></p>
+      <p class="muted">2 подкаста («4 типа мужчин» и «Кем она тебя видит»), «Взгляд мужчины», «Как полюбить себя», «Иерархия приоритетов»</p>
+      <p class="timer">осталось <span data-timer>24:00:00</span></p>
+    </div>
+    <ul class="terms">
+      <li>Доступ сразу после оплаты, навсегда</li>
+      <li>Аудио моим голосом, PDF-гайды, чек-листы, задания</li>
+      <li>Полный возврат в течение 7 дней, если не подошло</li>
+      <li>Оплата картой или по СБП через lava.top</li>
+    </ul>
+    <a class="btn" id="payBtn" href="#offer">забрать набор за 1 490 ₽</a>
+    <p class="paynote muted" id="payNote" hidden>Оплата подключается, ссылка появится здесь в ближайшее время.</p>
+  </div>
+</section>
+
+<section aria-labelledby="faq-h">
+  <h2 id="faq-h">вопросы</h2>
+  <details><summary>Как я получу набор?</summary><p>Сразу после оплаты на почту придёт ссылка на все материалы. Аудио можно слушать с телефона, PDF открываются в любом браузере.</p></details>
+  <details><summary>Сколько времени это займёт?</summary><p>Первый вечер около 40 минут. Дальше по 15 минут в день несколько дней. Задания на 7 дней необязательные, но с ними результат крепче.</p></details>
+  <details><summary>Подойдёт ли мужчинам?</summary><p>Да. В заданиях и бонусе есть отдельная мужская версия. Мужчины переживают расставание не легче, просто реже об этом говорят.</p></details>
+  <details><summary>Это поможет вернуть бывшего?</summary><p>Задача набора — вернуть тебя себе: твой фокус, силы и спокойствие. И здесь есть интересная вещь: когда ты перестаёшь зависеть и фокусируешься на себе, бывшие часто сами начинают напоминать о себе и стучаться обратно.</p><p>Разница в том, что решать ты будешь уже не из нужды, обиды или желания отомстить, а с холодной головой: продолжить, изменить эти отношения или спокойно закрыть эту дверь насовсем.</p></details>
+  <details><summary>Это подписка?</summary><p>Нет. Один платёж 1 490 ₽, без автосписаний.</p></details>
+  <details><summary>Как вернуть деньги?</summary><p>Напиши в течение 7 дней с момента покупки, и я верну всю сумму, без удержаний и лишних вопросов. После 7 дней возврат не делается.</p></details>
+  <details><summary>Если сюжет повторяется не в первый раз?</summary><p>Тогда, скорее всего, дело не в конкретном человеке. В конце набора есть запись на личную консультацию: разберём, почему так складывается, и что с этим делать.</p></details>
+</section>
+
+<footer>
+  <div class="stack">
+    <span>Омар · @omar_nebo</span>
+    <span>Набор носит образовательный характер и не заменяет психотерапию или медицинскую помощь.</span>
+    <span>Оплата и выдача материалов проходят через lava.top на её условиях.</span>
+  </div>
+</footer>
+
+</div>
+
+<script>
+const PAY_URL_BONUS = "https://app.lava.top/products/6c29251b-3d88-43b9-86e4-2024965005c8"; // lava.top: набор + бонусы (первые 24 часа)
+const PAY_URL = "https://app.lava.top/products/f79aae74-a233-44c7-93a4-5a4c8067ecf0";       // lava.top: набор без бонусов
+const Q = [
+  ["Как часто ты думаешь о бывшем партнёре?", ["Почти не думаю","Пару раз в день","Большую часть дня","Постоянно, даже засыпаю с мыслями о нём"]],
+  ["Проверяешь его соцсети, сторис, когда он был в сети?", ["Нет","Иногда, случайно","Каждый день","По многу раз в день"]],
+  ["Тянет написать первой?", ["Нет","Бывает, но держусь","Часто, особенно вечером","Уже писала, и не раз"]],
+  ["Что с тобой, когда он пишет или появляется?", ["Спокойно","Приятно, но держу себя в руках","Бросаю всё и отвечаю","Весь день идёт по этому сообщению"]],
+  ["Как сейчас сон, аппетит и энергия?", ["Как обычно","Чуть хуже, чем раньше","Заметно хуже","Нет сил ни на что"]],
+  ["Вы уже расходились и сходились снова?", ["Нет","Один раз","Несколько раз","Это постоянные качели"]],
+  ["Похожа ли эта история на твои прошлые отношения?", ["Нет, это другое","Немного","Да, сюжет повторяется","Каждый раз одно и то же"]],
+  ["Что ты думаешь о себе после расставания?", ["Со мной всё в порядке","Иногда сомневаюсь в себе","Часто: что со мной не так?","Меня невозможно любить просто так"]]
+];
+const R = [
+  {max:7, title:"ты уже отпускаешь", text:"Острая фаза позади или почти позади. Ты держишь себя, но иногда накрывает. Сейчас важно не откатиться назад, когда он напишет или ты увидишь его сторис.",
+   start:["«Если он или она напишет»: чтобы не откатиться","Утренний ритуал: чтобы закрепить состояние","Вызовы на 7 дней: вернуть энергию в свою жизнь"]},
+  {max:15, title:"ты застряла в качелях", text:"Ты то отпускаешь, то снова цепляешься. Каждое сообщение, сторис или воспоминание запускает всё заново. Это не слабость: так работает привязанность, и из неё есть понятный выход.",
+   start:["Протокол первых 72 часов: убрать то, что запускает качели","Аудио SOS: на вечер, когда тянет написать","«Начать жить заново»: 8 шагов на ближайшие дни"]},
+  {max:24, title:"эмоциональная зависимость", text:"Сейчас этот человек занимает почти всё твоё внимание и силы. Больно не только от потери: болит ощущение, что тебя не выбрали. Начни с простого и с сегодняшнего вечера, а не с больших решений.",
+   start:["Аудио SOS: включи его сегодня, вместо сообщения","Протокол первых 72 часов: шаг за шагом","«Любовь или зависимость?»: увидеть, что это было"]}
+];
+let i = 0; const ans = [];
+const $ = id => document.getElementById(id);
+function render(){
+  $("qNum").textContent = `вопрос ${i+1} из ${Q.length}`;
+  $("qBar").style.width = ((i+1)/Q.length*100)+"%";
+  $("qPct").textContent = Math.round(i/Q.length*100)+"%";
+  $("qText").textContent = Q[i][0];
+  $("qOpts").innerHTML = "";
+  Q[i][1].forEach((t,k)=>{
+    const b = document.createElement("button"); b.type="button"; b.className="opt"+(ans[i]===k?" sel":""); b.id=`q${i}o${k}`; b.textContent=t;
+    b.onclick = ()=>{ ans[i]=k; b.classList.add("sel"); setTimeout(next, 180); };
+    $("qOpts").appendChild(b);
+  });
+  $("qBack").hidden = i===0;
+}
+function next(){ if(i<Q.length-1){ i++; render(); } else analyse(); }
+function analyse(){
+  $("qWrap").hidden = true; $("aWrap").hidden = false;
+  const msgs=["Смотрим, что держит тебя сильнее всего","Сравниваем с типичными сценариями","Подбираем, с чего начать"];
+  let m=0; const t=setInterval(()=>{ m++; if(m<msgs.length) $("aText").textContent=msgs[m]; },450);
+  requestAnimationFrame(()=>{ $("aBar").style.width="100%"; });
+  setTimeout(()=>{ clearInterval(t); $("aWrap").hidden=true; $("aBar").style.width="0"; showResult(); },1400);
+}
+$("qBack").onclick = ()=>{ if(i>0){ i--; render(); } };
+function showResult(){
+  const s = ans.reduce((a,b)=>a+b,0), pct = Math.round(s/24*100), r = R.find(x=>s<=x.max);
+  $("qWrap").hidden = true;
+  const w = $("rWrap"); w.hidden = false;
+  w.innerHTML = `<p class="eyebrow">твой результат</p>
+   <div class="score"><span class="pct">${pct}%</span><span class="muted">уровень привязанности</span></div>
+   <div class="meter"><i style="width:0"></i></div>
+   <div class="scale"><span>отпускаю</span><span>качели</span><span>зависимость</span></div>
+   <h3>${r.title}</h3><p>${r.text}</p>
+   <p style="margin-top:16px"><b>С чего начать в наборе:</b></p>
+   <ul>${r.start.map(x=>`<li>${x}</li>`).join("")}</ul>
+   <div class="cta"><a class="btn" href="#offer">получить набор за 1 490 ₽</a><button class="link" type="button" id="again">пройти заново</button></div>`;
+  requestAnimationFrame(()=>{ w.querySelector(".meter i").style.width = pct+"%"; });
+  $("again").onclick = ()=>{ i=0; ans.length=0; w.hidden=true; $("qWrap").hidden=false; render(); };
+  $("quizBox").scrollIntoView({block:"start"});
+}
+render();
+// 24 часа на бонусы с первого визита этого человека
+let deadline = Date.now() + 864e5;
+try { const s = +localStorage.getItem("otp_deadline"); if (s) deadline = s; else localStorage.setItem("otp_deadline", deadline); } catch(e) {}
+let expired = false;
+function setPay(){
+  const url = expired ? PAY_URL : (PAY_URL_BONUS || PAY_URL);
+  const b = $("payBtn");
+  if (url){ b.href = url; b.target = "_blank"; b.rel = "noopener"; b.onclick = null; }
+  else { b.href = "#offer"; b.onclick = ()=>{ $("payNote").hidden = false; }; }
+}
+function tick(){
+  const left = deadline - Date.now();
+  if (left <= 0){
+    if (!expired){ expired = true; document.body.classList.add("bonus-expired");
+      $("bonusBox").hidden = true; document.querySelector(".bonus-gone").hidden = false; setPay(); }
+    return;
+  }
+  const h = Math.floor(left/36e5), m = Math.floor(left%36e5/6e4), s = Math.floor(left%6e4/1e3);
+  const t = [h,m,s].map(n=>String(n).padStart(2,"0")).join(":");
+  document.querySelectorAll("[data-timer]").forEach(el=>el.textContent = t);
+}
+tick(); setPay(); setInterval(tick, 1000);
+</script>
+</body>
+</html>
