@@ -159,7 +159,7 @@ p{margin:0}
 .co-pay{width:100%}
 .co-note{font-size:.82rem;text-align:center}
 #rest.reveal{animation:revealIn .7s ease both}
-@keyframes revealIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes revealIn{from{opacity:0}to{opacity:1}}
 button.btn{font-family:var(--f-display)}
 
 /* phone */
@@ -192,6 +192,23 @@ p,li,.ba-cell,.item span,.q,.chat p{overflow-wrap:break-word}
   .facts{gap:10px 18px}
   .fact b{font-size:1.35rem}
 }
+
+/* cases */
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cs{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.cs.main{grid-column:1/-1;border-color:var(--gold)}
+.cs .ba-mini{grid-template-columns:1fr}
+.cs-q{margin:0;font:700 1.05rem/1.35 var(--f-display);color:var(--gold)}
+.shots{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+.shot{flex:0 0 auto;scroll-snap-align:start;border:1px solid var(--line);border-radius:14px;padding:0;background:var(--surface);cursor:zoom-in;overflow:hidden}
+.shot img{height:300px;width:auto;max-width:none;display:block}
+.mini-q{display:grid;gap:10px;margin-top:20px}
+.mini-q p{border-left:2px solid var(--gold);padding:4px 0 4px 14px}
+.lb{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.88);display:grid;place-items:center;padding:56px 16px 24px}
+.lb[hidden]{display:none}
+.lb img{max-height:calc(100vh - 90px);max-width:100%;width:auto;height:auto;border-radius:12px;display:block}
+.lb .co-x{color:#fff}
+@media (max-width:600px){.cases{grid-template-columns:1fr}.shot img{height:260px}}
 
 /* case */
 .case{display:grid;grid-template-columns:200px 1fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;align-items:start}
@@ -322,6 +339,8 @@ img{max-width:100%}
     <blockquote class="pull">Мы можем получить от другого человека ровно столько любви, сколько способны дать себе сами.</blockquote>
     <p>Поэтому выход не в том, чтобы найти того, кто наконец полюбит тебя правильно. Выход в том, чтобы в первую очередь выбирать себя и научиться любить себя. Тогда и другие начинают относиться к тебе так же.</p>
 
+    <blockquote class="pull">Мозг отпускает только то, что закончено. Поэтому «просто забудь» не работает.</blockquote>
+
     <h3>что сделать уже сейчас</h3>
     <ol class="steps">
       <li><b>Сфокусируйся на себе.</b> Время, силы и деньги, которые уходили на партнёра, сегодня потрать на себя: спорт, встреча с друзьями, дело, которое откладывал.</li>
@@ -403,30 +422,65 @@ img{max-width:100%}
     <li><b>сегодня вечером</b><span>Аудио SOS и протокол 72 часов. Ты не пишешь ему, убираешь то, что запускает боль, и засыпаешь спокойнее.</span></li>
     <li><b>через 3 дня</b><span>Меньше проверяешь телефон. Есть план, что ответить, если он напишет. Начинаешь выходить из дома и видеться с людьми.</span></li>
     <li><b>через неделю</b><span>Утренний ритуал и задания возвращают энергию: спорт, свои дела, новые люди. Мысли о нём приходят реже.</span></li>
-    <li><b>через месяц</b><span>Ты понимаешь, что было любовью, а что зависимостью, и знаешь, как не выбрать того же человека снова.</span></li>
+    <li><b>через месяц</b><span>Ты понимаешь, что было любовью, а что зависимостью, и знаешь, как не выбрать того же человека снова. Главный признак: пять минут разговора с ним, и тебя не шатает.</span></li>
   </ol>
   </div>
   <p class="muted" style="margin-top:14px;font-size:.9rem">Результат зависит от того, выполняешь ли ты задания. Набор даёт шаги, делаешь их ты.</p>
 </section>
 
 <section id="reviews" aria-labelledby="rev-h">
-  <h2 id="rev-h">что меняется, когда меняешься ты</h2>
-  <p class="muted" style="margin-bottom:22px">Этот случай не про расставание. Но он хорошо показывает, как работает мой подход: ты меняешь своё поведение, и человек рядом начинает вести себя иначе.</p>
-  <article class="case">
-    <img class="case-photo" src="olga-ring.jpg" alt="Помолвочное кольцо в коробке" loading="lazy">
-    <div class="case-body">
+  <h2 id="rev-h">что меняется у тех, кто прошёл работу со мной</h2>
+  <p class="muted" style="margin-bottom:22px">Это отзывы о личной работе, разборах и эфирах. Набор новый, и в нём те же инструменты, которые я даю клиентам.</p>
+  <div class="cases">
+    <article class="cs main">
+      <p class="eyebrow">Лали · личная работа</p>
+      <div class="ba-mini">
+        <div><span class="ba-head">было</span><p>7–8 лет страданий: детские травмы, обиды на родителей, болезненные прошлые отношения. Не была готова даже обсуждать свои проблемы.</p></div>
+        <div><span class="ba-head">стало</span><p>Признала обиды, отпустила и простила. Встретила мужчину и смогла ему довериться.</p></div>
+      </div>
+      <blockquote class="cs-q">«После 7–8 лет страдания я снова начала дышать»</blockquote>
+    </article>
+    <article class="cs">
       <p class="eyebrow">Ольга · личная работа</p>
       <div class="ba-mini">
-        <div><span class="ba-head">было</span><p>Мужчина боялся брать за неё полную ответственность, хотя дело шло к свадьбе. На разговоры о будущем отвечал: «не беги впереди паровоза».</p></div>
-        <div><span class="ba-head">стало</span><p>Сам говорит «я вообще-то твой почти муж», берёт на себя бытовые расходы, сделал предложение. А Ольга ушла с нелюбимой работы.</p></div>
+        <div><span class="ba-head">было</span><p>Шли к свадьбе, но мужчина боялся брать ответственность: «не беги впереди паровоза».</p></div>
+        <div><span class="ba-head">стало</span><p>Вписал её в документы как невесту, взял на себя расходы, сделал предложение.</p></div>
       </div>
-      <blockquote class="chat">
-        <p>Короче, сама не знаю как, но что-то я поменяла в поведении, и он часто такие вещи говорит. Типа «я вообще-то твой почти муж».</p>
-        <p>А сейчас такой: «ну всё, полную ответственность за тебя беру».</p>
-        <p>Не знаю, как это работает, но работает 😅</p>
-      </blockquote>
-    </div>
-  </article>
+      <blockquote class="cs-q">«Как это работает — не знаю, но работает»</blockquote>
+    </article>
+    <article class="cs">
+      <p class="eyebrow">Ирина · эфир</p>
+      <div class="ba-mini">
+        <div><span class="ba-head">было</span><p>Жила по принципу «всё для детей».</p></div>
+        <div><span class="ba-head">стало</span><p>Сначала для себя, потом для них.</p></div>
+      </div>
+      <blockquote class="cs-q">«Все стали намного счастливее»</blockquote>
+    </article>
+    <article class="cs">
+      <p class="eyebrow">Дарья · разбор и эфир</p>
+      <div class="ba-mini">
+        <div><span class="ba-head">было</span><p>Зарабатывала из нужды и тянула всё на себе.</p></div>
+        <div><span class="ba-head">стало</span><p>Замедлилась, больше внимания мужу. Проекты появляются сами, старые заказчики возвращаются.</p></div>
+      </div>
+      <blockquote class="cs-q">«Ушла в семью… Муж кайфует»</blockquote>
+    </article>
+  </div>
+  <p class="eyebrow" style="margin:28px 0 12px">оригиналы сообщений · листай вбок</p>
+  <div class="shots" role="list">
+    <button class="shot" type="button" role="listitem" data-full="lali.jpg"><img src="lali.jpg" alt="Сообщение Лали" loading="lazy"></button>
+    <button class="shot" type="button" role="listitem" data-full="olya1.jpg"><img src="olya1.jpg" alt="Сообщение Ольги" loading="lazy"></button>
+    <button class="shot" type="button" role="listitem" data-full="olga-ring.jpg"><img src="olga-ring.jpg" alt="Предложение Ольге" loading="lazy"></button>
+    <button class="shot" type="button" role="listitem" data-full="olya2.jpg"><img src="olya2.jpg" alt="Сообщение Ольги" loading="lazy"></button>
+    <button class="shot" type="button" role="listitem" data-full="daria.jpg"><img src="daria.jpg" alt="Сообщение Дарьи" loading="lazy"></button>
+    <button class="shot" type="button" role="listitem" data-full="irina.jpg"><img src="irina.jpg" alt="Сообщение Ирины" loading="lazy"></button>
+    <button class="shot" type="button" role="listitem" data-full="wow.jpg"><img src="wow.jpg" alt="Отзыв после консультации" loading="lazy"></button>
+    <button class="shot" type="button" role="listitem" data-full="efir.jpg"><img src="efir.jpg" alt="Чат эфира" loading="lazy"></button>
+  </div>
+  <div class="mini-q">
+    <p>«Ты реально открыл мне глаза на простые вещи. Но они совсем не простые» <span class="muted">— после консультации</span></p>
+    <p>«Даёшь свой опыт, и мы вместе проживаем и находим, где это у нас» <span class="muted">— Валентина, эфир</span></p>
+    <p>«Через твои примеры и твой опыт нахожу ответы» <span class="muted">— Ирина, эфир</span></p>
+  </div>
 </section>
 
 <section aria-labelledby="fit-h">
@@ -445,10 +499,10 @@ img{max-width:100%}
 
 <section aria-labelledby="about-h">
   <div class="about">
-    <img class="photo about-photo" src="omar.jpg" alt="Омар, наставник по отношениям" loading="lazy">
+    <img class="photo about-photo" src="omar.jpg" alt="Омар Зейналов" loading="lazy">
     <div class="stack">
       <h2 id="about-h" style="margin:0">кто я</h2>
-      <p>Я Омар, наставник по личностному росту и отношениям. Больше 10 лет в психологии. Веду личную работу, группы, клубы, ретриты и мастер-майнды.</p>
+      <p>Я Омар Зейналов: эксперт, предприниматель, наставник. Больше 10 лет в психологии, философии и наставничестве. Помогаю выстроить отношения с собой, с противоположным полом и с деньгами. Веду личную работу, группы, клубы, ретриты и мастер-майнды.</p>
       <p>Я не верю, что из расставания нужно выходить годами. Я даю действия, которые возвращают силы за дни: задания, выход из зоны комфорта, работу с убеждениями. В этом наборе те шаги, которые я даю своим клиентам.</p>
       <div class="facts">
         <div class="fact"><b>10+ лет</b><span>в психологии</span></div>
@@ -508,6 +562,7 @@ img{max-width:100%}
 
 </div>
 
+<div class="lb" id="lb" hidden><button class="co-x" type="button" id="lbClose" aria-label="Закрыть">×</button><img id="lbImg" alt=""></div>
 <div class="co-overlay" id="checkout" hidden role="dialog" aria-modal="true" aria-labelledby="co-h">
   <div class="co-card">
     <button class="co-x" type="button" id="coClose" aria-label="Закрыть">×</button>
@@ -531,6 +586,7 @@ img{max-width:100%}
     </div>
     <div class="co-total"><span>итого к оплате</span><b>1 490 ₽</b></div>
     <a class="btn co-pay" id="coPay" href="#offer">перейти к оплате · 1&nbsp;490&nbsp;₽</a>
+    <p class="muted" style="font-size:.9rem;text-align:center">Цель набора — чтобы пять минут разговора с ним больше тебя не шатали.</p>
     <p class="co-note muted">🔒 Безопасная оплата через lava.top. Доступ к набору придёт на email сразу после оплаты. Полный возврат в течение 7 дней.</p>
   </div>
 </div>
@@ -641,6 +697,9 @@ function tick(){
   const t = (h ? [h,m,s] : [m,s]).map(n=>String(n).padStart(2,"0")).join(":");
   document.querySelectorAll("[data-timer]").forEach(el=>el.textContent = t);
 }
+document.querySelectorAll(".shot").forEach(b=>b.onclick=()=>{ $("lbImg").src=b.dataset.full; $("lbImg").alt=b.querySelector("img").alt; $("lb").hidden=false; });
+$("lbClose").onclick=()=>{ $("lb").hidden=true; };
+$("lb").addEventListener("click",e=>{ if(e.target.id==="lb") $("lb").hidden=true; });
 tick(); setPay(); setInterval(tick, 1000);
 </script>
 </body>
