@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Отпустить по-настоящему — Омар</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f0e0c'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23e8c64f' stroke-width='7'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0f0e0c">
+<meta property="og:url" content="https://omarnebo.ru/otpustit">
+<meta property="og:image" content="https://omarnebo.ru/og.jpg">
+<meta name="description" content="Тест из 7 вопросов, четыре нити, которые держат после расставания, и 4 шага, чтобы закончить отношения в голове.">
+<meta property="og:title" content="Отпустить по-настоящему. Почему блокировка не работает">
+<meta property="og:description" content="Тест из 7 вопросов, четыре нити, которые держат после расставания, и 4 шага, чтобы закончить отношения в голове.">
+<meta property="og:type" content="article">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Onest:wght@400;500;600&display=swap">
+<style>
+/* Layout: одна колонка чтения ~68ch; широкие схемы до 960px; миф зачёркнут красным, правда — бирюзой; финальный CTA — тёмный блок */
+:root{color-scheme:dark;
+  --paper:#0f0e0c; --card:#1a1814; --ink:#f3eee4; --muted:#a59e90; --rule:#302b23;
+  --accent:#e8c64f; --accent-soft:rgba(232,198,79,.12); --ok:#8fcfb0; --ok-soft:rgba(143,207,176,.12);
+  --cta-bg:#1a1814; --cta-fg:#f3eee4; --cta-muted:#a59e90;
+  --display:"Montserrat", system-ui, sans-serif; --body:"Onest", system-ui, sans-serif; --mono:"Onest", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17.5px;line-height:1.62;margin:0}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:5}
+.wrap{max-width:960px;margin:0 auto;padding-inline:20px;padding-block:28px 72px;display:flex;flex-direction:column;gap:48px}
+.col{max-width:680px;width:100%;margin-inline:auto;display:flex;flex-direction:column;gap:18px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.top a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:400}
+h1{font-family:var(--display);font-size:clamp(2.3rem,7vw,4.1rem);line-height:1.04;letter-spacing:-.005em}
+h2{font-family:var(--display);font-size:clamp(1.55rem,4vw,2.1rem);line-height:1.15}
+h3{font-family:var(--body);font-weight:600;font-size:1.08rem;line-height:1.35}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.lead{font-size:1.18rem;line-height:1.55;color:var(--ink)}
+.muted{color:var(--muted)}
+.hero{display:flex;flex-direction:column;gap:20px;max-width:820px}
+.hero .struck{font-family:var(--display);font-size:clamp(1.3rem,3.6vw,1.8rem);color:var(--muted)}
+s,.strike{text-decoration:line-through;text-decoration-color:var(--accent);text-decoration-thickness:2px}
+.toc{display:flex;flex-wrap:wrap;gap:8px}
+.toc a{font-size:.88rem;color:var(--ink);text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:5px 12px;background:var(--card)}
+.toc a:hover{border-color:var(--accent)}
+.byline{display:flex;gap:14px;align-items:center;font-size:.92rem;color:var(--muted);flex-wrap:wrap}
+.byline b{color:var(--ink);font-weight:600}
+section{display:flex;flex-direction:column;gap:18px;scroll-margin-top:24px}
+.col ul,.col ol{margin:0;padding-left:1.25em;display:flex;flex-direction:column;gap:6px}
+mark{background:var(--accent-soft);color:inherit;padding:0 .15em;border-radius:2px}
+blockquote.pull{margin:8px 0;font-family:var(--display);font-size:clamp(1.35rem,3.4vw,1.75rem);line-height:1.3;border-left:3px solid var(--accent);padding:4px 0 4px 20px}
+blockquote.pull cite{display:block;margin-top:10px;font-family:var(--mono);font-style:normal;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* миф и правда */
+.myth{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:14px;align-items:center;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:18px 20px}
+.myth .no{font-family:var(--display);font-size:1.25rem;color:var(--muted)}
+.myth .yes{font-family:var(--display);font-size:1.25rem;color:var(--ok)}
+.myth .arr{font-family:var(--mono);color:var(--muted)}
+.myth small{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-bottom:4px}
+/* сравнение */
+.vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.vs>div{border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.vs .bad{background:var(--accent-soft)}
+.vs .good{background:var(--ok-soft)}
+.vs .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.vs .bad .tag{color:var(--accent)} .vs .good .tag{color:var(--ok)}
+.vs ul{margin:0;padding-left:1.1em;font-size:.95rem;display:flex;flex-direction:column;gap:4px}
+/* фигуры */
+figure{margin:0;display:flex;flex-direction:column;gap:12px}
+figcaption{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.fig{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:22px}
+.wide{max-width:960px;width:100%;margin-inline:auto}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px}
+.flow .st{flex:1 1 130px;min-width:0;border:1px solid var(--rule);border-radius:10px;padding:12px 14px;background:var(--paper);display:flex;flex-direction:column;gap:4px}
+.flow .st b{font-weight:600}
+.flow .st span{font-size:.86rem;color:var(--muted);line-height:1.4}
+.flow .st.hot{border-color:var(--accent);background:var(--accent-soft)}
+.flow .st.ok{border-color:var(--ok);background:var(--ok-soft)}
+.flow.tight .st{flex:1 1 88px;font-size:.88rem;padding:10px 10px;hyphens:auto}
+.flow .ar{align-self:center;font-family:var(--mono);color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.cell{border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--paper);display:flex;flex-direction:column;gap:4px;min-width:0}
+.cell .k{font-family:var(--display);font-size:1.3rem;line-height:1.1}
+.cell .d{font-size:.9rem;color:var(--muted);line-height:1.4}
+.cell.hl{border-color:var(--ok);background:var(--ok-soft)}
+.cell.warn{border-color:var(--accent);background:var(--accent-soft)}
+.ladder{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:end}
+.rung{border-radius:10px;padding:16px;border:1px solid var(--rule);background:var(--paper);display:flex;flex-direction:column;gap:6px;min-width:0}
+.rung .lv{font-family:var(--display);font-size:2rem;line-height:1}
+.rung .q{font-size:.9rem;color:var(--muted);font-style:italic}
+.rung.r1{min-height:150px;border-color:var(--accent);background:var(--accent-soft)}
+.rung.r2{min-height:190px}
+.rung.r3{min-height:230px;border-color:var(--ok);background:var(--ok-soft)}
+.scale{position:relative;height:14px;border-radius:999px;background:linear-gradient(90deg,var(--accent-soft),var(--ok-soft));border:1px solid var(--rule)}
+.scale i{position:absolute;top:-6px;width:2px;height:26px;background:var(--ink)}
+.scale-l{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+/* история */
+.case{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.case .note{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* тест */
+.test{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.test label{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;cursor:pointer;font-size:.98rem;line-height:1.45}
+.test input{width:18px;height:18px;margin-top:3px;accent-color:var(--accent)}
+.result{border-top:1px solid var(--rule);padding-top:14px;display:flex;flex-direction:column;gap:6px}
+.result .n{font-family:var(--display);font-size:1.5rem}
+.result .t{color:var(--muted)}
+/* CTA */
+.soft{display:flex;gap:14px;align-items:center;flex-wrap:wrap;border:1px dashed var(--accent);border-radius:12px;padding:16px 18px;font-size:.98rem}
+.soft p{flex:1 1 260px;min-width:0}
+.cta{background:var(--cta-bg);color:var(--cta-fg);border-radius:16px;padding:clamp(24px,5vw,44px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;align-items:center}
+.cta h2{color:var(--cta-fg)}
+.cta p{color:var(--cta-muted)}
+.cta ul{margin:0;padding-left:1.1em;color:var(--cta-fg);display:flex;flex-direction:column;gap:6px;font-size:.98rem}
+.word{display:flex;flex-direction:column;gap:12px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:20px}
+.word .w{font-family:var(--display);font-size:clamp(2.4rem,7vw,3.4rem);line-height:1;color:var(--cta-fg)}
+.word .h{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cta-muted)}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{font:600 .95rem var(--body);border-radius:999px;padding:11px 18px;border:0;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:var(--accent);color:#1a1500}
+.btn.ghost{background:transparent;color:var(--cta-fg);border:1px solid rgba(255,255,255,.3)}
+.btn.line{background:transparent;color:var(--ink);border:1px solid var(--accent)}
+.btn:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.more a{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:16px}
+.more a:hover{border-color:var(--accent)}
+.more a span{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.more a b{font-family:var(--display);font-weight:400;font-size:1.15rem;line-height:1.2}
+footer{font-size:.86rem;color:var(--muted);border-top:1px solid var(--rule);padding-top:18px;display:flex;flex-direction:column;gap:6px}
+footer a{color:inherit}
+@media (max-width:720px){
+  body{font-size:16.5px}
+  .vs,.cta{grid-template-columns:1fr}
+  .ladder{grid-template-columns:1fr}.rung{min-height:0!important}
+  .myth{grid-template-columns:1fr}.myth .arr{transform:rotate(90deg);justify-self:start}
+  .flow .ar{display:none}
+}
+/* автор */
+.author{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:28px;align-items:center;background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:clamp(18px,3vw,28px)}
+.author img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:12px;display:block;max-width:100%;background:#111}
+.author .info{display:flex;flex-direction:column;gap:14px;min-width:0}
+.author .role{font-size:1.05rem;color:var(--muted)}
+.stats3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.stat{border-top:2px solid var(--accent);padding-top:10px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.stat b{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,3.5vw,2rem);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:.88rem;color:var(--muted);line-height:1.35}
+.ava{width:40px;height:40px;max-width:40px;border-radius:50%;object-fit:cover;flex:none}
+.byline{gap:12px}
+/* отзывы */
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cs{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.cs.feat{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+.cs.feat img{width:100%;height:auto;border-radius:10px;display:block}
+.cs .who{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline}
+.cs .who b{font-family:var(--display);font-weight:400;font-size:1.3rem}
+.cs .who span{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.ba{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 10px;font-size:.95rem}
+.ba dt{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.ba dd{margin:0}
+.ba dd.after{color:var(--ok);font-weight:500}
+.cs q{font-family:var(--display);font-size:1.12rem;line-height:1.35;quotes:"«" "»"}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.qt{border-left:2px solid var(--accent);padding:4px 0 4px 14px;display:flex;flex-direction:column;gap:6px}
+.qt p{font-size:.98rem;line-height:1.45}
+.qt span{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.shots{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+.shots img{height:380px;width:auto;max-width:none;border-radius:12px;border:1px solid var(--rule);scroll-snap-align:start;flex:none;background:#000}
+.cta .me{display:flex;gap:12px;align-items:center}
+.cta .me img{width:56px;height:56px;max-width:56px;border-radius:50%;object-fit:cover}
+.cta .me span{font-size:.92rem;color:var(--cta-muted);line-height:1.35}
+.cta .me b{color:var(--cta-fg);display:block;font-weight:600}
+@media (max-width:720px){
+  .author{grid-template-columns:1fr}.author img{max-width:320px}
+  .stats3{grid-template-columns:1fr}
+  .cases,.cs.feat{grid-template-columns:1fr}
+  .shots img{height:300px}
+}
+.sticky-cta{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:6;background:var(--accent);color:#1a1500;font:700 .95rem var(--body);text-decoration:none;padding:12px 22px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.22);white-space:nowrap}
+body{padding-bottom:64px}
+.cs.wide{grid-column:1/-1}
+h1,h2{font-weight:800!important;letter-spacing:-.015em}h1{font-size:clamp(1.85rem,6vw,3.3rem)!important;line-height:1.08!important}h3{font-weight:700!important}
+.hc b{font-weight:800!important;font-size:1.2rem!important}
+.progress{top:auto;bottom:0}
+[id]{scroll-margin-top:72px}
+.cta{border:1px solid var(--rule)}
+.more a.nabor-card{border:1.5px dashed var(--accent);background:var(--accent-soft)}
+.hc.nabor{border:1.5px dashed var(--accent);background:var(--accent-soft)}
+
+.sn{position:sticky;top:0;z-index:20;background:rgba(15,14,12,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #302b23}
+.sn-in{max-width:960px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.sn-logo{font:800 1.02rem/1 Montserrat,sans-serif;color:#f3eee4;text-decoration:none;text-transform:lowercase;letter-spacing:-.01em;white-space:nowrap}
+.sn-logo i{font-style:normal;color:#e8c64f}
+.sn nav{display:flex;gap:4px;align-items:center}
+.sn nav a{font:600 .88rem/1 Onest,sans-serif;color:#a59e90;text-decoration:none;padding:9px 10px;border-radius:999px;white-space:nowrap}
+.sn nav a:hover,.sn nav a[aria-current]{color:#f3eee4}
+.sn nav a.hl{color:#1a1500;background:#e8c64f}
+@media(max-width:420px){.sn-in{padding:10px 14px}.sn nav a{padding:8px 8px;font-size:.84rem}.sn-logo{font-size:.95rem}}
+.sf{border-top:1px solid #302b23;margin-top:40px}
+.sf-in{max-width:960px;margin:0 auto;padding:28px 20px 40px;display:grid;gap:10px;font:400 .9rem/1.55 Onest,sans-serif;color:#a59e90}
+.sf-links{display:flex;flex-wrap:wrap;gap:6px 18px}
+.sf a{color:#f3eee4}
+</style>
+</head>
+<body>
+
+
+<header class="sn"><div class="sn-in"><a class="sn-logo" href="/stati">омар <i>небо</i></a><nav aria-label="Разделы сайта"><a href="/stati" aria-current=page>статьи</a><a href="/">набор</a><a href="/razbor" class=hl>разбор</a></nav></div></header>
+<div class="progress" aria-hidden="true"></div>
+<a class="sticky-cta" href="#cta">Бесплатный разбор</a>
+<div class="wrap">
+  
+
+  <header class="hero">
+    <span class="eyebrow">Расставание · 6 минут чтения</span>
+    <p class="struck"><s>Заблокирую его везде, и станет легче</s></p>
+    <h1>Отпустить по-настоящему. Почему блокировка не работает и как закончить отношения в голове</h1>
+    <p class="lead">Ты его заблокировала. Удалила фото, переписку, может быть, даже номер. А думаешь о нём всё равно каждый день. С тобой всё в порядке: ты заблокировала его в телефоне, а отношения живут в голове. Там кнопки «заблокировать» нет.</p>
+    <div class="byline"><img class="ava" src="/face.jpg" alt="" width="40" height="40"><b>Омар Зейналов</b><span>эксперт, предприниматель, наставник · 10 000+ часов консультаций</span></div>
+    <nav class="toc" aria-label="Содержание">
+      <a href="#test">Тест</a><a href="#s1">Почему блок не работает</a><a href="#s2">Что держит</a><a href="#s3">Был ли он заинтересован</a><a href="#s4">4 шага</a><a href="#s5">Как понять, что отпустила</a>
+    </nav>
+  </header>
+  <section class="author" aria-labelledby="au-h">
+    <img src="/portrait.jpg" alt="Омар Зейналов" width="640" height="960">
+    <div class="info">
+      <span class="eyebrow">Автор статьи</span>
+      <h2 id="au-h">Омар Зейналов</h2>
+      <p class="role">Эксперт, предприниматель, наставник. Помогаю выстроить отношения с собой, с противоположным полом и с деньгами.</p>
+      <div class="stats3">
+        <div class="stat"><b>10+ лет</b><span>в психологии, философии и наставничестве</span></div>
+        <div class="stat"><b>10 000+</b><span>часов консультаций</span></div>
+        <div class="stat"><b>3 сферы</b><span>отношения с собой, с мужчиной, с деньгами</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="col">
+    <section id="test">
+      <h2>Проверь себя: держит ли тебя бывший</h2>
+      <p class="muted">Отметь то, что про тебя. Честно, займёт минуту.</p>
+      <div class="test" data-results='[[0,1,"Скорее всего, ты уже отпустила. Статья поможет закрепить."],[2,4,"Отношения формально закончились, но в голове ещё нет. Шаги ниже как раз для тебя."],[5,7,"Ты всё ещё в этих отношениях. Только теперь одна. Самой выйти отсюда обычно сложно: напиши «РАЗБОР», посмотрим вместе."]]'>
+        <label><input type="checkbox" id="t6-1"><span>Я знаю, сколько дней прошло с нашего последнего разговора</span></label>
+        <label><input type="checkbox" id="t6-2"><span>Я проверяю его страницу или страницу его новой девушки, хотя бы иногда</span></label>
+        <label><input type="checkbox" id="t6-3"><span>Я мысленно спорю с ним: в душе, в машине, перед сном</span></label>
+        <label><input type="checkbox" id="t6-4"><span>Есть слова, которые я ему так и не сказала</span></label>
+        <label><input type="checkbox" id="t6-5"><span>Я сравниваю с ним новых мужчин</span></label>
+        <label><input type="checkbox" id="t6-6"><span>Когда он пишет или появляется, меня «шатает» весь день</span></label>
+        <label><input type="checkbox" id="t6-7"><span>Я злюсь на него или жду, что он поймёт, кого потерял</span></label>
+        <div class="result" aria-live="polite"><span class="n">0 из 7</span><span class="t"></span></div>
+      </div>
+    </section>
+
+    <section id="s1">
+      <h2>Почему блокировка не помогает</h2>
+      <p>Блокировка — это попытка закончить отношения снаружи. Убрать человека из ленты, чтобы убрать его из головы.</p>
+      <p>Но мозг так не работает. Он не умеет забывать по команде. Чем сильнее ты стараешься не думать, тем чаще думаешь. Мозг отпускает только то, что закончено. А закончено для него то, что сказано, понято и прощено.</p>
+      <div class="myth"><div class="no"><small>Миф</small><s>Заблокировала — значит, отпустила</s></div><span class="arr">→</span><div class="yes"><small>Правда</small>Отпустила — когда не шатает</div></div>
+    </section>
+  </div>
+
+  <figure class="wide">
+    <div class="vs">
+      <div class="bad"><span class="tag">Закончить снаружи</span><h3>Блок в телефоне</h3><ul><li>удалила номер, фото, переписку</li><li>всё равно каждый вечер вспоминаешь</li><li>считаешь дни без него</li><li>полгода живёшь с ним в голове</li></ul></div>
+      <div class="good"><span class="tag">Закончить внутри</span><h3>Точка в голове</h3><ul><li>сказала всё, что не сказала</li><li>простила и забрала свои силы</li><li>видишь его сторис и ничего не чувствуешь</li><li>можешь спокойно ответить на сообщение</li></ul></div>
+    </div>
+    <figcaption>Второе и есть расставание. Блокировать его тогда становится не нужно</figcaption>
+  </figure>
+
+  <div class="col">
+    <section id="s2">
+      <h2>Что на самом деле держит</h2>
+      <p>В работе с клиентками я снова и снова вижу четыре вещи, которые держат женщину крепче любви.</p>
+    </section>
+  </div>
+
+  <figure class="wide">
+    <div class="fig">
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(210px,1fr))">
+        <div class="cell warn"><span class="k">Несказанные слова</span><span class="d">Не сказала, как было больно. Не задала вопрос. Не поставила точку. Пока слова внутри, разговор с ним продолжается в голове.</span></div>
+        <div class="cell warn"><span class="k">Обида</span><span class="d">Держит крепче любви. Каждый день, пока злишься, ты отдаёшь ему силы и внимание. Злость — это тоже связь.</span></div>
+        <div class="cell warn"><span class="k">Надежда</span><span class="d">«А вдруг поймёт. А вдруг вернётся». Ты не живёшь дальше, ты ждёшь. Ожидание — это не расставание.</span></div>
+        <div class="cell warn"><span class="k">Образ вместо человека</span><span class="d">Держишься не за него, а за то, каким он должен был быть. Или за список условий, под который он подходил.</span></div>
+      </div>
+    </div>
+    <figcaption>Четыре нити, которые держат после расставания</figcaption>
+  </figure>
+
+  <div class="col">
+    <section>
+      <h2>У любви условий нет</h2>
+      <p>Однажды я спросил девушку: «Кто-нибудь твоим условиям соответствовал?» Она ответила: «Да. Бывший муж». — «Почему он бывший?» И тут тишина.</p>
+      <p>Условия выполнены, а любви нет. Мужчина может соответствовать всем пунктам и не любить. Поэтому спроси себя честно: ты держишься за него или за свой список?</p>
+      <blockquote class="pull">Мозг отпускает только то, что закончено. А закончено то, что сказано, понято и прощено.<cite>Омар</cite></blockquote>
+    </section>
+
+    <section id="s3">
+      <h2>А был ли он заинтересован на самом деле</h2>
+      <p>Часто женщина держится за отношения, в которых мужчина не был по-настоящему вовлечён. И это легко проверить.</p>
+      <p>Мы всегда ценим то, в чём ограничены. Если мужчина много зарабатывает, подарок ему почти ничего не стоит. Его ограниченный ресурс — время. Если он находил для тебя вечер, сам предлагал встречу, тратил на тебя своё время, значит, ты была ему важна.</p>
+    </section>
+  </div>
+
+  <figure class="wide">
+    <div class="fig" style="display:flex;flex-direction:column;gap:14px">
+      <div class="flow">
+        <div class="st"><b>Подарки</b><span>ему ничего не стоят, если он много зарабатывает</span></div><span class="ar">≠</span>
+        <div class="st ok"><b>Вечер с тобой</b><span>стоит дорого: время у него ограничено</span></div>
+      </div>
+      <p class="muted" style="font-size:.95rem">Подарки были, а вечеров не было? Честно ответь себе, за что именно ты держишься.</p>
+    </div>
+    <figcaption>Критерий интереса: на кого он тратит свой вечер, тот ему и важен</figcaption>
+  </figure>
+
+  <div class="col">
+    <section id="s4">
+      <h2>Четыре шага, чтобы закончить отношения в голове</h2>
+      <p>Как бы парадоксально это ни звучало, чтобы расстаться, нужно на время вернуться в эти отношения. Мысленно, а не физически.</p>
+    </section>
+  </div>
+
+  <figure class="wide">
+    <div class="fig">
+      <div class="flow">
+        <div class="st"><b>1. Высказать</b><span>письмо, которое не отправишь</span></div><span class="ar">→</span>
+        <div class="st"><b>2. Расставить точки</b><span>три вопроса письменно</span></div><span class="ar">→</span>
+        <div class="st"><b>3. Простить</b><span>забрать себе свою жизнь</span></div><span class="ar">→</span>
+        <div class="st ok"><b>4. Поблагодарить</b><span>за то, что узнала о себе</span></div>
+      </div>
+    </div>
+    <figcaption>Порядок важен: благодарность без высказанной обиды не держится</figcaption>
+  </figure>
+
+  <div class="col">
+    <section style="gap:22px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h3>Шаг 1. Высказать</h3>
+        <p>Напиши ему письмо, которое не будешь отправлять. Всё, что не сказала: обиды, вопросы, благодарность, злость. Без цензуры и красивых формулировок. Пиши, пока не почувствуешь, что сказать больше нечего. Иногда на это уходит несколько вечеров.</p>
+        <div class="case">
+          <span class="note">Можно начать прямо здесь · текст никуда не отправляется и не сохраняется</span>
+          <label for="letter" class="muted" style="font-size:.95rem">Начни с фразы «Я так и не сказала тебе, что…»</label>
+          <textarea id="letter" rows="6" style="width:100%;font:inherit;font-size:1rem;line-height:1.5;padding:12px;border:1px solid var(--rule);border-radius:10px;background:var(--paper);color:var(--ink);resize:vertical" placeholder="Я так и не сказала тебе, что…"></textarea>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h3>Шаг 2. Расставить точки</h3>
+        <p>Ответь себе письменно на три вопроса. Это превращает боль в понимание.</p>
+        <ol><li>Что я получила в этих отношениях?</li><li>Что я не готова больше терпеть?</li><li>Чего я на самом деле хочу от мужчины?</li></ol>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h3>Шаг 3. Простить</h3>
+        <p>Простить — не значит оправдать его. И не значит вернуться. Простить — значит забрать себе то, что ты каждый день ему отдаёшь. Скажи вслух или напиши:</p>
+        <blockquote class="pull" style="margin:0">«Я тебя прощаю. И я забираю себе свою жизнь».</blockquote>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h3>Шаг 4. Поблагодарить</h3>
+        <p>Не за боль. За то, что ты узнала о себе рядом с ним: чего не хочешь, чего стоишь, какой больше не будешь. Когда благодарность сказана, ему больше нечего у тебя забирать.</p>
+      </div>
+    </section>
+
+    <section id="s5">
+      <h2>Как понять, что получилось</h2>
+      <p>Признак простой. Он пишет, а ты отвечаешь спокойно. Пять минут разговора с ним, и тебя не шатает. Ни злости, ни надежды, ни бессонной ночи после. Ты не знаешь, сколько дней прошло, и тебе неинтересно.</p>
+      <p>Если так, поздравляю: вы успешно расстались. Общение может даже остаться, но уже в другом формате.</p>
+      <div class="myth"><div class="no"><small>Ещё держит</small><s>Шатает от одного его сообщения</s></div><span class="arr">→</span><div class="yes"><small>Отпустила</small>5 минут разговора, и спокойно</div></div>
+    </section>
+
+    <section>
+      <h2>Пройти это по шагам</h2>
+      <p>Если хочется не просто прочитать, а пройти эти шаги с поддержкой, я собрал набор «Отпустить и не повторить»: аудио моим голосом на вечер, когда тянет написать, протокол первых 72 часов, письмо, которое не отправишь, и задания на 7 дней.</p>
+      <div class="soft"><p>Начни с теста на 2 минуты: он покажет, с чего начать именно тебе.</p><a class="btn primary" href="/?utm_source=article&amp;utm_medium=otpustit">Пройти тест и открыть набор</a></div>
+    </section>
+
+    <section>
+      <h2>Если не получается самой</h2>
+      <p>Эти шаги работают. Но бывает, что на каком-то из них ты застреваешь. Письмо не пишется. Простить не выходит. Или ты всё сделала, а через неделю снова проверяешь его страницу.</p>
+      <p>Обычно это значит, что держит не только он. Часто под этим лежит старая история: страх одиночества, привычка доказывать свою ценность, отношения с отцом. Изнутри это сложно увидеть.</p>
+      <div class="soft"><p>Поэтому я провожу бесплатный разбор на 30–40 минут. Найдём, что именно тебя держит, на каком шаге ты застреваешь и как не повторить этот сценарий с новым мужчиной.</p><a class="btn line" href="#cta">Записаться на разбор</a></div>
+    </section>
+  </div>
+
+  <section aria-labelledby="rv-h" style="gap:18px">
+    <span class="eyebrow">Кейсы и отзывы</span>
+    <h2 id="rv-h">Что меняется у тех, кто прошёл работу</h2>
+    <div class="cases"><article class="cs wide"><div class="who"><b>Лали</b><span>травмы · доверие</span></div>
+   <dl class="ba"><dt>Было</dt><dd>7–8 лет страданий: детские травмы, обиды на родителей, болезненные прошлые отношения. Не была готова обсуждать свои проблемы.</dd><dt>Стало</dt><dd class="after">Признала обиды, отпустила и простила. Встретила мужчину и смогла ему довериться.</dd></dl>
+   <q>После 7–8 лет страдания я снова начала дышать.</q></article><article class="cs"><div class="who"><b>Ирина</b><span>самоценность · дети</span></div>
+   <dl class="ba"><dt>Было</dt><dd>Жила по принципу «всё для детей».</dd><dt>Стало</dt><dd class="after">Сначала для себя, потом для них.</dd></dl>
+   <q>Все стали намного счастливее.</q></article><article class="cs"><div class="who"><b>Дарья</b><span>деньги · семья</span></div>
+   <dl class="ba"><dt>Было</dt><dd>Зарабатывала из нужды и тянула всё на себе.</dd><dt>Стало</dt><dd class="after">Замедлилась, больше внимания мужу. Проекты появляются сами, старые заказчики возвращаются.</dd></dl>
+   <q>Ушла в семью, больше внимания стала уделять мужу. Муж кайфует.</q></article><article class="cs"><div style="display:flex;flex-direction:column;gap:10px;min-width:0"><div class="who"><b>Ольга</b><span>отношения · ответственность</span></div>
+   <dl class="ba"><dt>Было</dt><dd>Шли к свадьбе, но мужчина боялся брать за неё полную ответственность: «не беги впереди паровоза».</dd><dt>Стало</dt><dd class="after">Вписал её в документы как невесту, взял на себя бытовые расходы и сам говорит: «Я вообще-то твой почти муж».</dd></dl>
+   <q>Не знаю, как это сработало, но что-то я поменяла в поведении. Как это работает — не знаю, но работает.</q></div>
+   </article></div>
+    <div class="quotes">
+      <div class="qt"><p>Через твои примеры и твой опыт нахожу ответы.</p><span>Ирина, участница эфира</span></div>
+      <div class="qt"><p>Даёшь свой опыт, и мы вместе проживаем и находим, где это у нас.</p><span>Валентина, участница эфира</span></div>
+      <div class="qt"><p>Ты реально открыл мне глаза на простые вещи. Но они совсем не простые.</p><span>после консультации</span></div>
+      <div class="qt"><p>Круто. Пожалел, что решил свой запрос не выносить.</p><span>Макар, участник эфира</span></div>
+    </div>
+    <figure><div class="shots" tabindex="0" aria-label="Скриншоты сообщений"><img src="/olya1.jpg" alt="Отзыв Ольги в директ, часть 1" loading="lazy"><img src="/olya2.jpg" alt="Отзыв Ольги, часть 2" loading="lazy"><img src="/ring.jpg" alt="Предложение" loading="lazy"><img src="/lali.jpg" alt="Отзыв Лали" loading="lazy"><img src="/daria.jpg" alt="Сообщение Дарьи после эфира" loading="lazy"><img src="/irina.jpg" alt="Сообщение Ирины" loading="lazy"><img src="/efir.jpg" alt="Чат эфира" loading="lazy"><img src="/wow.jpg" alt="Отзыв после консультации" loading="lazy"></div><figcaption>Оригиналы сообщений · листайте вбок</figcaption></figure>
+  </section>
+  <section class="cta" id="cta" aria-labelledby="cta-h">
+    <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+      <div class="me"><img src="/face.jpg" alt="" width="56" height="56"><span><b>Омар Зейналов</b>проведу разбор лично</span></div>
+      <span class="eyebrow" style="color:var(--cta-muted)">Бесплатная онлайн-сессия</span>
+      <h2 id="cta-h">Разберём твою ситуацию лично</h2>
+      <p>Статья даёт карту. Разбор показывает, где на этой карте стоишь именно ты. За одну онлайн-встречу мы:</p>
+      <ul>
+        <li>найдём сценарий, который повторяется в твоих отношениях;</li>
+        <li>увидим точку, где он ломается;</li>
+        <li>решим, какой первый шаг сделать уже на этой неделе.</li>
+      </ul>
+      <p style="font-size:.9rem">Это не терапия и не обещание чуда. Это честный взгляд со стороны.</p>
+    </div>
+    <div class="word">
+      <span class="h">Напиши одно слово мне в директ Instagram</span>
+      <span class="w">разбор</span>
+      <span class="h">@omar_nebo</span>
+      <div class="btns" style="flex-direction:column;align-items:stretch;width:100%">
+        <a class="btn primary" style="justify-content:center" href="https://ig.me/m/omar_nebo" target="_blank" rel="noopener">Написать в Instagram</a>
+        <button class="btn ghost" style="justify-content:center" type="button" data-copy="разбор">Скопировать слово</button>
+      </div>
+    </div>
+  </section>
+  <p class="muted" style="font-size:.9rem;max-width:680px;margin-inline:auto">Если после расставания ты неделями не можешь спать, есть, работать или появляются мысли причинить себе вред, пожалуйста, обратись к врачу-психотерапевту очно. Это важнее любой статьи.</p>
+  <section aria-labelledby="more-h" style="gap:14px"><h2 id="more-h">Читать дальше</h2><div class="more"><a href="/?utm_source=article&amp;utm_medium=otpustit" class="nabor-card"><span>Набор · 1 490 ₽</span><b>Отпустить и не повторить: тест, аудио и задания после расставания</b></a><a href="/zasluzhit"><span>Самоценность</span><b>Почему ты бегаешь за теми, кто тебя не ценит</b></a><a href="/babochki"><span>Любовь</span><b>Бабочки в животе — это не любовь</b></a><a href="/formula"><span>Отношения</span><b>Почему он пропадает после близости</b></a><a href="/proekt"><span>Выбор партнёра</span><b>Мужчина-проект всегда становится бывшим</b></a><a href="/celaya"><span>Зависимость</span><b>Здоровые отношения начинаются там, где они не нужны</b></a></div></section>
+
+</div>
+<footer class="sf"><div class="sf-in">
+<div class="sf-links"><a href="/stati">Статьи</a><a href="/">Набор «Отпустить и не повторить»</a><a href="/razbor">Бесплатный разбор</a><a href="https://instagram.com/omar_nebo" target="_blank" rel="noopener">Instagram @omar_nebo</a></div>
+<span>Омар Зейналов — эксперт, предприниматель, наставник. 10+ лет работы с людьми, 10 000+ часов консультаций.</span>
+<span>Материалы носят образовательный характер и не заменяют психотерапию или медицинскую помощь.</span>
+</div></footer>
+<script>
+(function(){
+  var st=document.querySelector('.sticky-cta'),ct=document.getElementById('cta');
+  if(st&&ct&&'IntersectionObserver' in window){new IntersectionObserver(function(e){st.hidden=e[0].isIntersecting},{threshold:0.05}).observe(ct)}
+  var bar=document.querySelector('.progress');
+  function onScroll(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max*100):0)+'%'}
+  if(bar){window.addEventListener('scroll',onScroll,{passive:true});onScroll()}
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy'),old=b.textContent;
+      function done(){b.textContent='Скопировано';setTimeout(function(){b.textContent=old},1600)}
+      try{navigator.clipboard.writeText(t).then(done,function(){sel(b)})}catch(e){sel(b)}
+    });
+  });
+  function sel(b){var w=b.closest('.word');var el=w&&w.querySelector('.w');if(!el)return;var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Выделено — скопируйте'}
+  document.querySelectorAll('.test').forEach(function(box){
+    var res=JSON.parse(box.getAttribute('data-results'));
+    var n=box.querySelector('.n'),t=box.querySelector('.t'),inputs=box.querySelectorAll('input');
+    function upd(){var c=0;inputs.forEach(function(i){if(i.checked)c++});
+      n.textContent=c+' из '+inputs.length;
+      for(var k=0;k<res.length;k++){if(c>=res[k][0]&&c<=res[k][1]){t.textContent=res[k][2];break}}}
+    inputs.forEach(function(i){i.addEventListener('change',upd)});upd();
+  });
+})();
+</script>
+
+</body>
+</html>
