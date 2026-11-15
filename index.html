@@ -3,710 +3,245 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Отпустить и не повторить — Омар</title>
-<meta name="description" content="Набор после расставания от Омара: тест, аудио, гайды и задания, чтобы стало легче уже сегодня вечером и следующие отношения были другими.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://omarnebo.ru/">
-<meta property="og:title" content="Отпустить и не повторить">
-<meta property="og:description" content="Набор после расставания от Омара: тест, аудио, гайды и задания, чтобы стало легче уже сегодня вечером и следующие отношения были другими.">
-<meta property="og:image" content="https://omarnebo.ru/og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f0e0c'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23e8c64f' stroke-width='7'/%3E%3C/svg%3E">
+<title>Карта желаний — Омар</title>
+<meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0f0e0c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f0e0c'/%3E%3Cpath d='M32 14l5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z' fill='%23e8c64f'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Onest:wght@400;500;600&family=Caveat:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Onest:wght@400;500;600&display=swap">
 <style>
-/* Layout: one narrow reading column, night-to-morning; brand from Omar's reels: black + gold, lowercase Montserrat, Caveat accents */
-:root{
-  --bg:#0f0e0c; --surface:#1a1814; --surface-2:#221f1a; --fg:#f3eee4; --muted:#a59e90; --line:#302b23;
-  --gold:#e8c64f; --gold-ink:#1a1500; --gold-soft:rgba(232,198,79,.12);
-  --f-display:"Montserrat",system-ui,sans-serif; --f-body:"Onest",system-ui,sans-serif; --f-hand:"Caveat","Comic Sans MS",cursive;
-  color-scheme:dark;
-}
-
+:root{--bg:#0f0e0c;--s:#1a1814;--s2:#221f1a;--fg:#f3eee4;--mu:#a59e90;--ln:#302b23;--gold:#e8c64f;--gs:rgba(232,198,79,.12);--ok:#5cc28f;--gift:#ef8d5a;
+--disp:"Montserrat",system-ui,sans-serif;--body:"Onest",system-ui,sans-serif}
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font:400 17px/1.6 var(--f-body);margin:0;-webkit-font-smoothing:antialiased}
-.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-section{padding-block:56px;border-top:1px solid var(--line)}
-section:first-of-type{border-top:0}
-h1,h2,h3{font-family:var(--f-display);font-weight:800;text-transform:lowercase;letter-spacing:-.01em;line-height:1.1;text-wrap:balance;margin:0}
-h1{font-size:clamp(2.3rem,8vw,3.6rem)}
-h2{font-size:clamp(1.6rem,5vw,2.2rem);margin-bottom:20px}
-h3{font-size:1.15rem;line-height:1.25}
-p{margin:0}
-.hand{font-family:var(--f-hand);color:var(--gold);text-transform:none;font-weight:700;letter-spacing:0}
-.eyebrow{font:600 .78rem/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.lead{font-size:1.15rem;color:var(--fg);max-width:34em}
-.muted{color:var(--muted)}
-.stack{display:flex;flex-direction:column;gap:16px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 1rem/1 var(--f-display);text-transform:lowercase;
-  background:var(--gold);color:var(--gold-ink);border:0;border-radius:999px;padding:18px 28px;cursor:pointer;text-decoration:none;transition:transform .15s}
-.btn:hover{transform:translateY(-1px)}
-.btn:focus-visible,.opt:focus-visible,.link:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
-.btn.ghost{background:transparent;color:var(--fg);border:1.5px solid var(--line)}
-.link{color:var(--gold);background:none;border:0;font:inherit;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
-
-/* hero */
-.hero{padding-block:48px 56px}
-.hero .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px}
-.handle{font:700 .9rem/1 var(--f-display);text-transform:lowercase;color:var(--muted)}
-.hero h1 .hand{display:block;font-size:.62em;margin-top:6px}
-.hero .lead{margin-top:22px}
-.hero .cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-.hero .note{font-size:.9rem}
-
-/* quotes from comments */
-.quotes{display:grid;gap:12px;grid-template-columns:1fr 1fr}
-.quote{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:.98rem;min-width:0}
-.quote::before{content:"“";font:800 1.6rem/0 var(--f-display);color:var(--gold);display:block;height:14px}
-.quote.wide{grid-column:1/-1}
-@media (max-width:560px){.quotes{grid-template-columns:1fr}}
-
-/* quiz */
-.quiz{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px}
-.progress{height:4px;background:var(--surface-2);border-radius:4px;overflow:hidden;margin:14px 0 22px}
-.progress i{display:block;height:100%;width:12.5%;background:var(--gold);transition:width .3s}
-.qhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-.qtext{font:700 1.3rem/1.3 var(--f-display);margin-bottom:18px;text-wrap:balance}
-.opts{display:grid;gap:10px}
-.opt{text-align:left;font:500 1rem/1.4 var(--f-body);color:var(--fg);background:var(--surface-2);border:1.5px solid transparent;border-radius:14px;padding:15px 18px;cursor:pointer;transition:border-color .15s,background .15s}
-.opt:hover{border-color:var(--gold)}
-.opt.sel{border-color:var(--gold);background:var(--gold-soft)}
-.qnav{display:flex;justify-content:space-between;margin-top:18px;min-height:24px}
-.result .score{display:flex;align-items:baseline;gap:12px;margin:8px 0 6px}
-.result .pct{font:800 3.4rem/1 var(--f-display);color:var(--gold);font-variant-numeric:tabular-nums}
-.meter{height:10px;border-radius:10px;background:linear-gradient(90deg,var(--surface-2),var(--surface-2));position:relative;overflow:hidden;margin:6px 0 4px}
-.meter i{position:absolute;inset:0 auto 0 0;background:var(--gold);border-radius:10px;transition:width .6s}
-.scale{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted)}
-.result h3{font-size:1.5rem;margin:18px 0 10px}
-.result ul{margin:14px 0 0;padding-left:20px;display:grid;gap:6px}
-.result .cta{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-
-/* before/after */
-.ba{display:grid;gap:10px}
-.ba-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.ba-cell{padding:14px 16px;border-radius:12px;font-size:.97rem;min-width:0}
-.ba-cell.now{background:var(--surface);color:var(--muted);border:1px solid var(--line)}
-.ba-cell.after{background:var(--gold-soft);border:1px solid var(--gold)}
-.ba-head{font:600 .75rem/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:0 4px}
-
-/* contents */
-.groups{display:grid;gap:28px}
-.group h3{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
-.group h3 .when{font:700 1.35rem/1 var(--f-hand);color:var(--gold);text-transform:none}
-.items{display:grid;gap:10px}
-.item{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
-.item svg{width:40px;height:40px}
-.item b{display:block;font-weight:600;margin-bottom:2px}
-.item span{color:var(--muted);font-size:.95rem}
-.tag{display:inline-block;font:600 .72rem/1 var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:4px 8px;margin-left:6px;vertical-align:2px}
-
-/* timeline */
-.tl{list-style:none;margin:0;padding:0;display:grid;gap:0;position:relative}
-.tl li{display:grid;gap:4px;padding:0 0 22px 30px;position:relative}
-.tl li::before{content:"";position:absolute;left:5px;top:.45em;width:12px;height:12px;border-radius:50%;background:var(--gold)}
-.tl li::after{content:"";position:absolute;left:10.5px;top:1.4em;bottom:0;width:1px;background:var(--line)}
-.tl li:last-child::after{display:none}
-.tl b{font:800 1.05rem/1.3 var(--f-display);text-transform:lowercase}
-.tl span{color:var(--muted)}
-.photo{width:100%;max-width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block}
-
-/* lesson */
-.lesson{display:grid;gap:16px;margin-top:20px;max-width:40em}
-.lesson h3{margin-top:14px;font-size:1.25rem}
-.pull{margin:6px 0;padding:18px 22px;border-left:3px solid var(--gold);background:var(--gold-soft);border-radius:0 14px 14px 0;font:700 1.2rem/1.4 var(--f-display)}
-.steps{margin:0;padding-left:22px;display:grid;gap:10px}
-.steps b{font-weight:600}
-.balance{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
-.bal-col{display:grid;gap:10px;min-width:0}
-.bal-row{display:grid;grid-template-columns:84px 1fr;align-items:center;gap:10px;font-size:.9rem;color:var(--muted)}
-.bal-row i{display:block;height:12px;border-radius:6px;background:var(--gold)}
-.bal-row:nth-child(2) i{background:var(--muted)}
-@media (max-width:560px){.balance{grid-template-columns:1fr}}
-
-/* bonus */
-.bonus-group{background:var(--gold-soft);border:1.5px dashed var(--gold);border-radius:20px;padding:20px}
-.bonus-why{margin-bottom:14px}
-.bonus-timer{font-variant-numeric:tabular-nums}
-.bonus-expired .bonus-group .items,.bonus-expired .bonus-timer,.bonus-expired .bonus-why{opacity:.45}
-.bonus-box{margin:18px 0 0;padding:16px 18px;border-radius:14px;background:var(--gold-soft);border:1px solid var(--gold);display:grid;gap:6px}
-.bonus-box .timer{font:700 1rem/1.2 var(--f-display);color:var(--gold);font-variant-numeric:tabular-nums}
-.hier{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.hier-col{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;gap:10px;min-width:0}
-.hier ol{margin:0;padding-left:22px;display:grid;gap:6px;font-size:.96rem}
-.hier li.me{color:var(--gold);font-weight:600}
-@media (max-width:560px){.hier{grid-template-columns:1fr}}
-
-/* checkout */
-.co-overlay{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.6);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));overflow-y:auto}
-.co-overlay[hidden]{display:none}
-.co-card{position:relative;width:100%;max-width:500px;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px 22px 20px;display:grid;gap:14px}
-.co-x{position:absolute;top:12px;right:14px;width:36px;height:36px;border:0;background:none;color:var(--muted);font-size:1.8rem;line-height:1;cursor:pointer}
-.co-prod{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;background:var(--surface-2);border-radius:14px;padding:12px}
-.co-prod img{width:56px;height:56px;border-radius:12px;object-fit:cover}
-.co-prod div{display:grid;min-width:0}
-.co-prod span.muted{font-size:.85rem}
-.co-price{font:800 1.05rem/1 var(--f-display);white-space:nowrap}
-.co-bonus{border:1.5px dashed var(--gold);background:var(--gold-soft);border-radius:16px;padding:14px 16px;display:grid;gap:6px}
-.co-bonus[hidden]{display:none}
-.co-bonus-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.co-tag{font:700 .72rem/1 var(--f-body);letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:var(--gold-ink);border-radius:999px;padding:5px 9px}
-.co-left{font:700 .9rem/1 var(--f-display);color:var(--gold);font-variant-numeric:tabular-nums}
-.co-bonus ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:.93rem}
-.support{font-size:.92rem;text-align:center;margin:0}
-.support a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
-.co-total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:12px}
-.co-total b{font:800 1.8rem/1 var(--f-display);font-variant-numeric:tabular-nums}
-.co-pay{width:100%}
-.co-note{font-size:.82rem;text-align:center}
-#rest.reveal{animation:revealIn .7s ease both}
-@keyframes revealIn{from{opacity:0}to{opacity:1}}
-button.btn{font-family:var(--f-display)}
-
-/* phone */
-p,li,.ba-cell,.item span,.q,.chat p{overflow-wrap:break-word}
-.btn{white-space:nowrap}
-@media (max-width:480px){
-  body{font-size:16px}
-  section{padding-block:44px}
-  h2{font-size:1.5rem}
-  .lead{font-size:1.05rem}
-  .quiz{padding:20px 18px;border-radius:18px}
-  .qtext{font-size:1.15rem}
-  .opt{padding:13px 15px;font-size:.96rem}
-  .ba-row{gap:8px}
-  .ba-cell{padding:10px 12px;font-size:.88rem;hyphens:auto;-webkit-hyphens:auto}
-  .item{grid-template-columns:32px 1fr;gap:12px;padding:14px}
-  .item svg{width:32px;height:32px}
-  .tag{font-size:.62rem;padding:3px 6px;margin-left:4px}
-  .group h3{flex-wrap:wrap;gap:4px 10px}
-  .bonus-group{padding:16px 14px}
-  .btn{padding:16px 22px;font-size:.95rem}
-  .offer{padding:22px 18px}
-  .price b{font-size:2.5rem}
-  .case{padding:16px}
-  .result .pct{font-size:2.8rem}
-  .result .cta{gap:14px}
-  .co-card{padding:22px 16px 16px}
-  .co-total b{font-size:1.5rem}
-  .pull{font-size:1.05rem;padding:14px 16px}
-  .facts{gap:10px 18px}
-  .fact b{font-size:1.35rem}
-}
-
-/* cases */
-.cases{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.cs{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
-.cs.main{grid-column:1/-1;border-color:var(--gold)}
-.cs .ba-mini{grid-template-columns:1fr}
-.cs-q{margin:0;font:700 1.05rem/1.35 var(--f-display);color:var(--gold)}
-.shots{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;-webkit-overflow-scrolling:touch}
-.shot{flex:0 0 auto;scroll-snap-align:start;border:1px solid var(--line);border-radius:14px;padding:0;background:var(--surface);cursor:zoom-in;overflow:hidden}
-.shot img{height:300px;width:auto;max-width:none;display:block}
-.mini-q{display:grid;gap:10px;margin-top:20px}
-.mini-q p{border-left:2px solid var(--gold);padding:4px 0 4px 14px}
-.lb{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.88);display:grid;place-items:center;padding:56px 16px 24px}
-.lb[hidden]{display:none}
-.lb img{max-height:calc(100vh - 90px);max-width:100%;width:auto;height:auto;border-radius:12px;display:block}
-.lb .co-x{color:#fff}
-@media (max-width:600px){.cases{grid-template-columns:1fr}.shot img{height:260px}}
-
-/* case */
-.case{display:grid;grid-template-columns:200px 1fr;gap:24px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;align-items:start}
-.case-photo{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;display:block}
-.case-body{display:grid;gap:16px;min-width:0}
-.ba-mini{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.ba-mini > div{display:grid;gap:6px;min-width:0}
-.ba-mini p{font-size:.97rem}
-.chat{margin:0;display:grid;gap:8px}
-.chat p{background:var(--surface-2);border-radius:16px 16px 16px 4px;padding:10px 14px;font-size:.97rem;max-width:34em}
-@media (max-width:600px){.case{grid-template-columns:1fr}.case-photo{max-width:220px}.ba-mini{grid-template-columns:1fr}}
-
-/* fit */
-.fit{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.fit > div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;min-width:0}
-.fit ul{margin:10px 0 0;padding-left:18px;display:grid;gap:8px}
-@media (max-width:600px){.fit{grid-template-columns:1fr}}
-
-/* about */
-.about{display:grid;grid-template-columns:240px 1fr;gap:28px;align-items:start}
-.about-photo{aspect-ratio:2/3}
-@media (max-width:600px){.about{grid-template-columns:1fr}.about-photo{max-width:320px}}
-.strip{display:grid;grid-template-columns:3fr 2fr;gap:12px;margin-top:28px}
-.strip figure,.tl-photo{margin:0;display:grid;gap:8px;min-width:0}
-.strip{align-items:start}
-.strip img{width:100%;height:auto;border-radius:16px;display:block}
-.strip figcaption,.tl-photo figcaption{font-size:.85rem}
-@media (max-width:560px){.strip{grid-template-columns:1fr}}
-.tl-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:start}
-@media (max-width:600px){.tl-grid{grid-template-columns:1fr}.tl-photo .photo{aspect-ratio:4/3}}
-.who{display:flex;align-items:center;gap:10px}
-.who img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
-.who > span{display:grid;line-height:1.2}
-.who b{font:700 .95rem/1.2 var(--f-display)}
-.facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:16px}
-.fact b{display:block;font:800 1.6rem/1 var(--f-display);color:var(--gold);font-variant-numeric:tabular-nums}
-.fact span{font-size:.85rem;color:var(--muted)}
-
-/* offer */
-.offer{background:var(--surface);border:1.5px solid var(--gold);border-radius:24px;padding:30px;text-align:left}
-.price{display:flex;align-items:baseline;gap:12px;margin:14px 0 4px;flex-wrap:wrap}
-.price b{font:800 3rem/1 var(--f-display);font-variant-numeric:tabular-nums}
-.terms{display:grid;gap:8px;margin:18px 0 24px;padding:0;list-style:none}
-.terms li{display:flex;gap:10px;align-items:flex-start}
-.terms li::before{content:"";flex:0 0 8px;height:8px;border-radius:50%;background:var(--gold);margin-top:.6em}
-.paynote{margin-top:12px;font-size:.9rem}
-.offer .btn{width:100%}
-
-/* faq */
-details{border-bottom:1px solid var(--line);padding-block:16px}
-summary{cursor:pointer;font:700 1.05rem/1.35 var(--f-display);list-style:none;display:flex;justify-content:space-between;gap:16px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--gold);font-weight:800}
-details[open] summary::after{content:"–"}
-details p{margin-top:10px;color:var(--muted)}
-footer{padding-block:40px 56px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
-footer .stack{gap:8px}
-
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-html{scroll-behavior:smooth}
-:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-img{max-width:100%}
 [hidden]{display:none!important}
+html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:max(28px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) 70px max(16px,env(safe-area-inset-left))}
+header{display:grid;grid-template-columns:1fr auto;gap:18px 28px;align-items:end}
+.eyebrow{font:600 12px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{font:800 clamp(32px,6vw,60px)/1 var(--disp);letter-spacing:-.02em;margin:8px 0 0;text-wrap:balance}
+.sub{color:var(--mu);margin:12px 0 0;max-width:62ch}
+.stats{display:flex;gap:26px;font-variant-numeric:tabular-nums}
+.stat b{display:block;font:800 30px/1 var(--disp)}
+.stat span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
+.bar{grid-column:1/-1;height:6px;border-radius:3px;background:var(--ln);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .5s}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 12px;align-items:center}
+.chip{border:1px solid var(--ln);background:var(--s);color:var(--fg);border-radius:999px;padding:7px 14px;font:500 13px var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--gold);color:#17140c;border-color:var(--gold)}
+.chip small{opacity:.6;margin-left:5px}
+.search{flex:1 1 200px;min-width:0;max-width:280px;margin-left:auto;border:1px solid var(--ln);background:var(--s);color:var(--fg);border-radius:10px;padding:9px 12px;font:inherit}
+.btn{border:0;border-radius:10px;padding:10px 16px;font:700 14px var(--body);cursor:pointer;background:var(--gold);color:#17140c}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--ln)}
+.btn:disabled{opacity:.6;cursor:default}
+button:focus-visible,input:focus-visible,select:focus-visible,label:focus-within{outline:2px solid var(--gold);outline-offset:2px}
+.panel{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;background:var(--s);border:1px solid var(--ln);border-radius:14px;padding:16px;margin-bottom:18px}
+.panel label{display:grid;gap:4px;font-size:12px;color:var(--mu);min-width:0}
+.panel input,.panel select{border:1px solid var(--ln);border-radius:8px;padding:9px 10px;font:inherit;background:var(--bg);color:var(--fg);min-width:0}
+.panel .row{grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end;align-items:center;flex-wrap:wrap}
+.msg{color:var(--mu);font-size:13px;margin-right:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:16px}
+.card{background:var(--s);border:1px solid var(--ln);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.ph{aspect-ratio:4/3;background:var(--s2);position:relative;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.mono{position:absolute;inset:0;display:grid;place-items:center;font:800 46px var(--disp);color:var(--mu);opacity:.4}
+.addph{position:absolute;inset:8px;display:grid;place-items:center;border:2px dashed var(--ln);border-radius:10px;color:var(--gold);font:600 13px var(--body);cursor:pointer;text-align:center;padding:8px}
+.addph:hover{border-color:var(--gold);background:var(--gs)}
+.addph input{position:absolute;width:1px;height:1px;opacity:0}
+.badge{position:absolute;left:10px;top:10px;font:700 11px var(--body);letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:6px;background:var(--ok);color:#0d1a12}
+.badge.g{background:var(--gift);color:#1d0f06}
+.card.done .ph img{filter:saturate(.35) brightness(.85)}
+.body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}
+.t{font-weight:600;line-height:1.3;overflow-wrap:anywhere}
+.card.done .t{text-decoration:line-through;text-decoration-color:var(--ok);color:var(--mu)}
+.meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--mu)}
+.price{color:var(--gold);font-weight:600;font-variant-numeric:tabular-nums}
+.acts{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.acts button,.acts a{font:500 12px var(--body);border:1px solid var(--ln);background:transparent;color:var(--fg);border-radius:8px;padding:5px 9px;cursor:pointer;text-decoration:none}
+.acts .on{background:var(--gift);border-color:var(--gift);color:#1d0f06}
+.acts .warn{border-color:var(--gift);color:var(--gift)}
+.empty{grid-column:1/-1;text-align:center;color:var(--mu);padding:40px 0}
+footer{margin-top:34px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--mu)}
+.link{background:none;border:0;color:var(--mu);font:inherit;text-decoration:underline;cursor:pointer;padding:0}
+@media (max-width:560px){header{grid-template-columns:1fr}.search{max-width:none;margin-left:0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-
 <div class="wrap">
-
-<section class="hero" id="quiz" aria-labelledby="quiz-h">
-  <div class="top"><span class="who"><img src="omar-look.jpg" alt="Омар" width="44" height="44"><span><b>Омар</b><span class="handle">@omar_nebo</span></span></span><span class="eyebrow">тест · 2 минуты</span></div>
-  <h1 id="quiz-h">почему ты не можешь отпустить, <span class="hand">даже когда понимаешь, что пора?</span></h1>
-  <p class="lead">Тест покажет, насколько ты ещё привязана и с чего начать, чтобы стало легче уже сегодня вечером.</p>
-  <div class="quiz" id="quizBox" style="margin-top:28px">
-    <div id="qWrap">
-      <div class="qhead"><span class="eyebrow" id="qNum">вопрос 1 из 8</span><span class="eyebrow" id="qPct">0%</span></div>
-      <div class="progress" aria-hidden="true"><i id="qBar"></i></div>
-      <p class="qtext" id="qText"></p>
-      <div class="opts" id="qOpts" role="group" aria-labelledby="qText"></div>
-      <div class="qnav"><button class="link" id="qBack" type="button" hidden>← назад</button><span></span></div>
+  <header>
+    <div>
+      <div class="eyebrow">Омар · список мечт</div>
+      <h1>Карта желаний</h1>
+      <p class="sub">Мечты, цели и подарки, которые меня порадуют. Если хотите что-то подарить, нажмите «Подарю я», чтобы никто не купил то же самое.</p>
     </div>
-    <div id="aWrap" hidden aria-live="polite"><p class="eyebrow">анализируем ответы…</p><div class="progress"><i id="aBar" style="width:0;transition:width 1.2s linear"></i></div><p class="muted" id="aText">Смотрим, что держит тебя сильнее всего</p></div>
-    <div id="rWrap" class="result" hidden aria-live="polite"></div>
-  </div>
-  <p class="muted" style="margin-top:14px;font-size:.9rem">Ответы видишь только ты. <button class="link" type="button" id="skipQuiz">Пропустить тест</button></p>
-</section>
-
-<div id="rest" hidden>
-<section aria-labelledby="pain-h">
-  <h2 id="pain-h">узнаёшь себя?</h2>
-  <p class="muted" style="margin-bottom:20px">Так пишут в комментариях под моими роликами и говорят на консультациях.</p>
-  <div class="quotes">
-    <div class="quote">Заблокировать то можно, ну в голове ты никак не заблокируешь.</div>
-    <div class="quote">Не захожу каждые 15 минут, не проверяю, когда он был в сети, и не жду, что он напишет…</div>
-    <div class="quote">На днях написал, что любит и скучает. Опять пропал.</div>
-    <div class="quote">Сказать многое хочется. Но в ответ не услышу ни слова.</div>
-    <div class="quote wide">Думаю о нём чаще, чем о своих планах, целях и о себе вообще.</div>
-  </div>
-  <p style="margin-top:22px" class="lead">Тебе больно не потому, что ты так сильно любишь. Тебе больно, потому что тебя не выбрали. С этим можно работать, и начать можно сегодня.</p>
-</section>
-
-<section id="lesson" aria-labelledby="les-h">
-  <p class="eyebrow">мини-урок от Омара · 5 минут</p>
-  <h2 id="les-h" style="margin-top:12px">почему ты так сильно привязываешься</h2>
-  <div class="lesson">
-    <p class="lead">Привязывает не человек. Привязывает то, сколько ты в него вложил или вложила.</p>
-    <p>Это одинаково работает и у женщин, и у мужчин. Мы ценим не самого человека, а образ, который о нём построили. И в этот образ мы вкладываем время, силы, внимание, энергию. А ещё деньги и подарки: мужчина, который много тратит на женщину, точно так же начинает ценить этот образ и держаться за него.</p>
-    <p>Постепенно получается, что ты выбираешь другого человека больше, чем себя. Вот здесь и рождается зависимость.</p>
-
-    <div class="balance" role="img" aria-label="Баланс значимости: при зависимости почти все вложения уходят в партнёра, когда баланс на месте, ты вкладываешь в себя не меньше, чем в него">
-      <div class="bal-col">
-        <span class="ba-head">когда есть зависимость</span>
-        <div class="bal-row"><span>в партнёра</span><i style="width:88%"></i></div>
-        <div class="bal-row"><span>в себя</span><i style="width:12%"></i></div>
-      </div>
-      <div class="bal-col">
-        <span class="ba-head">когда баланс на месте</span>
-        <div class="bal-row"><span>в партнёра</span><i style="width:45%"></i></div>
-        <div class="bal-row"><span>в себя</span><i style="width:55%"></i></div>
-      </div>
+    <div class="stats">
+      <div class="stat"><b id="sTotal">—</b><span>желаний</span></div>
+      <div class="stat"><b id="sDone">—</b><span>сбылось</span></div>
     </div>
+    <div class="bar"><i id="bar"></i></div>
+  </header>
 
-    <h3>что происходит, когда баланс нарушен</h3>
-    <p>Растёт тревога. Хочется всё контролировать: где он или она, с кем, почему не ответил. А когда что-то идёт не так, тебе сразу становится очень плохо, потому что под угрозой оказалось всё, во что ты вложился.</p>
-
-    <h3>главная ловушка</h3>
-    <p>Большинство людей бегают за теми, у кого любовь и одобрение приходится заслуживать. Чем больше заслуживаешь, тем больше вкладываешь. Чем больше вкладываешь, тем сильнее держишься.</p>
-    <blockquote class="pull">Мы можем получить от другого человека ровно столько любви, сколько способны дать себе сами.</blockquote>
-    <p>Поэтому выход не в том, чтобы найти того, кто наконец полюбит тебя правильно. Выход в том, чтобы в первую очередь выбирать себя и научиться любить себя. Тогда и другие начинают относиться к тебе так же.</p>
-
-    <blockquote class="pull">Мозг отпускает только то, что закончено. Поэтому «просто забудь» не работает.</blockquote>
-
-    <h3>что сделать уже сейчас</h3>
-    <ol class="steps">
-      <li><b>Сфокусируйся на себе.</b> Время, силы и деньги, которые уходили на партнёра, сегодня потрать на себя: спорт, встреча с друзьями, дело, которое откладывал.</li>
-      <li><b>Заметь, где ты заслуживаешь.</b> Где ты доказываешь, подстраиваешься, ждёшь одобрения? Просто увидь это, уже станет легче.</li>
-      <li><b>Поставь себя на первое место.</b> Одно решение в день в свою пользу, даже маленькое. Так восстанавливается баланс значимости.</li>
-    </ol>
-
-    <h3>как не попасть в это снова</h3>
-    <p>Держи баланс значимости: вкладывайся в того, кто вкладывается в тебя, и не опережай его. И в первую очередь фокус на себе: любовь к себе не лозунг, а ежедневные действия по отношению к себе.</p>
-
-    <p class="muted">Это основа. В наборе есть пошаговые инструменты: что делать в вечер, когда тянет написать, как вернуть себе силы за несколько дней и как полюбить себя так, чтобы не выбирать тех, кого надо заслуживать.</p>
-    <div><button class="btn" type="button" data-checkout>забрать набор за 1&nbsp;490&nbsp;₽</button></div>
+  <div class="tools" id="chips"></div>
+  <div class="tools">
+    <button class="btn" id="addBtn" hidden>+ Добавить желание</button>
+    <input class="search" id="q" type="search" placeholder="Поиск" aria-label="Поиск по желаниям">
   </div>
-</section>
 
-<section aria-labelledby="ba-h">
-  <h2 id="ba-h">что изменится</h2>
-  <div class="ba">
-    <div class="ba-row"><span class="ba-head">сейчас</span><span class="ba-head">после набора</span></div>
-    <div class="ba-row"><div class="ba-cell now">Проверяешь, когда он был в сети</div><div class="ba-cell after">Телефон больше не центр дня</div></div>
-    <div class="ba-row"><div class="ba-cell now">Тянет написать первой, особенно вечером</div><div class="ba-cell after">Знаешь, что делать в эту минуту, и справляешься</div></div>
-    <div class="ba-row"><div class="ba-cell now">Не понимаешь, отвечать ли, если он напишет</div><div class="ba-cell after">Есть готовый ответ и спокойная голова</div></div>
-    <div class="ba-row"><div class="ba-cell now">Нет сил, лежишь и прокручиваешь разговоры</div><div class="ba-cell after">Спорт, люди, свои дела: силы возвращаются</div></div>
-    <div class="ba-row"><div class="ba-cell now">Боишься, что следующие отношения будут такими же</div><div class="ba-cell after">Понимаешь, как не выбрать того же человека снова</div></div>
-    <div class="ba-row"><div class="ba-cell now">Он на первом месте, ты где-то потом</div><div class="ba-cell after">Ты у себя на первом месте и начинаешь выбирать себя</div></div>
-    <div class="ba-row"><div class="ba-cell now">Кажется, что с тобой что-то не так</div><div class="ba-cell after">Растёт самооценка, ты чувствуешь свою ценность</div></div>
-    <div class="ba-row"><div class="ba-cell now">Любовь приходится заслуживать</div><div class="ba-cell after">Ты любишь себя и больше не бегаешь за другими</div></div>
-    <div class="ba-row"><div class="ba-cell now">Всё внимание уходит на одного человека</div><div class="ba-cell after">Фокус на себе, и ты снова получаешь внимание противоположного пола</div></div>
-    <div class="ba-row"><div class="ba-cell now">Привязываешься и зависишь</div><div class="ba-cell after">Перестаёшь привязываться и зависеть от другого человека</div></div>
-  </div>
-</section>
+  <form class="panel" id="login" hidden>
+    <label>Почта<input id="lEmail" type="email" autocomplete="username" required></label>
+    <label>Пароль<input id="lPass" type="password" autocomplete="current-password" required></label>
+    <div class="row"><span class="msg" id="lMsg"></span>
+      <button type="button" class="btn ghost" id="lCancel">Отмена</button>
+      <button class="btn" id="lGo">Войти</button></div>
+  </form>
 
-<section id="inside" aria-labelledby="in-h">
-  <h2 id="in-h">что внутри набора</h2>
-  <div class="groups">
-    <div class="group">
-      <h3>сегодня вечером <span class="when">первые 40 минут</span></h3>
-      <div class="items">
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M14 17v6M18 13v14M22 15v10M26 18v4" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg><div><b>Аудио «SOS: тянет написать» <span class="tag">аудио</span></b><span>8 минут. Включаешь вместо сообщения и проживаешь импульс, а не действуешь из него.</span></div></div>
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M13 13h14M13 20h14M13 27h9" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg><div><b>Протокол первых 72 часов <span class="tag">pdf</span></b><span>Что сделать с фото, перепиской, соцсетями, вещами и общими друзьями прямо сейчас.</span></div></div>
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><rect x="13" y="12" width="14" height="17" rx="3" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M17 20l2.5 2.5L24 18" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div><b>Блокировать или нет <span class="tag">pdf</span></b><span>Когда блок помогает, а когда держит сильнее. И что делать, если заблокировали тебя.</span></div></div>
-      </div>
-    </div>
-    <div class="group">
-      <h3>следующие 3 дня <span class="when">по 15 минут</span></h3>
-      <div class="items">
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M12 27l6-6 4 4 7-9" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><div><b>Аудио «Начать жить заново» <span class="tag">аудио</span></b><span>15 минут, 8 шагов. От «убрать информационный шум» до новых знакомств, у каждого шага действие на сегодня.</span></div></div>
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M12 15h16v10H18l-4 3v-3h-2z" stroke="var(--gold)" stroke-width="2.2" stroke-linejoin="round" fill="none"/></svg><div><b>Если он или она напишет <span class="tag">pdf</span></b><span>3 готовых сценария ответа и как понять, стоит ли возвращаться, когда человек то пишет, то пропадает.</span></div></div>
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><circle cx="20" cy="20" r="6" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M20 9v3M20 28v3M9 20h3M28 20h3" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round"/></svg><div><b>Ритуал «Новая реальность» <span class="tag">pdf</span></b><span>Моя практика на 21 день: утром ты описываешь, кем становишься, вечером записываешь, что уже получилось. С примерами и трекером.</span></div></div>
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M14 12h12v16H14z M17 17h6M17 21h6M17 25h3" stroke="var(--gold)" stroke-width="2.2" stroke-linejoin="round" fill="none"/></svg><div><b>«Любовь или зависимость?» и «Письмо, которое не отправишь» <span class="tag">чек-лист</span></b><span>Понять, что это было на самом деле, и высказать всё, не отправляя ни слова.</span></div></div>
-      </div>
-    </div>
-    <div class="group">
-      <h3>дальше <span class="when">7 дней</span></h3>
-      <div class="items">
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M20 11l2.6 5.4 5.9.8-4.3 4.1 1 5.8L20 24.4l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z" stroke="var(--gold)" stroke-width="2" stroke-linejoin="round" fill="none"/></svg><div><b>Вызовы на 7 дней <span class="tag">задания</span></b><span>Мои задания на выход из зоны комфорта, в женской и мужской версии: спорт, танцы по утрам, новое достижение, знакомства.</span></div></div>
-      </div>
-    </div>
-    <div class="group bonus-group" id="bonusGroup">
-      <h3>бонусы за быстрое решение <span class="when bonus-timer">ещё <span data-timer>30:00</span></span></h3>
-      <p class="muted bonus-why">Это то, о чём меня чаще всего спрашивают на консультациях. Набор помогает отпустить. Бонусы помогают сделать так, чтобы следующие отношения были другими: понять, кого выбирать, как тебя видит противоположный пол и где твоё место в собственной жизни. Они входят в набор, если оплатить его в течение 30 минут после теста.</p>
-      <div class="items">
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><rect x="16.5" y="10" width="7" height="13" rx="3.5" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M13 20a7 7 0 0 0 14 0M20 27v3" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><div><b>Подкаст для женщин «4 типа мужчин» <span class="tag">аудио</span></b><span>Эмоционально зрелый и незрелый, сильный и слабый: как отличить их с первых встреч и кого выбирать, чтобы не повторять один и тот же сценарий.</span></div></div>
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><rect x="16.5" y="10" width="7" height="13" rx="3.5" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M13 20a7 7 0 0 0 14 0M20 27v3" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><div><b>Подкаст для мужчин «Кем она тебя видит» <span class="tag">аудио</span></b><span>Четыре категории, по которым женщина распределяет мужчин: ухажёр-спонсор, друг, любовник и мужчина. В какой ты сейчас и в каком порядке проходить эти роли, чтобы стать для неё мужчиной.</span></div></div>
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><circle cx="20" cy="16" r="4.5" stroke="var(--gold)" stroke-width="2.2" fill="none"/><path d="M12 29c1.5-4.5 4.5-6.5 8-6.5s6.5 2 8 6.5" stroke="var(--gold)" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg><div><b>Взгляд мужчины <span class="tag">pdf</span></b><span>Что он чувствует после расставания и почему пишет «скучаю». Для мужчин: почему она ушла и как не вестись на проверки.</span></div></div>
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M20 28s-8-4.8-8-10.2A4.4 4.4 0 0 1 20 15a4.4 4.4 0 0 1 8 2.8C28 23.2 20 28 20 28z" stroke="var(--gold)" stroke-width="2.2" stroke-linejoin="round" fill="none"/></svg><div><b>Как полюбить себя и поднять самооценку <span class="tag">pdf</span></b><span>Как вернуть баланс значимости, перестать заслуживать любовь и вкладываться в себя так, чтобы рядом оказывались те, кто вкладывается в тебя.</span></div></div>
-        <div class="item"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold-soft)"/><path d="M14 13h12M16 19h8M18 25h4" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg><div><b>Иерархия приоритетов <span class="tag">pdf</span></b><span>Кто должен быть на каком месте в жизни мужчины и женщины, и почему отношения рушатся, когда партнёр стоит выше тебя самого.</span></div></div>
-      </div>
-      <p class="muted bonus-gone" hidden>Время на бонусы вышло. Набор по-прежнему доступен за 1 490 ₽.</p>
-    </div>
-  </div>
-</section>
+  <form class="panel" id="form" hidden>
+    <label>Название<input id="fTitle" required maxlength="140"></label>
+    <label>Цена<input id="fPrice" maxlength="40" placeholder="например, 20 000 ₽"></label>
+    <label>Категория<select id="fCat"></select></label>
+    <label>Ссылка на товар<input id="fLink" type="url" placeholder="https://"></label>
+    <label>Фото<input id="fImg" type="file" accept="image/*"></label>
+    <div class="row"><span class="msg" id="fMsg"></span>
+      <button type="button" class="btn ghost" id="fCancel">Отмена</button>
+      <button class="btn" id="fSave">Сохранить</button></div>
+  </form>
 
-<section aria-labelledby="tl-h">
-  <h2 id="tl-h">что будет меняться</h2>
-  <div class="tl-grid">
-  <figure class="tl-photo"><img class="photo" src="surf.jpg" alt="Омар выходит из океана с доской на закате" loading="lazy"></figure>
-  <ol class="tl">
-    <li><b>сегодня вечером</b><span>Аудио SOS и протокол 72 часов. Ты не пишешь ему, убираешь то, что запускает боль, и засыпаешь спокойнее.</span></li>
-    <li><b>через 3 дня</b><span>Меньше проверяешь телефон. Есть план, что ответить, если он напишет. Начинаешь выходить из дома и видеться с людьми.</span></li>
-    <li><b>через неделю</b><span>Утренний ритуал и задания возвращают энергию: спорт, свои дела, новые люди. Мысли о нём приходят реже.</span></li>
-    <li><b>через месяц</b><span>Ты понимаешь, что было любовью, а что зависимостью, и знаешь, как не выбрать того же человека снова. Главный признак: пять минут разговора с ним, и тебя не шатает.</span></li>
-  </ol>
-  </div>
-  <p class="muted" style="margin-top:14px;font-size:.9rem">Результат зависит от того, выполняешь ли ты задания. Набор даёт шаги, делаешь их ты.</p>
-</section>
+  <div class="grid" id="grid"><div class="empty">Загружаю список желаний…</div></div>
 
-<section id="reviews" aria-labelledby="rev-h">
-  <h2 id="rev-h">что меняется у тех, кто прошёл работу со мной</h2>
-  <p class="muted" style="margin-bottom:22px">Это отзывы о личной работе, разборах и эфирах. Набор новый, и в нём те же инструменты, которые я даю клиентам.</p>
-  <div class="cases">
-    <article class="cs main">
-      <p class="eyebrow">Лали · личная работа</p>
-      <div class="ba-mini">
-        <div><span class="ba-head">было</span><p>7–8 лет страданий: детские травмы, обиды на родителей, болезненные прошлые отношения. Не была готова даже обсуждать свои проблемы.</p></div>
-        <div><span class="ba-head">стало</span><p>Признала обиды, отпустила и простила. Встретила мужчину и смогла ему довериться.</p></div>
-      </div>
-      <blockquote class="cs-q">«После 7–8 лет страдания я снова начала дышать»</blockquote>
-    </article>
-    <article class="cs">
-      <p class="eyebrow">Ольга · личная работа</p>
-      <div class="ba-mini">
-        <div><span class="ba-head">было</span><p>Шли к свадьбе, но мужчина боялся брать ответственность: «не беги впереди паровоза».</p></div>
-        <div><span class="ba-head">стало</span><p>Вписал её в документы как невесту, взял на себя расходы, сделал предложение.</p></div>
-      </div>
-      <blockquote class="cs-q">«Как это работает — не знаю, но работает»</blockquote>
-    </article>
-    <article class="cs">
-      <p class="eyebrow">Ирина · эфир</p>
-      <div class="ba-mini">
-        <div><span class="ba-head">было</span><p>Жила по принципу «всё для детей».</p></div>
-        <div><span class="ba-head">стало</span><p>Сначала для себя, потом для них.</p></div>
-      </div>
-      <blockquote class="cs-q">«Все стали намного счастливее»</blockquote>
-    </article>
-    <article class="cs">
-      <p class="eyebrow">Дарья · разбор и эфир</p>
-      <div class="ba-mini">
-        <div><span class="ba-head">было</span><p>Зарабатывала из нужды и тянула всё на себе.</p></div>
-        <div><span class="ba-head">стало</span><p>Замедлилась, больше внимания мужу. Проекты появляются сами, старые заказчики возвращаются.</p></div>
-      </div>
-      <blockquote class="cs-q">«Ушла в семью… Муж кайфует»</blockquote>
-    </article>
-  </div>
-  <p class="eyebrow" style="margin:28px 0 12px">оригиналы сообщений · листай вбок</p>
-  <div class="shots" role="list">
-    <button class="shot" type="button" role="listitem" data-full="lali.jpg"><img src="lali.jpg" alt="Сообщение Лали" loading="lazy"></button>
-    <button class="shot" type="button" role="listitem" data-full="olya1.jpg"><img src="olya1.jpg" alt="Сообщение Ольги" loading="lazy"></button>
-    <button class="shot" type="button" role="listitem" data-full="olga-ring.jpg"><img src="olga-ring.jpg" alt="Предложение Ольге" loading="lazy"></button>
-    <button class="shot" type="button" role="listitem" data-full="olya2.jpg"><img src="olya2.jpg" alt="Сообщение Ольги" loading="lazy"></button>
-    <button class="shot" type="button" role="listitem" data-full="daria.jpg"><img src="daria.jpg" alt="Сообщение Дарьи" loading="lazy"></button>
-    <button class="shot" type="button" role="listitem" data-full="irina.jpg"><img src="irina.jpg" alt="Сообщение Ирины" loading="lazy"></button>
-    <button class="shot" type="button" role="listitem" data-full="wow.jpg"><img src="wow.jpg" alt="Отзыв после консультации" loading="lazy"></button>
-    <button class="shot" type="button" role="listitem" data-full="efir.jpg"><img src="efir.jpg" alt="Чат эфира" loading="lazy"></button>
-  </div>
-  <div class="mini-q">
-    <p>«Ты реально открыл мне глаза на простые вещи. Но они совсем не простые» <span class="muted">— после консультации</span></p>
-    <p>«Даёшь свой опыт, и мы вместе проживаем и находим, где это у нас» <span class="muted">— Валентина, эфир</span></p>
-    <p>«Через твои примеры и твой опыт нахожу ответы» <span class="muted">— Ирина, эфир</span></p>
-  </div>
-</section>
-
-<section aria-labelledby="fit-h">
-  <h2 id="fit-h">кому подойдёт</h2>
-  <div class="fit">
-    <div><h3>подойдёт, если</h3><ul>
-      <li>вы расстались недавно и тебя кроет вечерами;</li>
-      <li>прошли месяцы, а ты всё ещё проверяешь его страницу;</li>
-      <li>вы сходитесь и расходитесь, и ты устала от качелей;</li>
-      <li>ты мужчина и не можешь выкинуть её из головы.</li></ul></div>
-    <div><h3>не подойдёт, если</h3><ul>
-      <li>хочешь вернуть партнёра: набор про то, как вернуть себя;</li>
-      <li>не готова ничего делать, только слушать.</li></ul></div>
-  </div>
-</section>
-
-<section aria-labelledby="about-h">
-  <div class="about">
-    <img class="photo about-photo" src="omar.jpg" alt="Омар Зейналов" loading="lazy">
-    <div class="stack">
-      <h2 id="about-h" style="margin:0">кто я</h2>
-      <p>Я Омар Зейналов: эксперт, предприниматель, наставник. Больше 10 лет в психологии, философии и наставничестве. Помогаю выстроить отношения с собой, с противоположным полом и с деньгами. Веду личную работу, группы, клубы, ретриты и мастер-майнды.</p>
-      <p>Я не верю, что из расставания нужно выходить годами. Я даю действия, которые возвращают силы за дни: задания, выход из зоны комфорта, работу с убеждениями. В этом наборе те шаги, которые я даю своим клиентам.</p>
-      <div class="facts">
-        <div class="fact"><b>10+ лет</b><span>в психологии</span></div>
-        <div class="fact"><b>~10 000</b><span>часов консультаций</span></div>
-        <div class="fact"><b>~500</b><span>человек прошли через мою работу</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="strip">
-    <figure><img src="stage.jpg" alt="Омар выступает перед залом в технопарке «Идея»" loading="lazy"></figure>
-    <figure><img src="moto.jpg" alt="Омар на мотоцикле на пляже вечером" loading="lazy"></figure>
-  </div>
-</section>
-
-<section id="offer" aria-labelledby="offer-h">
-  <div class="offer">
-    <p class="eyebrow">набор целиком</p>
-    <h2 id="offer-h" style="margin:10px 0 0">отпустить и не повторить</h2>
-    <div class="price"><b>1 490 ₽</b><span class="muted">одним платежом</span></div>
-    <p class="muted">Одна сессия у психолога стоит от 5 000 ₽. Здесь 2 аудио, 4 гайда, чек-листы и 7 дней заданий.</p>
-    <div class="bonus-box" id="bonusBox">
-      <p><b>+ 5 бонусов, если оплатить в течение 30 минут после теста</b></p>
-      <p class="muted">2 подкаста («4 типа мужчин» и «Кем она тебя видит»), «Взгляд мужчины», «Как полюбить себя», «Иерархия приоритетов»</p>
-      <p class="timer">осталось <span data-timer>30:00</span></p>
-    </div>
-    <ul class="terms">
-      <li>Доступ сразу после оплаты, навсегда</li>
-      <li>Аудио моим голосом, PDF-гайды, чек-листы, задания</li>
-      <li>Полный возврат в течение 7 дней, если не подошло</li>
-      <li>Оплата картой или по СБП через lava.top</li>
-    </ul>
-    <button class="btn" id="payBtn" type="button" data-checkout>забрать набор за 1&nbsp;490&nbsp;₽</button>
-    <p class="support muted">Не проходит оплата или ты не из России? <a href="https://ig.me/m/omar_nebo" target="_blank" rel="noopener">Напиши в поддержку</a>, помогу оплатить.</p>
-    <p class="paynote muted" id="payNote" hidden>Оплата подключается, ссылка появится здесь в ближайшее время.</p>
-  </div>
-</section>
-
-<section aria-labelledby="faq-h">
-  <h2 id="faq-h">вопросы</h2>
-  <details><summary>Как я получу набор?</summary><p>Сразу после оплаты на почту придёт ссылка на все материалы. Аудио можно слушать с телефона, PDF открываются в любом браузере.</p></details>
-  <details><summary>Сколько времени это займёт?</summary><p>Первый вечер около 40 минут. Дальше по 15 минут в день несколько дней. Задания на 7 дней необязательные, но с ними результат крепче.</p></details>
-  <details><summary>Подойдёт ли мужчинам?</summary><p>Да. В заданиях и бонусе есть отдельная мужская версия. Мужчины переживают расставание не легче, просто реже об этом говорят.</p></details>
-  <details><summary>Это поможет вернуть бывшего?</summary><p>Задача набора — вернуть тебя себе: твой фокус, силы и спокойствие. И здесь есть интересная вещь: когда ты перестаёшь зависеть и фокусируешься на себе, бывшие часто сами начинают напоминать о себе и стучаться обратно.</p><p>Разница в том, что решать ты будешь уже не из нужды, обиды или желания отомстить, а с холодной головой: продолжить, изменить эти отношения или спокойно закрыть эту дверь насовсем.</p></details>
-  <details><summary>Не проходит оплата или я не из России?</summary><p>Напиши мне в Instagram <a href="https://ig.me/m/omar_nebo" target="_blank" rel="noopener">@omar_nebo</a> слово «ОПЛАТА» и из какой ты страны. Подскажу другой способ оплаты и пришлю набор вручную. Бонусы сохраню, даже если таймер уже закончился.</p></details>
-  <details><summary>Это подписка?</summary><p>Нет. Один платёж 1 490 ₽, без автосписаний.</p></details>
-  <details><summary>Как вернуть деньги?</summary><p>Напиши в течение 7 дней с момента покупки, и я верну всю сумму, без удержаний и лишних вопросов. После 7 дней возврат не делается.</p></details>
-  <details><summary>Если сюжет повторяется не в первый раз?</summary><p>Тогда, скорее всего, дело не в конкретном человеке. В конце набора есть запись на личную консультацию: разберём, почему так складывается, и что с этим делать.</p></details>
-</section>
-
+  <footer>
+    <span id="note"></span>
+    <span><button class="link" id="authBtn" type="button" hidden>Вход для Омара</button></span>
+  </footer>
 </div>
 
-<footer>
-  <div class="stack">
-    <span>Омар · @omar_nebo · <a href="/stati">Статьи</a> · <a href="/razbor">Бесплатный разбор</a></span>
-    <span>Набор носит образовательный характер и не заменяет психотерапию или медицинскую помощь.</span>
-    <span>Оплата и выдача материалов проходят через lava.top на её условиях.</span>
-    <span>Поддержка по оплате: <a href="https://ig.me/m/omar_nebo" target="_blank" rel="noopener">написать в Instagram</a></span>
-  </div>
-</footer>
-
-</div>
-
-<div class="lb" id="lb" hidden><button class="co-x" type="button" id="lbClose" aria-label="Закрыть">×</button><img id="lbImg" alt=""></div>
-<div class="co-overlay" id="checkout" hidden role="dialog" aria-modal="true" aria-labelledby="co-h">
-  <div class="co-card">
-    <button class="co-x" type="button" id="coClose" aria-label="Закрыть">×</button>
-    <h2 id="co-h" style="margin:0 0 4px">оформление заказа</h2>
-    <p class="muted" style="font-size:.92rem">Оплата картой РФ или по СБП на следующем шаге</p>
-    <div class="co-prod">
-      <img src="omar.jpg" alt="" width="56" height="56">
-      <div><b>Отпустить и не повторить</b><span class="muted">2 аудио · 6 гайдов · задания на 7 дней</span></div>
-      <span class="co-price">1 490 ₽</span>
-    </div>
-    <div class="co-bonus" id="coBonus">
-      <div class="co-bonus-head"><span class="co-tag">в подарок</span><span class="co-left">ещё <span data-timer>30:00</span></span></div>
-      <p><b>+ 5 бонусов к набору, 0 ₽</b></p>
-      <ul>
-        <li>Подкаст для женщин «4 типа мужчин»</li>
-        <li>Подкаст для мужчин «Кем она тебя видит»</li>
-        <li>«Взгляд мужчины»</li>
-        <li>«Как полюбить себя и поднять самооценку»</li>
-        <li>«Иерархия приоритетов»</li>
-      </ul>
-    </div>
-    <div class="co-total"><span>итого к оплате</span><b>1 490 ₽</b></div>
-    <a class="btn co-pay" id="coPay" href="#offer">перейти к оплате · 1&nbsp;490&nbsp;₽</a>
-    <p class="muted" style="font-size:.9rem;text-align:center">Цель набора — чтобы пять минут разговора с ним больше тебя не шатали.</p>
-    <p class="support muted">Трудности с оплатой? <a href="https://ig.me/m/omar_nebo" target="_blank" rel="noopener">Напиши в поддержку</a> в Instagram, отвечаю в течение дня.</p>
-    <p class="co-note muted">🔒 Безопасная оплата через lava.top. Доступ к набору придёт на email сразу после оплаты. Полный возврат в течение 7 дней.</p>
-  </div>
-</div>
-
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.min.js"></script>
 <script>
-const PAY_URL_BONUS = "https://app.lava.top/products/6c29251b-3d88-43b9-86e4-2024965005c8"; // lava.top: набор + бонусы (первые 30 минут после теста)
-const PAY_URL = "https://app.lava.top/products/f79aae74-a233-44c7-93a4-5a4c8067ecf0";       // lava.top: набор без бонусов
-const Q = [
-  ["Как часто ты думаешь о бывшем партнёре?", ["Почти не думаю","Пару раз в день","Большую часть дня","Постоянно, даже засыпаю с мыслями о нём"]],
-  ["Проверяешь его соцсети, сторис, когда он был в сети?", ["Нет","Иногда, случайно","Каждый день","По многу раз в день"]],
-  ["Тянет написать первой?", ["Нет","Бывает, но держусь","Часто, особенно вечером","Уже писала, и не раз"]],
-  ["Что с тобой, когда он пишет или появляется?", ["Спокойно","Приятно, но держу себя в руках","Бросаю всё и отвечаю","Весь день идёт по этому сообщению"]],
-  ["Как сейчас сон, аппетит и энергия?", ["Как обычно","Чуть хуже, чем раньше","Заметно хуже","Нет сил ни на что"]],
-  ["Вы уже расходились и сходились снова?", ["Нет","Один раз","Несколько раз","Это постоянные качели"]],
-  ["Похожа ли эта история на твои прошлые отношения?", ["Нет, это другое","Немного","Да, сюжет повторяется","Каждый раз одно и то же"]],
-  ["Что ты думаешь о себе после расставания?", ["Со мной всё в порядке","Иногда сомневаюсь в себе","Часто: что со мной не так?","Меня невозможно любить просто так"]]
-];
-const R = [
-  {max:7, title:"ты уже отпускаешь", text:"Острая фаза позади или почти позади. Ты держишь себя, но иногда накрывает. Сейчас важно не откатиться назад, когда он напишет или ты увидишь его сторис.",
-   start:["«Если он или она напишет»: чтобы не откатиться","Утренний ритуал: чтобы закрепить состояние","Вызовы на 7 дней: вернуть энергию в свою жизнь"]},
-  {max:15, title:"ты застряла в качелях", text:"Ты то отпускаешь, то снова цепляешься. Каждое сообщение, сторис или воспоминание запускает всё заново. Это не слабость: так работает привязанность, и из неё есть понятный выход.",
-   start:["Протокол первых 72 часов: убрать то, что запускает качели","Аудио SOS: на вечер, когда тянет написать","«Начать жить заново»: 8 шагов на ближайшие дни"]},
-  {max:24, title:"эмоциональная зависимость", text:"Сейчас этот человек занимает почти всё твоё внимание и силы. Больно не только от потери: болит ощущение, что тебя не выбрали. Начни с простого и с сегодняшнего вечера, а не с больших решений.",
-   start:["Аудио SOS: включи его сегодня, вместо сообщения","Протокол первых 72 часов: шаг за шагом","«Любовь или зависимость?»: увидеть, что это было"]}
-];
-let i = 0; const ans = [];
-const $ = id => document.getElementById(id);
+const CATS=["Вещи","Путешествия","Впечатления","Развитие","Карьера","Дом","Спорт и здоровье","Для близких"];
+const $=id=>document.getElementById(id);
+const cfg=window.WISHLIST_CONFIG||{};
+const sb=(cfg.supabaseUrl&&cfg.supabaseKey&&window.supabase)?supabase.createClient(cfg.supabaseUrl,cfg.supabaseKey):null;
+let items=[],marks=new Set(),mine=new Set(),owner=false,editId=null,filter="Все",confirmDel=null;
+let token;try{token=localStorage.getItem("wl_token");if(!token){token=crypto.randomUUID()+crypto.randomUUID();localStorage.setItem("wl_token",token)}}catch(e){token=crypto.randomUUID()+crypto.randomUUID()}
+
+$("fCat").innerHTML=CATS.map(c=>`<option>${c}</option>`).join("");
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl=u=>/^https?:\/\//i.test(u||"")?u:"";
+
 function render(){
-  $("qNum").textContent = `вопрос ${i+1} из ${Q.length}`;
-  $("qBar").style.width = ((i+1)/Q.length*100)+"%";
-  $("qPct").textContent = Math.round(i/Q.length*100)+"%";
-  $("qText").textContent = Q[i][0];
-  $("qOpts").innerHTML = "";
-  Q[i][1].forEach((t,k)=>{
-    const b = document.createElement("button"); b.type="button"; b.className="opt"+(ans[i]===k?" sel":""); b.id=`q${i}o${k}`; b.textContent=t;
-    b.onclick = ()=>{ ans[i]=k; b.classList.add("sel"); setTimeout(next, 180); };
-    $("qOpts").appendChild(b);
-  });
-  $("qBack").hidden = i===0;
+  const total=items.length,done=items.filter(i=>i.done).length;
+  $("sTotal").textContent=total;$("sDone").textContent=done;
+  $("bar").style.width=total?(done/total*100)+"%":"0";
+  const counts={};items.forEach(i=>counts[i.cat]=(counts[i.cat]||0)+1);
+  const chips=["Все",...CATS.filter(c=>counts[c]),"Сбылось"];
+  $("chips").innerHTML=chips.map(c=>`<button class="chip" data-f="${esc(c)}" aria-pressed="${c===filter}">${esc(c)}<small>${c==="Все"?total:c==="Сбылось"?done:counts[c]}</small></button>`).join("");
+  const q=$("q").value.trim().toLowerCase();
+  const list=items.filter(i=>filter==="Все"||(filter==="Сбылось"?i.done:i.cat===filter)).filter(i=>!q||i.title.toLowerCase().includes(q))
+    .sort((a,b)=>(a.done-b.done)||((a.ord??0)-(b.ord??0)));
+  if(!list.length){$("grid").innerHTML=`<div class="empty">${items.length?"Ничего не найдено.":"Пока здесь пусто."}</div>`;return}
+  $("grid").innerHTML=list.map(i=>{
+    const taken=marks.has(i.id),isMine=mine.has(i.id);
+    let img=i.img?`<img src="${esc(i.img)}" alt="" loading="lazy">`
+      :owner?`<label class="addph">+ Добавить фото<input type="file" accept="image/*" data-ph="${esc(i.id)}"></label>`
+      :`<div class="mono">${esc((i.title||"?").trim()[0]||"?")}</div>`;
+    const badge=i.done?`<span class="badge">Сбылось</span>`:(!owner&&taken)?`<span class="badge g">${isMine?"Вы дарите":"Уже дарят"}</span>`:"";
+    let acts="";const link=safeUrl(i.link);
+    if(link)acts+=`<a href="${esc(link)}" target="_blank" rel="noopener">Где купить</a>`;
+    if(owner){
+      acts+=`<button data-a="done" data-id="${esc(i.id)}">${i.done?"Вернуть":"Сбылось ✓"}</button><button data-a="edit" data-id="${esc(i.id)}">Изменить</button>`;
+      acts+=confirmDel===i.id?`<button class="warn" data-a="del2" data-id="${esc(i.id)}">Точно удалить?</button>`:`<button data-a="del" data-id="${esc(i.id)}">Удалить</button>`;
+    }else if(sb&&!i.done&&(!taken||isMine)){
+      acts+=`<button data-a="gift" data-id="${esc(i.id)}" class="${isMine?"on":""}">${isMine?"Я дарю · отменить":"Подарю я"}</button>`;
+    }
+    return `<article class="card${i.done?" done":""}"><div class="ph">${img}${badge}</div><div class="body"><div class="t">${esc(i.title)}</div><div class="meta">${i.price?`<span class="price">${esc(i.price)}</span>`:""}<span>${esc(i.cat)}</span></div>${acts?`<div class="acts">${acts}</div>`:""}</div></article>`;
+  }).join("");
 }
-function next(){ if(i<Q.length-1){ i++; render(); } else analyse(); }
-function analyse(){
-  $("qWrap").hidden = true; $("aWrap").hidden = false;
-  const msgs=["Смотрим, что держит тебя сильнее всего","Сравниваем с типичными сценариями","Подбираем, с чего начать"];
-  let m=0; const t=setInterval(()=>{ m++; if(m<msgs.length) $("aText").textContent=msgs[m]; },450);
-  requestAnimationFrame(()=>{ $("aBar").style.width="100%"; });
-  setTimeout(()=>{ clearInterval(t); $("aWrap").hidden=true; $("aBar").style.width="0"; showResult(); },1400);
-}
-$("qBack").onclick = ()=>{ if(i>0){ i--; render(); } };
-function showResult(){
-  const s = ans.reduce((a,b)=>a+b,0), pct = Math.round(s/24*100), r = R.find(x=>s<=x.max);
-  $("qWrap").hidden = true;
-  const w = $("rWrap"); w.hidden = false;
-  w.innerHTML = `<p class="eyebrow">твой результат</p>
-   <div class="score"><span class="pct">${pct}%</span><span class="muted">уровень привязанности</span></div>
-   <div class="meter"><i style="width:0"></i></div>
-   <div class="scale"><span>отпускаю</span><span>качели</span><span>зависимость</span></div>
-   <h3>${r.title}</h3><p>${r.text}</p>
-   <p style="margin-top:16px"><b>С чего начать в наборе:</b></p>
-   <ul>${r.start.map(x=>`<li>${x}</li>`).join("")}</ul>
-   <div class="cta"><button class="btn" type="button" data-checkout>получить набор за 1&nbsp;490&nbsp;₽</button><a class="link" href="#pain-h">читать дальше ↓</a><button class="link" type="button" id="again">пройти заново</button></div>`;
-  revealRest(); startTimer(); try{localStorage.setItem("otp_done","1")}catch(e){}
-  requestAnimationFrame(()=>{ w.querySelector(".meter i").style.width = pct+"%"; });
-  $("again").onclick = ()=>{ i=0; ans.length=0; w.hidden=true; $("qWrap").hidden=false; render(); };
-  $("quizBox").scrollIntoView({block:"start"});
-}
-render();
-// бонусы действуют BONUS_MIN минут с момента результата теста (или пропуска теста / открытия оплаты)
-const BONUS_MIN = 30;
-let deadline = null;
-try { const s = +localStorage.getItem("otp_deadline2"); if (s) deadline = s; } catch(e) {}
-function startTimer(){
-  if (deadline) return;
-  deadline = Date.now() + BONUS_MIN*6e4;
-  try { localStorage.setItem("otp_deadline2", deadline); } catch(e) {}
-  tick();
-}
-let expired = false;
-function setPay(){
-  const url = expired ? PAY_URL : (PAY_URL_BONUS || PAY_URL);
-  const b = $("coPay");
-  if (url){ b.href = url; b.onclick = null; }
-  else { b.href = "#offer"; b.onclick = ()=>{ $("payNote").hidden = false; closeCheckout(); }; }
-  $("coBonus").hidden = expired;
-}
-function revealRest(){
-  const r = $("rest"); if (!r.hidden) return;
-  r.hidden = false; r.classList.add("reveal");
-}
-let lastFocus = null;
-function openCheckout(){ startTimer(); lastFocus = document.activeElement; $("checkout").hidden = false; document.body.style.overflow = "hidden"; $("coPay").focus(); }
-function closeCheckout(){ $("checkout").hidden = true; document.body.style.overflow = ""; if (lastFocus) lastFocus.focus(); }
-document.addEventListener("click", e=>{ const t = e.target.closest("[data-checkout]"); if (t){ e.preventDefault(); openCheckout(); } });
-$("coClose").onclick = closeCheckout;
-$("checkout").addEventListener("click", e=>{ if (e.target.id === "checkout") closeCheckout(); });
-document.addEventListener("keydown", e=>{ if (e.key === "Escape" && !$("checkout").hidden) closeCheckout(); });
-$("skipQuiz").onclick = ()=>{ revealRest(); startTimer(); $("offer").scrollIntoView({behavior:"smooth"}); };
-try { if (localStorage.getItem("otp_done")) revealRest(); } catch(e) {}
-function tick(){
-  if (!deadline){ document.querySelectorAll("[data-timer]").forEach(el=>el.textContent = String(BONUS_MIN).padStart(2,"0")+":00"); return; }
-  const left = deadline - Date.now();
-  if (left <= 0){
-    if (!expired){ expired = true; document.body.classList.add("bonus-expired");
-      $("bonusBox").hidden = true; document.querySelector(".bonus-gone").hidden = false; setPay(); }
-    return;
+
+async function load(){
+  if(!sb){
+    const r=await fetch("data.json");items=(await r.json()).map(x=>({...x,ord:x.order}));render();
+    $("note").textContent="Список только для просмотра.";return;
   }
-  const h = Math.floor(left/36e5), m = Math.floor(left%36e5/6e4), s = Math.floor(left%6e4/1e3);
-  const t = (h ? [h,m,s] : [m,s]).map(n=>String(n).padStart(2,"0")).join(":");
-  document.querySelectorAll("[data-timer]").forEach(el=>el.textContent = t);
+  const {data,error}=await sb.from("wishes").select("*");
+  if(error){$("grid").innerHTML=`<div class="empty">Не удалось загрузить список. Обновите страницу.</div>`;return}
+  items=data;
+  if(!owner){
+    const [m,my]=await Promise.all([sb.from("gift_marks").select("item_id"),sb.rpc("my_gifts",{p_token:token})]);
+    marks=new Set((m.data||[]).map(x=>x.item_id));mine=new Set(my.data||[]);
+  }
+  render();
 }
-document.querySelectorAll(".shot").forEach(b=>b.onclick=()=>{ $("lbImg").src=b.dataset.full; $("lbImg").alt=b.querySelector("img").alt; $("lb").hidden=false; });
-$("lbClose").onclick=()=>{ $("lb").hidden=true; };
-$("lb").addEventListener("click",e=>{ if(e.target.id==="lb") $("lb").hidden=true; });
-tick(); setPay(); setInterval(tick, 1000);
+
+async function uploadPhoto(file){
+  const ext=(file.name.split(".").pop()||"jpg").toLowerCase().replace(/[^a-z0-9]/g,"")||"jpg";
+  const path=`${Date.now()}-${Math.random().toString(36).slice(2,8)}.${ext}`;
+  const {error}=await sb.storage.from("wishlist").upload(path,file,{contentType:file.type||"image/jpeg"});
+  if(error)throw error;
+  return sb.storage.from("wishlist").getPublicUrl(path).data.publicUrl;
+}
+
+$("chips").onclick=e=>{const b=e.target.closest("[data-f]");if(b){filter=b.dataset.f;render()}};
+$("q").oninput=render;
+$("grid").onclick=async e=>{
+  const b=e.target.closest("button[data-a]");if(!b||!sb)return;
+  const id=b.dataset.id,a=b.dataset.a,it=items.find(x=>x.id===id);
+  try{
+    if(a==="del"){confirmDel=id;render();return}
+    b.disabled=true;
+    if(a==="done"){const {error}=await sb.from("wishes").update({done:!it.done}).eq("id",id);if(error)throw error}
+    if(a==="del2"){confirmDel=null;const {error}=await sb.from("wishes").delete().eq("id",id);if(error)throw error}
+    if(a==="edit"){openForm(it);b.disabled=false;return}
+    if(a==="gift"){const {data,error}=await sb.rpc("gift_toggle",{p_item:id,p_token:token});if(error)throw error;if(data==="taken")$("note").textContent="Это уже кто-то дарит."}
+    await load();
+  }catch(err){$("note").textContent="Не получилось сохранить: "+(err.message||"ошибка");b.disabled=false}
+};
+$("grid").addEventListener("change",async e=>{
+  const inp=e.target.closest("input[data-ph]");if(!inp||!inp.files[0]||!owner)return;
+  const lab=inp.parentElement;lab.firstChild.textContent="Загружаю…";
+  try{const url=await uploadPhoto(inp.files[0]);const {error}=await sb.from("wishes").update({img:url}).eq("id",inp.dataset.ph);if(error)throw error;await load()}
+  catch(err){lab.firstChild.textContent="Не загрузилось, попробуйте ещё раз"}
+});
+
+function openForm(it){
+  editId=it?it.id:null;$("form").hidden=false;$("fMsg").textContent="";
+  $("fTitle").value=it?.title||"";$("fPrice").value=it?.price||"";$("fCat").value=it?.cat||CATS[0];$("fLink").value=it?.link||"";$("fImg").value="";
+  $("fSave").textContent=it?"Сохранить":"Добавить";$("form").scrollIntoView({behavior:"smooth",block:"center"});$("fTitle").focus();
+}
+$("addBtn").onclick=()=>openForm(null);
+$("fCancel").onclick=()=>{$("form").hidden=true};
+$("form").onsubmit=async e=>{
+  e.preventDefault();
+  const data={title:$("fTitle").value.trim(),price:$("fPrice").value.trim(),cat:$("fCat").value,link:$("fLink").value.trim()};
+  if(!data.title)return;
+  $("fSave").disabled=true;$("fMsg").textContent="Сохраняю…";
+  try{
+    const f=$("fImg").files[0];if(f)data.img=await uploadPhoto(f);
+    let r;
+    if(editId)r=await sb.from("wishes").update(data).eq("id",editId);
+    else r=await sb.from("wishes").insert({...data,img:data.img||"",done:false,ord:Math.max(0,...items.map(i=>i.ord||0))+1});
+    if(r.error)throw r.error;
+    $("form").hidden=true;await load();
+  }catch(err){$("fMsg").textContent="Не сохранилось: "+(err.message||"ошибка")}
+  $("fSave").disabled=false;
+};
+
+function setOwner(v){owner=v;$("addBtn").hidden=!v;$("authBtn").textContent=v?"Выйти":"Вход для Омара";if(v){$("login").hidden=true;$("note").textContent="Вы вошли: можно добавлять и менять желания."}else $("note").textContent=""}
+$("authBtn").onclick=async()=>{if(owner){await sb.auth.signOut();setOwner(false);load()}else{$("login").hidden=false;$("lEmail").focus()}};
+$("lCancel").onclick=()=>{$("login").hidden=true};
+$("login").onsubmit=async e=>{
+  e.preventDefault();$("lGo").disabled=true;$("lMsg").textContent="Проверяю…";
+  const {error}=await sb.auth.signInWithPassword({email:$("lEmail").value.trim(),password:$("lPass").value});
+  $("lGo").disabled=false;
+  if(error){$("lMsg").textContent="Неверная почта или пароль.";return}
+  $("lPass").value="";setOwner(true);load();
+};
+
+(async()=>{
+  if(sb){$("authBtn").hidden=false;const {data}=await sb.auth.getSession();setOwner(!!data.session)}
+  load().catch(()=>{$("grid").innerHTML=`<div class="empty">Не удалось загрузить список. Обновите страницу.</div>`});
+})();
 </script>
 </body>
 </html>

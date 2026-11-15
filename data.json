@@ -1,0 +1,852 @@
+[
+{
+"id": "w00",
+"title": "Скрипка (+ мостик)",
+"cat": "Вещи",
+"price": "7 500 ₽",
+"done": true,
+"img": "",
+"order": 0,
+"link": ""
+},
+{
+"id": "w01",
+"title": "Новый год в Куршевеле",
+"cat": "Путешествия",
+"price": "5 000 € на двоих",
+"done": false,
+"img": "",
+"order": 1,
+"link": ""
+},
+{
+"id": "w02",
+"title": "Наушники Marshall",
+"cat": "Вещи",
+"price": "20 000 ₽",
+"done": false,
+"img": "img/a675055a46.jpg",
+"order": 2,
+"link": ""
+},
+{
+"id": "w03",
+"title": "Наушники AirPods",
+"cat": "Вещи",
+"price": "20 000 ₽",
+"done": false,
+"img": "img/6549829a21.jpg",
+"order": 3,
+"link": ""
+},
+{
+"id": "w04",
+"title": "MacBook M4, 512 ГБ",
+"cat": "Вещи",
+"price": "100 000 ₽",
+"done": false,
+"img": "img/09c95c7302.jpg",
+"order": 4,
+"link": ""
+},
+{
+"id": "w05",
+"title": "iPhone 17 Pro Max",
+"cat": "Вещи",
+"price": "50 000 ₽",
+"done": false,
+"img": "img/cf20726b5e.jpg",
+"order": 5,
+"link": ""
+},
+{
+"id": "w06",
+"title": "Часы в стиле old money",
+"cat": "Вещи",
+"price": "3 000 ₽",
+"done": false,
+"img": "",
+"order": 6,
+"link": ""
+},
+{
+"id": "w07",
+"title": "Часы Tissot PRX",
+"cat": "Вещи",
+"price": "40 000 ₽",
+"done": false,
+"img": "img/c501015822.jpg",
+"order": 7,
+"link": ""
+},
+{
+"id": "w08",
+"title": "Виза в Европу",
+"cat": "Путешествия",
+"price": "20 000 ₽",
+"done": false,
+"img": "img/13078cfd61.jpg",
+"order": 8,
+"link": ""
+},
+{
+"id": "w09",
+"title": "Загранпаспорт",
+"cat": "Путешествия",
+"price": "50 000 ₽",
+"done": false,
+"img": "img/90558ab906.jpg",
+"order": 9,
+"link": ""
+},
+{
+"id": "w10",
+"title": "Фотосессия (5 шт.)",
+"cat": "Впечатления",
+"price": "30 000 ₽",
+"done": false,
+"img": "img/30fa6ca10a.jpg",
+"order": 10,
+"link": ""
+},
+{
+"id": "w11",
+"title": "GoPro / Insta360 + все допы",
+"cat": "Вещи",
+"price": "50 000 ₽",
+"done": false,
+"img": "img/ce01858b96.jpg",
+"order": 11,
+"link": ""
+},
+{
+"id": "w12",
+"title": "Ремонт в помещении",
+"cat": "Дом",
+"price": "300 000 ₽",
+"done": false,
+"img": "img/8b9fb9e985.jpg",
+"order": 12,
+"link": ""
+},
+{
+"id": "w13",
+"title": "Стильный гардероб",
+"cat": "Вещи",
+"price": "",
+"done": false,
+"img": "img/b8c5e11a22.jpg",
+"order": 13,
+"link": ""
+},
+{
+"id": "w14",
+"title": "Библиотека",
+"cat": "Дом",
+"price": "",
+"done": false,
+"img": "img/b44a97dd0b.jpg",
+"order": 14,
+"link": ""
+},
+{
+"id": "w15",
+"title": "Играть на скрипке",
+"cat": "Развитие",
+"price": "",
+"done": false,
+"img": "img/0a5a908f8d.jpg",
+"order": 15,
+"link": ""
+},
+{
+"id": "w16",
+"title": "+10 кг массы",
+"cat": "Спорт и здоровье",
+"price": "",
+"done": false,
+"img": "img/000cbec4e5.jpg",
+"order": 16,
+"link": ""
+},
+{
+"id": "w17",
+"title": "Водить машину",
+"cat": "Развитие",
+"price": "",
+"done": false,
+"img": "img/ef22e4bce3.jpg",
+"order": 17,
+"link": ""
+},
+{
+"id": "w18",
+"title": "1 млн аудитории в Instagram",
+"cat": "Карьера",
+"price": "",
+"done": false,
+"img": "img/14670495bb.jpg",
+"order": 18,
+"link": ""
+},
+{
+"id": "w19",
+"title": "Запустить своё шоу",
+"cat": "Карьера",
+"price": "",
+"done": false,
+"img": "img/946b054c3b.jpg",
+"order": 19,
+"link": ""
+},
+{
+"id": "w20",
+"title": "Воронка продаж онлайн",
+"cat": "Карьера",
+"price": "",
+"done": false,
+"img": "img/d2b5ca33bd.jpg",
+"order": 20,
+"link": ""
+},
+{
+"id": "w21",
+"title": "Поездка в Европу",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "img/194af95dd6.jpg",
+"order": 21,
+"link": ""
+},
+{
+"id": "w22",
+"title": "Переезд",
+"cat": "Дом",
+"price": "",
+"done": false,
+"img": "img/519e0fe746.jpg",
+"order": 22,
+"link": ""
+},
+{
+"id": "w23",
+"title": "Чекап организма",
+"cat": "Спорт и здоровье",
+"price": "",
+"done": false,
+"img": "img/2589ceea09.jpg",
+"order": 23,
+"link": ""
+},
+{
+"id": "w24",
+"title": "Новый классический костюм",
+"cat": "Вещи",
+"price": "",
+"done": false,
+"img": "img/1f5f13ea3a.jpg",
+"order": 24,
+"link": ""
+},
+{
+"id": "w25",
+"title": "Выступление на 400–500 человек",
+"cat": "Карьера",
+"price": "",
+"done": false,
+"img": "img/ad7142b26e.jpg",
+"order": 25,
+"link": ""
+},
+{
+"id": "w26",
+"title": "Поплавать с китами (Маврикий)",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "img/42e385f649.jpg",
+"order": 26,
+"link": ""
+},
+{
+"id": "w27",
+"title": "Подняться на Эверест",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "img/7300428e49.jpg",
+"order": 27,
+"link": ""
+},
+{
+"id": "w28",
+"title": "Telegram-канал на 1 млн",
+"cat": "Карьера",
+"price": "",
+"done": false,
+"img": "",
+"order": 28,
+"link": ""
+},
+{
+"id": "w29",
+"title": "Бутсы-футзалки",
+"cat": "Вещи",
+"price": "",
+"done": false,
+"img": "img/ce5cb829cd.jpg",
+"order": 29,
+"link": ""
+},
+{
+"id": "w30",
+"title": "Кабриолет маме — Porsche 911",
+"cat": "Для близких",
+"price": "",
+"done": false,
+"img": "",
+"order": 30,
+"link": ""
+},
+{
+"id": "w31",
+"title": "Начать инвестировать и получать пассивный доход",
+"cat": "Карьера",
+"price": "",
+"done": false,
+"img": "",
+"order": 31,
+"link": ""
+},
+{
+"id": "w32",
+"title": "Пройти аяваску",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "",
+"order": 32,
+"link": ""
+},
+{
+"id": "w33",
+"title": "Пройти тренинг ПДР",
+"cat": "Развитие",
+"price": "",
+"done": false,
+"img": "",
+"order": 33,
+"link": ""
+},
+{
+"id": "w34",
+"title": "Доля в компании",
+"cat": "Карьера",
+"price": "",
+"done": false,
+"img": "",
+"order": 34,
+"link": ""
+},
+{
+"id": "w35",
+"title": "Написать книгу",
+"cat": "Карьера",
+"price": "",
+"done": false,
+"img": "",
+"order": 35,
+"link": ""
+},
+{
+"id": "w36",
+"title": "Мальдивы",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "",
+"order": 36,
+"link": ""
+},
+{
+"id": "w37",
+"title": "Свидание с яркими эмоциями",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "img/afb35e29f0.jpg",
+"order": 37,
+"link": ""
+},
+{
+"id": "w38",
+"title": "Парфюмы (3 шт.)",
+"cat": "Вещи",
+"price": "",
+"done": false,
+"img": "img/24fa450b98.jpg",
+"order": 38,
+"link": ""
+},
+{
+"id": "w39",
+"title": "Каппадокия (воздушные шары)",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "",
+"order": 39,
+"link": ""
+},
+{
+"id": "w40",
+"title": "Сняться в фильме",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "img/d2e6835efd.jpg",
+"order": 40,
+"link": ""
+},
+{
+"id": "w41",
+"title": "Закрытый клуб по подписке на 1000+ человек",
+"cat": "Карьера",
+"price": "",
+"done": false,
+"img": "img/2f47fd101b.jpg",
+"order": 41,
+"link": ""
+},
+{
+"id": "w42",
+"title": "Портмоне и сумка ручной работы на заказ",
+"cat": "Вещи",
+"price": "",
+"done": false,
+"img": "img/ededb2bbbd.jpg",
+"order": 42,
+"link": ""
+},
+{
+"id": "w43",
+"title": "Построить баню",
+"cat": "Дом",
+"price": "",
+"done": false,
+"img": "",
+"order": 43,
+"link": ""
+},
+{
+"id": "w44",
+"title": "Обустроить дом родителям",
+"cat": "Для близких",
+"price": "",
+"done": false,
+"img": "",
+"order": 44,
+"link": ""
+},
+{
+"id": "w45",
+"title": "Построить гараж",
+"cat": "Дом",
+"price": "",
+"done": false,
+"img": "",
+"order": 45,
+"link": ""
+},
+{
+"id": "w46",
+"title": "Купить виллу",
+"cat": "Дом",
+"price": "",
+"done": false,
+"img": "",
+"order": 46,
+"link": ""
+},
+{
+"id": "w47",
+"title": "Квартира в Москве",
+"cat": "Дом",
+"price": "",
+"done": false,
+"img": "",
+"order": 47,
+"link": ""
+},
+{
+"id": "w48",
+"title": "Квартира за границей",
+"cat": "Дом",
+"price": "",
+"done": false,
+"img": "",
+"order": 48,
+"link": ""
+},
+{
+"id": "w49",
+"title": "Получить ВНЖ",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "",
+"order": 49,
+"link": ""
+},
+{
+"id": "w50",
+"title": "Вернуться в спортзал",
+"cat": "Спорт и здоровье",
+"price": "",
+"done": false,
+"img": "img/d12cb80524.jpg",
+"order": 50,
+"link": ""
+},
+{
+"id": "w51",
+"title": "Видеостудия дома",
+"cat": "Дом",
+"price": "",
+"done": false,
+"img": "img/41feab911a.jpg",
+"order": 51,
+"link": ""
+},
+{
+"id": "w52",
+"title": "Париж: Лувр",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "img/8d9b2c3999.jpg",
+"order": 52,
+"link": ""
+},
+{
+"id": "w53",
+"title": "Дубай: спорткары и багги",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "img/7b915cdd54.jpg",
+"order": 53,
+"link": ""
+},
+{
+"id": "w54",
+"title": "Езда на лошадях",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "img/eebd36fc3e.jpg",
+"order": 54,
+"link": ""
+},
+{
+"id": "w55",
+"title": "Горячие источники",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "img/4bba824daa.jpg",
+"order": 55,
+"link": ""
+},
+{
+"id": "w56",
+"title": "IT-стартап в сфере психологии",
+"cat": "Карьера",
+"price": "",
+"done": false,
+"img": "",
+"order": 56,
+"link": ""
+},
+{
+"id": "w57",
+"title": "Благотворительность",
+"cat": "Для близких",
+"price": "",
+"done": false,
+"img": "",
+"order": 57,
+"link": ""
+},
+{
+"id": "w58",
+"title": "Побывать в Лондоне",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "",
+"order": 58,
+"link": ""
+},
+{
+"id": "w59",
+"title": "Побывать в замке",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "",
+"order": 59,
+"link": ""
+},
+{
+"id": "w60",
+"title": "Альпы",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "",
+"order": 60,
+"link": ""
+},
+{
+"id": "w61",
+"title": "Права на мотоцикл",
+"cat": "Развитие",
+"price": "",
+"done": false,
+"img": "",
+"order": 61,
+"link": ""
+},
+{
+"id": "w62",
+"title": "Кикбоксинг",
+"cat": "Спорт и здоровье",
+"price": "",
+"done": false,
+"img": "img/fb36daff74.jpg",
+"order": 62,
+"link": ""
+},
+{
+"id": "w63",
+"title": "Подняться на Эльбрус",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "img/f42f2b1796.jpg",
+"order": 63,
+"link": ""
+},
+{
+"id": "w64",
+"title": "Париж: Эйфелева башня",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "img/5320f71bd9.jpg",
+"order": 64,
+"link": ""
+},
+{
+"id": "w65",
+"title": "Шарлем Шейк",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "img/7876370c57.jpg",
+"order": 65,
+"link": ""
+},
+{
+"id": "w66",
+"title": "Серфинг",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "img/9374d8b638.jpg",
+"order": 66,
+"link": ""
+},
+{
+"id": "w67",
+"title": "Тир / охота",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "img/2531f26821.jpg",
+"order": 67,
+"link": ""
+},
+{
+"id": "w68",
+"title": "Дорогая закрытая вечеринка",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "",
+"order": 68,
+"link": ""
+},
+{
+"id": "w69",
+"title": "Покататься на винтажных машинах",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "",
+"order": 69,
+"link": ""
+},
+{
+"id": "w70",
+"title": "Полететь в Баку",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "",
+"order": 70,
+"link": ""
+},
+{
+"id": "w71",
+"title": "Побывать у Каабы",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "",
+"order": 71,
+"link": ""
+},
+{
+"id": "w72",
+"title": "101 цветок любимой",
+"cat": "Для близких",
+"price": "",
+"done": false,
+"img": "",
+"order": 72,
+"link": ""
+},
+{
+"id": "w73",
+"title": "Любимой — недвижимость с пассивным доходом",
+"cat": "Для близких",
+"price": "",
+"done": false,
+"img": "",
+"order": 73,
+"link": ""
+},
+{
+"id": "w74",
+"title": "Умная колонка",
+"cat": "Вещи",
+"price": "",
+"done": false,
+"img": "img/9b2e47600c.jpg",
+"order": 74,
+"link": ""
+},
+{
+"id": "w75",
+"title": "Полёт на самолёте",
+"cat": "Впечатления",
+"price": "",
+"done": false,
+"img": "img/a369eac182.jpg",
+"order": 75,
+"link": ""
+},
+{
+"id": "w76",
+"title": "Поплавать с китами (Тенерифе)",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "img/a9295dd7af.jpg",
+"order": 76,
+"link": ""
+},
+{
+"id": "w77",
+"title": "Дом Медичи",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "img/8331cfa2de.jpg",
+"order": 77,
+"link": ""
+},
+{
+"id": "w78",
+"title": "Поиграть в теннис",
+"cat": "Спорт и здоровье",
+"price": "",
+"done": false,
+"img": "img/adda5404c2.jpg",
+"order": 78,
+"link": ""
+},
+{
+"id": "w79",
+"title": "Поездка в Японию",
+"cat": "Путешествия",
+"price": "",
+"done": false,
+"img": "img/0dbab9bb7c.jpg",
+"order": 79,
+"link": ""
+},
+{
+"id": "w80",
+"title": "Диплом провокативного психолога",
+"cat": "Развитие",
+"price": "",
+"done": false,
+"img": "",
+"order": 80,
+"link": ""
+},
+{
+"id": "w81",
+"title": "Диплом гештальт-терапевта",
+"cat": "Развитие",
+"price": "",
+"done": false,
+"img": "",
+"order": 81,
+"link": ""
+},
+{
+"id": "w82",
+"title": "Диплом бизнес-тренера",
+"cat": "Развитие",
+"price": "",
+"done": false,
+"img": "",
+"order": 82,
+"link": ""
+},
+{
+"id": "w83",
+"title": "Дипломы коуча и психолога",
+"cat": "Развитие",
+"price": "",
+"done": false,
+"img": "",
+"order": 83,
+"link": ""
+},
+{
+"id": "w84",
+"title": "Пройти тренинг К1",
+"cat": "Развитие",
+"price": "",
+"done": false,
+"img": "",
+"order": 84,
+"link": ""
+}
+]
