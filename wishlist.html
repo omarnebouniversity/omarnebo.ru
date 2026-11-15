@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Карта желаний — Омар</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f0e0c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f0e0c'/%3E%3Cpath d='M32 14l5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z' fill='%23e8c64f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Onest:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#0f0e0c;--s:#1a1814;--s2:#221f1a;--fg:#f3eee4;--mu:#a59e90;--ln:#302b23;--gold:#e8c64f;--gs:rgba(232,198,79,.12);--ok:#5cc28f;--gift:#ef8d5a;
+--disp:"Montserrat",system-ui,sans-serif;--body:"Onest",system-ui,sans-serif}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:max(28px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) 70px max(16px,env(safe-area-inset-left))}
+header{display:grid;grid-template-columns:1fr auto;gap:18px 28px;align-items:end}
+.eyebrow{font:600 12px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{font:800 clamp(32px,6vw,60px)/1 var(--disp);letter-spacing:-.02em;margin:8px 0 0;text-wrap:balance}
+.sub{color:var(--mu);margin:12px 0 0;max-width:62ch}
+.stats{display:flex;gap:26px;font-variant-numeric:tabular-nums}
+.stat b{display:block;font:800 30px/1 var(--disp)}
+.stat span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
+.bar{grid-column:1/-1;height:6px;border-radius:3px;background:var(--ln);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .5s}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 12px;align-items:center}
+.chip{border:1px solid var(--ln);background:var(--s);color:var(--fg);border-radius:999px;padding:7px 14px;font:500 13px var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--gold);color:#17140c;border-color:var(--gold)}
+.chip small{opacity:.6;margin-left:5px}
+.search{flex:1 1 200px;min-width:0;max-width:280px;margin-left:auto;border:1px solid var(--ln);background:var(--s);color:var(--fg);border-radius:10px;padding:9px 12px;font:inherit}
+.btn{border:0;border-radius:10px;padding:10px 16px;font:700 14px var(--body);cursor:pointer;background:var(--gold);color:#17140c}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--ln)}
+.btn:disabled{opacity:.6;cursor:default}
+button:focus-visible,input:focus-visible,select:focus-visible,label:focus-within{outline:2px solid var(--gold);outline-offset:2px}
+.panel{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;background:var(--s);border:1px solid var(--ln);border-radius:14px;padding:16px;margin-bottom:18px}
+.panel label{display:grid;gap:4px;font-size:12px;color:var(--mu);min-width:0}
+.panel input,.panel select{border:1px solid var(--ln);border-radius:8px;padding:9px 10px;font:inherit;background:var(--bg);color:var(--fg);min-width:0}
+.panel .row{grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end;align-items:center;flex-wrap:wrap}
+.msg{color:var(--mu);font-size:13px;margin-right:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:16px}
+.card{background:var(--s);border:1px solid var(--ln);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.ph{aspect-ratio:4/3;background:var(--s2);position:relative;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.mono{position:absolute;inset:0;display:grid;place-items:center;font:800 46px var(--disp);color:var(--mu);opacity:.4}
+.addph{position:absolute;inset:8px;display:grid;place-items:center;border:2px dashed var(--ln);border-radius:10px;color:var(--gold);font:600 13px var(--body);cursor:pointer;text-align:center;padding:8px}
+.addph:hover{border-color:var(--gold);background:var(--gs)}
+.addph input{position:absolute;width:1px;height:1px;opacity:0}
+.badge{position:absolute;left:10px;top:10px;font:700 11px var(--body);letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:6px;background:var(--ok);color:#0d1a12}
+.badge.g{background:var(--gift);color:#1d0f06}
+.card.done .ph img{filter:saturate(.35) brightness(.85)}
+.body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1;min-width:0}
+.t{font-weight:600;line-height:1.3;overflow-wrap:anywhere}
+.card.done .t{text-decoration:line-through;text-decoration-color:var(--ok);color:var(--mu)}
+.meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--mu)}
+.price{color:var(--gold);font-weight:600;font-variant-numeric:tabular-nums}
+.acts{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.acts button,.acts a{font:500 12px var(--body);border:1px solid var(--ln);background:transparent;color:var(--fg);border-radius:8px;padding:5px 9px;cursor:pointer;text-decoration:none}
+.acts .on{background:var(--gift);border-color:var(--gift);color:#1d0f06}
+.acts .warn{border-color:var(--gift);color:var(--gift)}
+.empty{grid-column:1/-1;text-align:center;color:var(--mu);padding:40px 0}
+footer{margin-top:34px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--mu)}
+.link{background:none;border:0;color:var(--mu);font:inherit;text-decoration:underline;cursor:pointer;padding:0}
+@media (max-width:560px){header{grid-template-columns:1fr}.search{max-width:none;margin-left:0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">Омар · список мечт</div>
+      <h1>Карта желаний</h1>
+      <p class="sub">Мечты, цели и подарки, которые меня порадуют. Если хотите что-то подарить, нажмите «Подарю я», чтобы никто не купил то же самое.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="sTotal">—</b><span>желаний</span></div>
+      <div class="stat"><b id="sDone">—</b><span>сбылось</span></div>
+    </div>
+    <div class="bar"><i id="bar"></i></div>
+  </header>
+
+  <div class="tools" id="chips"></div>
+  <div class="tools">
+    <button class="btn" id="addBtn" hidden>+ Добавить желание</button>
+    <input class="search" id="q" type="search" placeholder="Поиск" aria-label="Поиск по желаниям">
+  </div>
+
+  <form class="panel" id="login" hidden>
+    <label>Почта<input id="lEmail" type="email" autocomplete="username" required></label>
+    <label>Пароль<input id="lPass" type="password" autocomplete="current-password" required></label>
+    <div class="row"><span class="msg" id="lMsg"></span>
+      <button type="button" class="btn ghost" id="lCancel">Отмена</button>
+      <button class="btn" id="lGo">Войти</button></div>
+  </form>
+
+  <form class="panel" id="form" hidden>
+    <label>Название<input id="fTitle" required maxlength="140"></label>
+    <label>Цена<input id="fPrice" maxlength="40" placeholder="например, 20 000 ₽"></label>
+    <label>Категория<select id="fCat"></select></label>
+    <label>Ссылка на товар<input id="fLink" type="url" placeholder="https://"></label>
+    <label>Фото<input id="fImg" type="file" accept="image/*"></label>
+    <div class="row"><span class="msg" id="fMsg"></span>
+      <button type="button" class="btn ghost" id="fCancel">Отмена</button>
+      <button class="btn" id="fSave">Сохранить</button></div>
+  </form>
+
+  <div class="grid" id="grid"><div class="empty">Загружаю список желаний…</div></div>
+
+  <footer>
+    <span id="note"></span>
+    <span><button class="link" id="authBtn" type="button" hidden>Вход для Омара</button></span>
+  </footer>
+</div>
+
+<script src="/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.3/dist/umd/supabase.min.js"></script>
+<script>
+const CATS=["Вещи","Путешествия","Впечатления","Развитие","Карьера","Дом","Спорт и здоровье","Для близких"];
+const $=id=>document.getElementById(id);
+const cfg=window.WISHLIST_CONFIG||{};
+const sb=(cfg.supabaseUrl&&cfg.supabaseKey&&window.supabase)?supabase.createClient(cfg.supabaseUrl,cfg.supabaseKey):null;
+let items=[],marks=new Set(),mine=new Set(),owner=false,editId=null,filter="Все",confirmDel=null;
+let token;try{token=localStorage.getItem("wl_token");if(!token){token=crypto.randomUUID()+crypto.randomUUID();localStorage.setItem("wl_token",token)}}catch(e){token=crypto.randomUUID()+crypto.randomUUID()}
+
+$("fCat").innerHTML=CATS.map(c=>`<option>${c}</option>`).join("");
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const imgSrc=u=>/^img\//.test(u||"")?"/"+u.slice(4):u;
+const safeUrl=u=>/^https?:\/\//i.test(u||"")?u:"";
+
+function render(){
+  const total=items.length,done=items.filter(i=>i.done).length;
+  $("sTotal").textContent=total;$("sDone").textContent=done;
+  $("bar").style.width=total?(done/total*100)+"%":"0";
+  const counts={};items.forEach(i=>counts[i.cat]=(counts[i.cat]||0)+1);
+  const chips=["Все",...CATS.filter(c=>counts[c]),"Сбылось"];
+  $("chips").innerHTML=chips.map(c=>`<button class="chip" data-f="${esc(c)}" aria-pressed="${c===filter}">${esc(c)}<small>${c==="Все"?total:c==="Сбылось"?done:counts[c]}</small></button>`).join("");
+  const q=$("q").value.trim().toLowerCase();
+  const list=items.filter(i=>filter==="Все"||(filter==="Сбылось"?i.done:i.cat===filter)).filter(i=>!q||i.title.toLowerCase().includes(q))
+    .sort((a,b)=>(a.done-b.done)||((a.ord??0)-(b.ord??0)));
+  if(!list.length){$("grid").innerHTML=`<div class="empty">${items.length?"Ничего не найдено.":"Пока здесь пусто."}</div>`;return}
+  $("grid").innerHTML=list.map(i=>{
+    const taken=marks.has(i.id),isMine=mine.has(i.id);
+    let img=i.img?`<img src="${esc(imgSrc(i.img))}" alt="" loading="lazy">`
+      :owner?`<label class="addph">+ Добавить фото<input type="file" accept="image/*" data-ph="${esc(i.id)}"></label>`
+      :`<div class="mono">${esc((i.title||"?").trim()[0]||"?")}</div>`;
+    const badge=i.done?`<span class="badge">Сбылось</span>`:(!owner&&taken)?`<span class="badge g">${isMine?"Вы дарите":"Уже дарят"}</span>`:"";
+    let acts="";const link=safeUrl(i.link);
+    if(link)acts+=`<a href="${esc(link)}" target="_blank" rel="noopener">Где купить</a>`;
+    if(owner){
+      acts+=`<button data-a="done" data-id="${esc(i.id)}">${i.done?"Вернуть":"Сбылось ✓"}</button><button data-a="edit" data-id="${esc(i.id)}">Изменить</button>`;
+      acts+=confirmDel===i.id?`<button class="warn" data-a="del2" data-id="${esc(i.id)}">Точно удалить?</button>`:`<button data-a="del" data-id="${esc(i.id)}">Удалить</button>`;
+    }else if(sb&&!i.done&&(!taken||isMine)){
+      acts+=`<button data-a="gift" data-id="${esc(i.id)}" class="${isMine?"on":""}">${isMine?"Я дарю · отменить":"Подарю я"}</button>`;
+    }
+    return `<article class="card${i.done?" done":""}"><div class="ph">${img}${badge}</div><div class="body"><div class="t">${esc(i.title)}</div><div class="meta">${i.price?`<span class="price">${esc(i.price)}</span>`:""}<span>${esc(i.cat)}</span></div>${acts?`<div class="acts">${acts}</div>`:""}</div></article>`;
+  }).join("");
+}
+
+async function load(){
+  if(!sb){
+    const r=await fetch("/data.json");items=(await r.json()).map(x=>({...x,ord:x.order}));render();
+    $("note").textContent="Список только для просмотра.";return;
+  }
+  const {data,error}=await sb.from("wishes").select("*");
+  if(error){$("grid").innerHTML=`<div class="empty">Не удалось загрузить список. Обновите страницу.</div>`;return}
+  items=data;
+  if(!owner){
+    const [m,my]=await Promise.all([sb.from("gift_marks").select("item_id"),sb.rpc("my_gifts",{p_token:token})]);
+    marks=new Set((m.data||[]).map(x=>x.item_id));mine=new Set(my.data||[]);
+  }
+  render();
+}
+
+async function uploadPhoto(file){
+  const ext=(file.name.split(".").pop()||"jpg").toLowerCase().replace(/[^a-z0-9]/g,"")||"jpg";
+  const path=`${Date.now()}-${Math.random().toString(36).slice(2,8)}.${ext}`;
+  const {error}=await sb.storage.from("wishlist").upload(path,file,{contentType:file.type||"image/jpeg"});
+  if(error)throw error;
+  return sb.storage.from("wishlist").getPublicUrl(path).data.publicUrl;
+}
+
+$("chips").onclick=e=>{const b=e.target.closest("[data-f]");if(b){filter=b.dataset.f;render()}};
+$("q").oninput=render;
+$("grid").onclick=async e=>{
+  const b=e.target.closest("button[data-a]");if(!b||!sb)return;
+  const id=b.dataset.id,a=b.dataset.a,it=items.find(x=>x.id===id);
+  try{
+    if(a==="del"){confirmDel=id;render();return}
+    b.disabled=true;
+    if(a==="done"){const {error}=await sb.from("wishes").update({done:!it.done}).eq("id",id);if(error)throw error}
+    if(a==="del2"){confirmDel=null;const {error}=await sb.from("wishes").delete().eq("id",id);if(error)throw error}
+    if(a==="edit"){openForm(it);b.disabled=false;return}
+    if(a==="gift"){const {data,error}=await sb.rpc("gift_toggle",{p_item:id,p_token:token});if(error)throw error;if(data==="taken")$("note").textContent="Это уже кто-то дарит."}
+    await load();
+  }catch(err){$("note").textContent="Не получилось сохранить: "+(err.message||"ошибка");b.disabled=false}
+};
+$("grid").addEventListener("change",async e=>{
+  const inp=e.target.closest("input[data-ph]");if(!inp||!inp.files[0]||!owner)return;
+  const lab=inp.parentElement;lab.firstChild.textContent="Загружаю…";
+  try{const url=await uploadPhoto(inp.files[0]);const {error}=await sb.from("wishes").update({img:url}).eq("id",inp.dataset.ph);if(error)throw error;await load()}
+  catch(err){lab.firstChild.textContent="Не загрузилось, попробуйте ещё раз"}
+});
+
+function openForm(it){
+  editId=it?it.id:null;$("form").hidden=false;$("fMsg").textContent="";
+  $("fTitle").value=it?.title||"";$("fPrice").value=it?.price||"";$("fCat").value=it?.cat||CATS[0];$("fLink").value=it?.link||"";$("fImg").value="";
+  $("fSave").textContent=it?"Сохранить":"Добавить";$("form").scrollIntoView({behavior:"smooth",block:"center"});$("fTitle").focus();
+}
+$("addBtn").onclick=()=>openForm(null);
+$("fCancel").onclick=()=>{$("form").hidden=true};
+$("form").onsubmit=async e=>{
+  e.preventDefault();
+  const data={title:$("fTitle").value.trim(),price:$("fPrice").value.trim(),cat:$("fCat").value,link:$("fLink").value.trim()};
+  if(!data.title)return;
+  $("fSave").disabled=true;$("fMsg").textContent="Сохраняю…";
+  try{
+    const f=$("fImg").files[0];if(f)data.img=await uploadPhoto(f);
+    let r;
+    if(editId)r=await sb.from("wishes").update(data).eq("id",editId);
+    else r=await sb.from("wishes").insert({...data,img:data.img||"",done:false,ord:Math.max(0,...items.map(i=>i.ord||0))+1});
+    if(r.error)throw r.error;
+    $("form").hidden=true;await load();
+  }catch(err){$("fMsg").textContent="Не сохранилось: "+(err.message||"ошибка")}
+  $("fSave").disabled=false;
+};
+
+function setOwner(v){owner=v;$("addBtn").hidden=!v;$("authBtn").textContent=v?"Выйти":"Вход для Омара";if(v){$("login").hidden=true;$("note").textContent="Вы вошли: можно добавлять и менять желания."}else $("note").textContent=""}
+$("authBtn").onclick=async()=>{if(owner){await sb.auth.signOut();setOwner(false);load()}else{$("login").hidden=false;$("lEmail").focus()}};
+$("lCancel").onclick=()=>{$("login").hidden=true};
+$("login").onsubmit=async e=>{
+  e.preventDefault();$("lGo").disabled=true;$("lMsg").textContent="Проверяю…";
+  const {error}=await sb.auth.signInWithPassword({email:$("lEmail").value.trim(),password:$("lPass").value});
+  $("lGo").disabled=false;
+  if(error){$("lMsg").textContent="Неверная почта или пароль.";return}
+  $("lPass").value="";setOwner(true);load();
+};
+
+(async()=>{
+  if(sb){$("authBtn").hidden=false;const {data}=await sb.auth.getSession();setOwner(!!data.session)}
+  load().catch(()=>{$("grid").innerHTML=`<div class="empty">Не удалось загрузить список. Обновите страницу.</div>`});
+})();
+</script>
+</body>
+</html>
